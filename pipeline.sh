@@ -16,12 +16,15 @@ if [[ "$version_conda" != "$version_Rs" ]]; then
     return
 fi
 
-# (iv) Install R packages (change variables if desired)
+# (iv) Download R package data
 fold_pkgs='pkgs'
 mirror='https://utstat.toronto.edu/cran'
-$Rs_path install_libs.R $fold_pkgs $mirror
+$Rs_path 1_download_pkgs.R $fold_pkgs $mirror
 
-# (v) Loop through package-specific scripts
+# (v) Download website specific data
+
+
+# (vi) Loop through package-specific scripts
 fn_process=$(ls process | grep .R$)
 n_process=$(ls process | wc -l)
 j=0
