@@ -16,14 +16,20 @@ if [[ "$version_conda" != "$version_Rs" ]]; then
     return
 fi
 
-# (iv) Install R packages
-# $Rs_path install_libs.R
+# (iv) Install R packages (change variables if desired)
+fold_pkgs='pkgs'
+mirror='https://utstat.toronto.edu/cran'
+$Rs_path install_libs.R $fold_pkgs $mirror
 
 # (v) Loop through package-specific scripts
 fn_process=$(ls process | grep .R$)
+n_process=$(ls process | wc -l)
+j=0
 for fn in $fn_process; do
-    echo "--- Processing package "$fn" ---"
+    j=$((j+1))
+    echo "--- Processing package "$fn" ("$j" of "$n_process") ---"
     # $Rs_path process/$fn
 done
 
 
+echo "~~~ End of pipeline.sh ~~~"

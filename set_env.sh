@@ -7,8 +7,13 @@ n_char=$(echo $grep_env | wc -w)
 
 if [[ "$n_char" -eq 0 ]]; then
     echo "Installing environment"
-    # conda install numpy pandas plotnine scikit-learn
-    conda create --name $env_name --file conda_env.txt python=3.9
+    # (i) For replication
+    # conda create --name $env_name --file conda_env.txt python=3.7
+    # (ii) For initialization
+    conda create --name $env_name python python=3.9
+    conda activate $env_name
+    conda install -c conda-forge r-base=4.0.3  # numpy pandas plotnine scikit-learn 
+    # conda install gxx_linux-64
 else
     echo "Environment already exists"
     conda list --explicit > conda_env.txt
