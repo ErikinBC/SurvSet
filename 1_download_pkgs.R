@@ -24,6 +24,8 @@ makeifnot(dir_pkgs)
 ###################################
 # ---- (2) DOWNLOAD PACKAGES ---- #
 
+# https://vincentarelbundock.github.io/Rdatasets/datasets.html
+
 # (i) Find which have not been downloaded
 all_pkgs = names(lst_pkgs)
 existing_pkgs = list.files(dir_pkgs)

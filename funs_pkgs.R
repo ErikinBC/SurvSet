@@ -34,4 +34,5 @@ list(
     smcure='https://cran.r-project.org/src/contrib/Archive/smcure/smcure_1.0.tar.gz', #2012-02-11 
     smoothHR='https://cran.r-project.org/src/contrib/smoothHR_1.0.3.tar.gz', #2021-10-07
     plsRcox='https://cran.r-project.org/src/contrib/plsRcox_1.7.6.tar.gz', #2021-03-19
-    mlr3proba='https://cran.r-project.org/src/contrib/mlr3proba_0.4.3.tar.gz') #2022-01-22
+    mlr3proba='https://cran.r-project.org/src/contrib/mlr3proba_0.4.3.tar.gz', #2022-01-22
+    sodavis='https://cran.r-project.org/src/contrib/sodavis_1.2.tar.gz') #2018-05-13
