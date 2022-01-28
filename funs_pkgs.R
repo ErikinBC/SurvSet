@@ -31,5 +31,7 @@ list(
     asaur='https://cran.r-project.org/src/contrib/Archive/asaur/asaur_0.44.tar.gz', #2016-02-17 
     AF='https://cran.r-project.org/src/contrib/Archive/AF/AF_0.1.4.tar.gz', #2017-02-11
     Ecdat='https://cran.r-project.org/src/contrib/Archive/Ecdat/Ecdat_0.3-7.tar.gz', #2020-02-10
-    smcure='https://cran.r-project.org/src/contrib/Archive/smcure/smcure_1.0.tar.gz' #2012-02-11 
-    )
+    smcure='https://cran.r-project.org/src/contrib/Archive/smcure/smcure_1.0.tar.gz', #2012-02-11 
+    smoothHR='https://cran.r-project.org/src/contrib/smoothHR_1.0.3.tar.gz', #2021-10-07
+    plsRcox='https://cran.r-project.org/src/contrib/plsRcox_1.7.6.tar.gz', #2021-03-19
+    mlr3proba='https://cran.r-project.org/src/contrib/mlr3proba_0.4.3.tar.gz') #2022-01-22

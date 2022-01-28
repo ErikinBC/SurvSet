@@ -36,26 +36,10 @@ for (pp in pckgs) {
   }
 }
 
-# Function to count categorical features
-bin.count <- function(df) {
-  df <- as.data.frame(df)
-  idx.u <- apply(df,2,function(cc) length(unique(cc)))
-  idx.leq <- which(idx.u <= 12)
-  if (length(idx.leq) > 0) {
-    print(apply(df[,idx.leq,drop=F],2,table))
-    propv <- apply(df[,which(idx.u <= 12),drop=F],2,function(cc) min(prop.table(table(cc))) )
-    if ( any(propv < 0.05) ) {
-      print('The following features have a class imbalance < 5%')
-      print(propv[propv < 0.05])
-    }  
-  }
-}
 
 
 ##################################################################
 ####### ------- BUILT IN SURVIVAL DATASETS ----------- ###########
-
-
 
 # ------------------ COXPHF DATASETS ---------------- #
 
@@ -263,6 +247,13 @@ So.follic <- with(follic,Surv(time=time, event=status %in% c(1,2)))
 X.follic <- model.matrix(~age+hgb+factor(clinstg)+ch,data=follic)[,-1]
 id.follic <- seq(nrow(X.follic))
 cr.follic <- data.table(time=follic$time, event=follic$status)
+
+# https://rdrr.io/cran/randomForestSRC/man/vdv.html
+
+
+# ------------------ smoothHR DATASETS ---------------- #
+
+# https://rdrr.io/cran/smoothHR/man/whas500.html
 
 # ------------------ coin DATASETS ---------------- #
 
@@ -816,114 +807,91 @@ So.vlbw <- Surv(time=tmp.dat$time, event=rep(1,nrow(tmp.dat)))
 id.vlbw <- seq(nrow(X.vlbw))
 cr.vlbw <- NULL
 
-##############################################################
-####### ------- Chandan Reddy DATASETS ----------- ###########
+# ##############################################################
+# ####### ------- Chandan Reddy DATASETS ----------- ###########
 
-dir.reddy <- file.path(dir.dataset , 'chandan_reddy')
+# dir.reddy <- file.path(dir.dataset , 'chandan_reddy')
 
-# --- (i) worcester_heart_attack --- #
-tmp.dat <- fread(file.path(dir.reddy, 'worcester_heart_attack.csv'))
-So.worcester <- with(tmp.dat, Surv(time=days_in_hospital, event=(died_in_hospital == 'yes')))
-X.worcester <- model.matrix(~age+sex+peak_cardiac+cardiac_shock+first_mycardia,data=tmp.dat)[,-1]
-id.worcester <- tmp.dat$id
-cr.worcester <- NULL
+# # --- (i) worcester_heart_attack --- #
+# tmp.dat <- fread(file.path(dir.reddy, 'worcester_heart_attack.csv'))
+# So.worcester <- with(tmp.dat, Surv(time=days_in_hospital, event=(died_in_hospital == 'yes')))
+# X.worcester <- model.matrix(~age+sex+peak_cardiac+cardiac_shock+first_mycardia,data=tmp.dat)[,-1]
+# id.worcester <- tmp.dat$id
+# cr.worcester <- NULL
 
-# --- (ii) vdv --- #
-tmp.dat <- fread(file.path(dir.reddy, 'vdv.csv'))
-So.vdv <- with(tmp.dat, Surv(time=Time, event=(Censoring==1)))
-X.vdv <- as.matrix(tmp.dat[,-(1:2)])
-id.vdv <- seq(nrow(X.vdv))
-cr.vdv <- NULL
+# # --- (ii) vdv --- #
+# tmp.dat <- fread(file.path(dir.reddy, 'vdv.csv'))
+# So.vdv <- with(tmp.dat, Surv(time=Time, event=(Censoring==1)))
+# X.vdv <- as.matrix(tmp.dat[,-(1:2)])
+# id.vdv <- seq(nrow(X.vdv))
+# cr.vdv <- NULL
 
-# --- (iii) AML_Bull.csv --- #
-tmp.dat <- fread(file.path(dir.reddy, 'AML_Bull.csv'))
-So.AML <- with(tmp.dat, Surv(time=A1, event=A2))
-X.AML <- as.matrix(tmp.dat[,-(1:3)])
-id.AML <- seq(nrow(X.AML))
-cr.AML <- NULL
+# # --- (iii) AML_Bull.csv --- #
+# tmp.dat <- fread(file.path(dir.reddy, 'AML_Bull.csv'))
+# So.AML <- with(tmp.dat, Surv(time=A1, event=A2))
+# X.AML <- as.matrix(tmp.dat[,-(1:3)])
+# id.AML <- seq(nrow(X.AML))
+# cr.AML <- NULL
 
-# --- (iv) DBCD.csv --- #
-tmp.dat <- fread(file.path(dir.reddy, 'DBCD.csv'))
-So.DBCD <- with(tmp.dat, Surv(time=A1, event=A2))
-X.DBCD <- as.matrix(tmp.dat[,-(1:3)])
-id.DBCD <- seq(nrow(X.DBCD))
-cr.DBCD <- NULL
+# # --- (iv) DBCD.csv --- #
+# tmp.dat <- fread(file.path(dir.reddy, 'DBCD.csv'))
+# So.DBCD <- with(tmp.dat, Surv(time=A1, event=A2))
+# X.DBCD <- as.matrix(tmp.dat[,-(1:3)])
+# id.DBCD <- seq(nrow(X.DBCD))
+# cr.DBCD <- NULL
 
-# --- (v) DLBCL --- #
-tmp.dat <- fread(file.path(dir.reddy, 'DLBCL.csv'))
-So.DLBCL <- with(tmp.dat, Surv(time=time, event=status))
-X.DLBCL <- as.matrix(tmp.dat[,-(1:3)])
-id.DLBCL <- seq(nrow(X.DLBCL))
-cr.DLBCL <- NULL
+# # --- (v) DLBCL --- #
+# tmp.dat <- fread(file.path(dir.reddy, 'DLBCL.csv'))
+# So.DLBCL <- with(tmp.dat, Surv(time=time, event=status))
+# X.DLBCL <- as.matrix(tmp.dat[,-(1:3)])
+# id.DLBCL <- seq(nrow(X.DLBCL))
+# cr.DLBCL <- NULL
 
-# --- (vi) NSBCD.csv --- #
-tmp.dat <- fread(file.path(dir.reddy, 'NSBCD.csv'))
-So.NSBCD <- with(tmp.dat, Surv(time=A1, event=A2))
-X.NSBCD <- as.matrix(tmp.dat[,-(1:3)])
-id.NSBCD <- seq(nrow(X.NSBCD))
-cr.NSBCD <- NULL
+# # --- (vi) NSBCD.csv --- #
+# tmp.dat <- fread(file.path(dir.reddy, 'NSBCD.csv'))
+# So.NSBCD <- with(tmp.dat, Surv(time=A1, event=A2))
+# X.NSBCD <- as.matrix(tmp.dat[,-(1:3)])
+# id.NSBCD <- seq(nrow(X.NSBCD))
+# cr.NSBCD <- NULL
 
-# --- (vii) employee_attrition.csv --- #
-tmp.dat <- fread(file.path(dir.reddy, 'employee_attrition.csv'))
-tmp.dat[, BusinessTravel := factor(BusinessTravel, levels=c('Travel_Rarely','Travel_Frequently','Non-Travel'))]
-So.employee <- with(tmp.dat, Surv(time=YearsAtCompany,Attrition=='Yes') )
+# ######################################################
+# ####### ------- CUSTOMER CHURN ----------- ###########
 
-X.employee <- model.matrix(~Age + BusinessTravel + DailyRate + Department + DistanceFromHome + 
-               Education + EducationField + EnvironmentSatisfaction + Gender + HourlyRate + 
-               JobInvolvement + JobLevel + JobRole + JobSatisfaction + MaritalStatus + 
-               MonthlyIncome + MonthlyRate + NumCompaniesWorked + OverTime + PercentSalaryHike + 
-               PerformanceRating + RelationshipSatisfaction + StockOptionLevel + TrainingTimesLastYear, data=tmp.dat)[,-1]
-id.employee <- seq(nrow(X.employee))
-cr.employee <- NULL
+# dir.churn <- file.path(dir.dataset,'churn')
 
-######################################################
-####### ------- CUSTOMER CHURN ----------- ###########
+# # --- (i) Telco Churn --- #
+# tmp.dat <- fread(file.path(dir.churn, 'WA_Fn-UseC_-Telco-Customer-Churn.csv'))[as.numeric(order(customerID))]
+# # Remove anyone who had tenure==0
+# tmp.dat <- tmp.dat[tenure > 0]
+# # design + Surv
+# So.telco <- with(tmp.dat, Surv(time=tenure, event=(Churn == 'Yes')))
+# X.telco <- model.matrix(~.,
+#         data=tmp.dat[,which(!colnames(tmp.dat) %in% c('customerID','TotalCharges','Churn','tenure')),with=F])[,-1]
+# id.telco <- as.numeric(as.factor(tmp.dat$customerID))
+# cr.telco <- NULL
+# # Remove perfectly correlated features
+# cc.telco <- abs(cor(X.telco))
+# X.telco <- X.telco[,!colnames(X.telco) %in% names(unlist(sapply(1:ncol(cc.telco), function(rr) which(cc.telco[rr,][-rr]==1))[c(5,9)]))]
 
-dir.churn <- file.path(dir.dataset,'churn')
+# ################################################################
+# ####### ------- OPENML SURVIVAL DATASETS ----------- ###########
 
-# --- (i) Telco Churn --- #
-tmp.dat <- fread(file.path(dir.churn, 'WA_Fn-UseC_-Telco-Customer-Churn.csv'))[as.numeric(order(customerID))]
-# Remove anyone who had tenure==0
-tmp.dat <- tmp.dat[tenure > 0]
-# design + Surv
-So.telco <- with(tmp.dat, Surv(time=tenure, event=(Churn == 'Yes')))
-X.telco <- model.matrix(~.,
-        data=tmp.dat[,which(!colnames(tmp.dat) %in% c('customerID','TotalCharges','Churn','tenure')),with=F])[,-1]
-id.telco <- as.numeric(as.factor(tmp.dat$customerID))
-cr.telco <- NULL
-# Remove perfectly correlated features
-cc.telco <- abs(cor(X.telco))
-X.telco <- X.telco[,!colnames(X.telco) %in% names(unlist(sapply(1:ncol(cc.telco), function(rr) which(cc.telco[rr,][-rr]==1))[c(5,9)]))]
+# dir.openml <- file.path(dir.dataset, 'openML')
 
-################################################################
-####### ------- OPENML SURVIVAL DATASETS ----------- ###########
 
-dir.openml <- file.path(dir.dataset, 'openML')
+# # https://www.openml.org/d/213
+# # --- (ii)  Pharynx --- #
+# tmp.dat <- fread(file.path(dir.openml,'dataset_2199_pharynx.csv'))
+# # Drop unknown Grade or Conditon
+# tmp.dat <- tmp.dat[Grade != '?' & Condition != '?']
+# # Aggregated Condition
+# tmp.dat[, Condition:= fct_recode(Condition,'01'='0','01'='2','234'='2','234'='3','234'='4') ]
 
-# https://www.openml.org/d/1245
-# --- (i) lungcancer - Shedden [phpl04K8a] --- #
-tmp.dat <- fread(file.path(dir.openml,'phpl04K8a.csv'))
-cn.clean <- c('OS_event','histology','sex')
-tmp.dat[, (cn.clean) := lapply(.SD, function(ll) str_remove_all(ll,"\\'")), .SDcols=cn.clean]
-tmp.dat[, `:=` (OS_years = round(OS_years, 3), OS_event=as.numeric(OS_event))]
-X.lungcancer <- model.matrix(~., data=tmp.dat[,-(1:3)])[,-1]
-So.lungcancer <- with(tmp.dat, Surv(time=OS_years, event=OS_event))
-id.lungcancer <- seq(nrow(X.lungcancer))
-cr.lungcancer <- NULL
-
-# https://www.openml.org/d/213
-# --- (ii)  Pharynx --- #
-tmp.dat <- fread(file.path(dir.openml,'dataset_2199_pharynx.csv'))
-# Drop unknown Grade or Conditon
-tmp.dat <- tmp.dat[Grade != '?' & Condition != '?']
-# Aggregated Condition
-tmp.dat[, Condition:= fct_recode(Condition,'01'='0','01'='2','234'='2','234'='3','234'='4') ]
-
-So.pharynx <- with(tmp.dat, Surv(time = class, event = Status))
-X.pharynx <- model.matrix(~factor(Inst) + factor(sex) + factor(Treatment) + factor(Grade) + Age + 
-               factor(Condition) + factor(Site) + factor(N), data=tmp.dat)[,-1]
-id.pharynx <- seq(nrow(X.pharynx))
-cr.pharynx <- NULL
+# So.pharynx <- with(tmp.dat, Surv(time = class, event = Status))
+# X.pharynx <- model.matrix(~factor(Inst) + factor(sex) + factor(Treatment) + factor(Grade) + Age + 
+#                factor(Condition) + factor(Site) + factor(N), data=tmp.dat)[,-1]
+# id.pharynx <- seq(nrow(X.pharynx))
+# cr.pharynx <- NULL
 
 ######################################################
 ####### ------- OTHER DATASETS ----------- ###########

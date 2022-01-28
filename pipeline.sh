@@ -22,7 +22,8 @@ mirror='https://utstat.toronto.edu/cran'
 $Rs_path 1_download_pkgs.R $fold_pkgs $mirror
 
 # (v) Download website specific data
-
+fold_custom='custom'
+# $Rs_path 2_download_custom.R $fold_custom
 
 # (vi) Loop through package-specific scripts
 fn_process=$(ls process | grep .R$)
