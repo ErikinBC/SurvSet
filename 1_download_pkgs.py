@@ -1,5 +1,4 @@
 import argparse
-import enum
 parser = argparse.ArgumentParser()
 parser.add_argument('--fold_pkgs', help='Name of the folder where the R packages will be downloaded to (default="pkgs"', default='pkgs')
 parser.add_argument('--mirror', help='Mirror address for the CRAN packages', default='https://cloud.r-project.org/')
