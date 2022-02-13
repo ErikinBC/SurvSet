@@ -1,3 +1,8 @@
+.idea/
+venv/
 pkgs/
 custom/
 output/
+__pycache__/
+fold/
+.DS_store

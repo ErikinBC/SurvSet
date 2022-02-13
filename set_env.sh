@@ -1,14 +1,15 @@
 #!/bin/bash
 
+# Check to see if anaconda/miniconda environment exists
 env_name=SurvSet
-status=0
-# Check to see if miniconda environment exists
-grep_env=$(ls ~/miniconda3/envs | grep $env_name)
+path_conda=$(which conda)
+path_conda=$(echo $path_conda | awk '{split($0,a,"3/"); print a[1]}')3
+grep_env=$(ls $path_conda/envs | grep $env_name)
 n_char=$(echo $grep_env | wc -w)
 
+status=1  # Set install option
 if [[ "$n_char" -eq 0 ]]; then
     echo "Installing environment"
-
     if [[ "$status" -eq 0 ]]; then
         echo "Cloning conda environment from conda_env.txt"
         conda create --name $env_name --file conda_env.txt python=3.9
@@ -16,8 +17,7 @@ if [[ "$n_char" -eq 0 ]]; then
         echo "Building conda from scratch"
         conda create --name $env_name python python=3.9
         conda activate $env_name
-        conda install -c conda-forge r-base=4.0.3
-        conda install numpy pandas plotnine scikit-learn 
+        conda install -c conda-forge numpy pandas plotnine scikit-learn 
     fi
 else
     echo "Environment already exists"
