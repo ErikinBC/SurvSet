@@ -17,7 +17,7 @@ if [[ "$n_char" -eq 0 ]]; then
         echo "Building conda from scratch"
         conda create --name $env_name python python=3.9
         conda activate $env_name
-        conda install -c conda-forge numpy pandas plotnine scikit-learn 
+        conda install -c conda-forge numpy pandas plotnine scikit-learn rdata
     fi
 else
     echo "Environment already exists"

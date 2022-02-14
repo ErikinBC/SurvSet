@@ -25,7 +25,7 @@ makeifnot(dir_pkgs)
 ###################################
 # ---- (1) DOWNLOAD PACKAGES ---- #
 
-# # https://vincentarelbundock.github.io/Rdatasets/datasets.html
+# https://vincentarelbundock.github.io/Rdatasets/datasets.html
 
 # (i) Find which have not been downloaded
 all_pkgs = list(di_pkgs)
