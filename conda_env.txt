@@ -40,8 +40,11 @@ https://conda.anaconda.org/conda-forge/osx-64/python_abi-3.9-2_cp39.tar.bz2
 https://conda.anaconda.org/conda-forge/noarch/pytz-2021.3-pyhd8ed1ab_0.tar.bz2
 https://conda.anaconda.org/conda-forge/noarch/six-1.16.0-pyh6c4a22f_0.tar.bz2
 https://conda.anaconda.org/conda-forge/noarch/threadpoolctl-3.1.0-pyh8a188c0_0.tar.bz2
+https://conda.anaconda.org/conda-forge/noarch/typing_extensions-4.0.1-pyha770c72_0.tar.bz2
 https://repo.anaconda.com/pkgs/main/noarch/wheel-0.37.1-pyhd3eb1b0_0.conda
+https://conda.anaconda.org/conda-forge/noarch/zipp-3.7.0-pyhd8ed1ab_1.tar.bz2
 https://conda.anaconda.org/conda-forge/osx-64/certifi-2021.10.8-py39h6e9494a_1.tar.bz2
+https://conda.anaconda.org/conda-forge/osx-64/importlib-metadata-4.11.0-py39h6e9494a_0.tar.bz2
 https://conda.anaconda.org/conda-forge/osx-64/kiwisolver-1.3.2-py39hf018cea_1.tar.bz2
 https://conda.anaconda.org/conda-forge/osx-64/libcblas-3.9.0-13_osx64_openblas.tar.bz2
 https://conda.anaconda.org/conda-forge/osx-64/liblapack-3.9.0-13_osx64_openblas.tar.bz2
@@ -50,6 +53,7 @@ https://conda.anaconda.org/conda-forge/osx-64/pillow-7.2.0-py39h31b929e_2.tar.bz
 https://conda.anaconda.org/conda-forge/noarch/python-dateutil-2.8.2-pyhd8ed1ab_0.tar.bz2
 https://conda.anaconda.org/conda-forge/osx-64/unicodedata2-14.0.0-py39h89e85a6_0.tar.bz2
 https://conda.anaconda.org/conda-forge/osx-64/fonttools-4.29.1-py39h89e85a6_0.tar.bz2
+https://conda.anaconda.org/conda-forge/noarch/importlib_metadata-4.11.0-hd8ed1ab_0.tar.bz2
 https://conda.anaconda.org/conda-forge/osx-64/numpy-1.22.2-py39h9d9ce41_0.tar.bz2
 https://repo.anaconda.com/pkgs/main/osx-64/setuptools-58.0.4-py39hecd8cb5_0.conda
 https://conda.anaconda.org/conda-forge/noarch/joblib-1.1.0-pyhd8ed1ab_0.tar.bz2
@@ -62,5 +66,7 @@ https://conda.anaconda.org/conda-forge/noarch/descartes-1.1.0-py_4.tar.bz2
 https://conda.anaconda.org/conda-forge/noarch/mizani-0.7.3-pyhd8ed1ab_0.tar.bz2
 https://conda.anaconda.org/conda-forge/noarch/patsy-0.5.2-pyhd8ed1ab_0.tar.bz2
 https://conda.anaconda.org/conda-forge/osx-64/scikit-learn-1.0.2-py39hd4eea88_0.tar.bz2
+https://conda.anaconda.org/conda-forge/noarch/xarray-0.21.1-pyhd8ed1ab_0.tar.bz2
+https://conda.anaconda.org/conda-forge/noarch/rdata-0.6-pyhd8ed1ab_0.tar.bz2
 https://conda.anaconda.org/conda-forge/osx-64/statsmodels-0.13.2-py39hc89836e_0.tar.bz2
 https://conda.anaconda.org/conda-forge/noarch/plotnine-0.8.0-pyhd8ed1ab_0.tar.bz2

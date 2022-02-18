@@ -8,9 +8,7 @@ fold_custom = args.fold_custom
 
 # Load modules
 import os
-from zipfile import ZipFile
-from urllib.request import urlretrieve
-from funs_support import get_fn_url, makeifnot
+from funs_support import makeifnot, download_csv, download_zip
 
 # Folder to write into
 dir_base = os.getcwd()
@@ -20,25 +18,16 @@ makeifnot(dir_custom)
 
 # --- (1) Employee Attrition --- #
 url = 'https://raw.githubusercontent.com/IBM/employee-attrition-aif360/master/data/emp_attrition.csv'
-path_write = os.path.join(dir_custom, get_fn_url(url)[0])
-urlretrieve(url=url, filename=path_write)
+download_csv(url, dir_custom)
 
 # --- (2) Lung Cancer --- #
 # https://www.openml.org/d/1245
 url = 'https://www.openml.org/data/get_csv/552598/phpl04K8a'
-path_write = os.path.join(dir_custom, get_fn_url(url)[0])
-urlretrieve(url=url, filename=path_write)
-
+download_csv(url, dir_custom)
 
 # --- (3) Reddy Datasets --- #
 url = 'https://dmkd.cs.vt.edu/projects/survival/data/Gene_expression_data.zip'
-path_write = os.path.join(dir_custom, url.split('/')[-1])
-urlretrieve(url=url, filename=path_write)
-path_unzip = path_write.replace('.zip','')
-with ZipFile(path_write, 'r') as zip:
-    zip.extractall(path_unzip)
-os.remove(path_write)
-
+download_zip(url, dir_custom)
 
 # AML_Bull
 # https://pubmed.ncbi.nlm.nih.gov/15084693/

@@ -1,27 +1,40 @@
-# Process MASS data
+dir_pkgs = os.path.join(dir_base, 'pkgs')
 
+# Load modules
 import os
-import rdata
 import numpy as np
 import pandas as pd
+from funs_support import makeifnot, load_rda, rename_cols
 
-# Set directory
-dir_base = os.getcwd()
-dir_pkgs = os.path.join(dir_base, 'pkgs')
+
+
+
 dir_process = os.path.join(dir_pkgs, 'MASS', 'data')
+
+
+# Baseline columns for all datasets
+cn_surv = ['pid', 'time', 'time2', 'event']
+
 
 #####################
 # --- (i) AIDS2 --- #
 
-#  Ripley, B.D., Solomon, P.J. (1994). A note on Australian AIDS survival, University of Adelaide Department of Statistics Research Report 94/3
-
-parsed = rdata.parser.parse_file(os.path.join(dir_process, "Aids2.rda"))
-converted = rdata.conversion.convert(parsed)
-df_aids2 = converted['Aids2']
-
-
-np.sort(os.listdir(dir_process))
-rdata
+# This should be a funs_support function
+df_aids2 = load_rda(dir_process, 'Aids2.rda')
+# (i) Create the event time
+df_aids2 = df_aids2.assign(time=lambda x: x['death']-x['diag'])
+df_aids2 = df_aids2.assign(event=lambda x: x['status'].map({'D':1, 'A':0}))
+# (ii) Drop duplicates
+df_aids2 = df_aids2.drop_duplicates()
+# (iii) Insert needed columns
+df_aids2.insert(0, 'time2', np.nan)
+df_aids2.insert(0, 'pid', range(len(df_aids2)))
+# (iv) Clean up
+cn_fac = ['state','sex','T.categ']
+cn_num = ['age']
+df_aids2 = df_aids2[cn_surv + cn_num + cn_fac]
+df_aids2 = rename_cols(df_aids2 , cn_num, cn_fac)
+df_aids2.to_csv(os.path.join(dir_output, 'aids2.csv'))
 
 
 #########################
@@ -29,7 +42,4 @@ rdata
 
 
 
-# Drzewiecki, K.T., Ladefoged, C., and Christensen, H.E. (1980), Biopsy and prognosis for cutaneous malignant melanoma in clinical stage I. Scand. J. Plast. Reconstru. Surg. 14, 141-144. 
-
-# Drzewiecki, K.T., Poulsen, H., Vibe, P., Ladefoged, C., Andersen, P.K.  (1984). Melanoma in Denmark: Experience at the University Hospital in Odense. Pp. 461-468 in Cutaneous Melanoma. Clinical Management and Treatment Results Worldwide. (eds. C.M. Balch, G.W. Milton).  Lippincott, Philadelphia. 
 

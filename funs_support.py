@@ -1,14 +1,53 @@
+# Load modules
 import os
 import gzip
+import rdata
 import shutil
 import tarfile
+import numpy as np
 import pandas as pd
+from zipfile import ZipFile
+from urllib.request import urlretrieve
 
 # Make a folder if it does not exist
 def makeifnot(path):
     if not os.path.exists(path):
         os.makedirs(path, exist_ok=True)
+    else:
+        print('Path already exists')
 
+# Load an RDA file
+def load_rda(fold, fn):
+    path = os.path.join(fold, fn)
+    parsed = rdata.parser.parse_file(path)
+    converted = rdata.conversion.convert(parsed)
+    fn_rda = fn.replace('.rda', '')
+    df = converted[fn_rda]
+    return df
+
+# Download zipped folder
+def download_zip(url, fold):
+    fn_url = url.split('/')[-1]
+    path_write = os.path.join(fold, fn_url)
+    path_unzip = path_write.replace('.zip','')
+    exists = os.path.exists(path_write) or os.path.exists(path_unzip)
+    if not exists:
+        urlretrieve(url=url, filename=path_write)
+        with ZipFile(path_write, 'r') as zip:
+            zip.extractall(path_unzip)
+        os.remove(path_write)
+    else:
+        print('Folder/zip already exists')
+
+# Download file if it does not exist
+def download_csv(url, fold):
+    fn_csv = get_fn_url(url)[0]
+    # Extract filename from url
+    path_write = os.path.join(fold, fn_csv)
+    if not os.path.exists(path_write):
+        urlretrieve(url=url, filename=path_write)
+    else:
+        print('CSV file already exists')
 
 # Extract filename from the url
 def get_fn_url(url):
@@ -35,18 +74,20 @@ def untar(path_tar, path_write, path_extract):
     tmp_tar.extractall(members=subdir_and_files, path=path_write)
     tmp_tar.close()
 
-
-# # Function to count categorical features
-# bin_count <- function(df) {
-#   df <- as.data.frame(df)
-#   idx.u <- apply(df,2,function(cc) length(unique(cc)))
-#   idx.leq <- which(idx.u <= 12)
-#   if (length(idx.leq) > 0) {
-#     print(apply(df[,idx.leq,drop=F],2,table))
-#     propv <- apply(df[,which(idx.u <= 12),drop=F],2,function(cc) min(prop.table(table(cc))) )
-#     if ( any(propv < 0.05) ) {
-#       print('The following features have a class imbalance < 5%')
-#       print(propv[propv < 0.05])
-#     }  
-#   }
-# }
+# Rename columns to num_{} or fac_{}
+def rename_cols(df, cn_num=None, cn_fac=None):
+    assert isinstance(df, pd.DataFrame)
+    cn_df = df.columns
+    di_cn = {'num':cn_num, 'fac':cn_fac}
+    for k, v in di_cn.items():
+        if v is not None:
+            if isinstance(v, str):
+                v = [v]
+                di_cn[k] = v
+            cn_err = np.setdiff1d(v, cn_df)
+            assert len(cn_err)==0, 'Columns %s from %s were not found in columns' % (cn_err,k)
+            di_v = dict(zip(v,['%s_%s'%(k,cn) for cn in v]))
+            df = df.rename(columns=di_v)
+    # Replace any periods with underscores
+    df.columns = df.columns.str.replace('\\.','_',regex=True)
+    return df
