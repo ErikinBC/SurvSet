@@ -13,9 +13,9 @@ fold_custom='custom'
 python 2_download_custom.py --fold_custom $fold_custom
 
 # (iii) Loop through package-specific scripts
-fold_output='custom'
+fold_output='output'
 python 3_process.py --fold_output $fold_output
 
-# (iv) Create latex tables
+
 
 echo "~~~ End of pipeline.sh ~~~"

@@ -4,10 +4,14 @@ import gzip
 import rdata
 import shutil
 import tarfile
+import warnings
 import numpy as np
 import pandas as pd
 from zipfile import ZipFile
 from urllib.request import urlretrieve
+
+# Remove annoying warning from load_rda
+warnings.filterwarnings('ignore', message='Unknown encoding. Assumed ASCII.')
 
 # Make a folder if it does not exist
 def makeifnot(path):
@@ -15,6 +19,19 @@ def makeifnot(path):
         os.makedirs(path, exist_ok=True)
     else:
         print('Path already exists')
+
+# stringr like
+def str_subset(x, pat, regex=True):
+    if not isinstance(x, pd.Series):
+        x = pd.Series(x)
+    z = x[x.str.contains(pat, regex=regex)]
+    z.reset_index(drop=True, inplace=True)
+    return z
+
+# Add row ids
+def add_pid(df, cn='pid'):
+    assert isinstance(df, pd.DataFrame)
+    df.insert(0, cn, range(1,len(df)+1))
 
 # Load an RDA file
 def load_rda(fold, fn):
