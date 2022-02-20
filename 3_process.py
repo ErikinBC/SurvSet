@@ -18,8 +18,8 @@ dir_pkgs = os.path.join(dir_base, 'pkgs')
 makeifnot(dir_output)
 
 # (ii) Baseline columns for all datasets
-cn_surv = ['pid', 'time', 'event']
-cn_surv2 = ['pid', 'time', 'time2', 'event']
+cn_surv = ['pid', 'event', 'time']
+cn_surv2 = ['pid', 'event', 'time', 'time2']
 
 # (iii) Find all processing files and run
 fn_process = pd.Series(os.listdir('process'))

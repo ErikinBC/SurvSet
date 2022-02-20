@@ -12,6 +12,7 @@ from urllib.request import urlretrieve
 
 # Remove annoying warning from load_rda
 warnings.filterwarnings('ignore', message='Unknown encoding. Assumed ASCII.')
+warnings.filterwarnings('ignore', message='Missing constructor for R class "Date". The underlying R object is returned instead.')
 
 # Make a folder if it does not exist
 def makeifnot(path):
@@ -19,6 +20,36 @@ def makeifnot(path):
         os.makedirs(path, exist_ok=True)
     else:
         print('Path already exists')
+
+# Function to rename columns
+def rename(df, di):
+    assert isinstance(df, pd.DataFrame)
+    df.rename(columns=di, inplace=True)
+
+# Fill missing factors
+def fill_fac(df):
+    assert isinstance(df, pd.DataFrame)
+
+# Function to map features in columns
+def df_map(df, di_map):
+    assert isinstance(df, pd.DataFrame)
+    for cn, di in di_map.items():
+        df[cn] = df[cn].map(di)
+        assert df[cn].notnull().any(), 'mapping for %s missed a value' % cn
+
+# If a column can be converted to integer, do so
+qq = pd.DataFrame({'a':[1,2],'b':[3.0,4.0],'c':['a','b']})
+(qq.dtypes == int) | (qq.dtypes == float)
+def float2int(df):
+    assert isinstance(df, pd.DataFrame)
+
+# Replace missing and make int
+def num2int(x, fill=None):
+    assert isinstance(x, pd.Series)
+    if fill is None:
+        fill = x.min()-1
+    z = x.fillna(fill).astype(int)
+    return z
 
 # stringr like
 def str_subset(x, pat, regex=True):
@@ -91,8 +122,8 @@ def untar(path_tar, path_write, path_extract):
     tmp_tar.extractall(members=subdir_and_files, path=path_write)
     tmp_tar.close()
 
-# Rename columns to num_{} or fac_{}
-def rename_cols(df, cn_num=None, cn_fac=None):
+# Add suffix to numerical and factor columns
+def add_suffix(df, cn_num=None, cn_fac=None):
     assert isinstance(df, pd.DataFrame)
     cn_df = df.columns
     di_cn = {'num':cn_num, 'fac':cn_fac}
@@ -108,3 +139,9 @@ def rename_cols(df, cn_num=None, cn_fac=None):
     # Replace any periods with underscores
     df.columns = df.columns.str.replace('\\.','_',regex=True)
     return df
+
+# Wrapper for column rename
+def df_rename(df, di, errors='ignore'):
+    assert isinstance(df, pd.DataFrame)
+    df.rename(columns=di, inplace=True, errors=errors)
+
