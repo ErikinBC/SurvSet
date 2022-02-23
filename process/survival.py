@@ -1,55 +1,69 @@
 # Process the Survival package
-import os
 import numpy as np
 import pandas as pd
 from funs_class import baseline
-from funs_support import load_rda, df_map, add_suffix
+from funs_support import load_rda
+
+# (i) Create event, time, and id
+# (ii) Subset
+# (iii) Feature transform
+# (iv) Define num, fac, and Surv
+# (v) Write
+
+# import os
+# cn_surv = ['pid', 'time', 'event']
+# cn_surv2 = ['pid', 'time', 'time2', 'event']
+# dir_base = os.getcwd()
+# dir_output = os.path.join(dir_base, 'output')
+# dir_pkgs = os.path.join(dir_base, 'pkgs')
+# self = package(pkg='survival', dir_pkgs=dir_pkgs, dir_output=dir_output, cn_surv=cn_surv, cn_surv2=cn_surv2)
+
 
 class package(baseline):
     # --- (i) cancer --- #
+    # https://stat.ethz.ch/R-manual/R-devel/library/survival/html/lung.html
     def process_cancer(self):
-        df_cancer = load_rda(self.dir_process, 'cancer.rda')
+        fn = 'cancer'
+        df = load_rda(self.dir_process, '%s.rda' % fn)
+        df.reset_index(drop=True, inplace=True)
         cn_fac = ['inst', 'ph.ecog', 'sex']
         cn_num = ['wt.loss', 'ph.karno', 'pat.karno', 'meal.cal', 'age']
         # (i) Create event, time, and id
-
+        df['status'] = np.where(df['status'] == 2, 1, 0)
         # (ii) Subset
         # (iii) Feature transform
+        di_map = {'sex':{1:'M',2:'F'}}
+        self.df_map(df, di_map)
+        df[cn_fac] = self.fill_fac(df[cn_fac])
+        self.float2int(df)  # Floats to integers
         # (iv) Define num, fac, and Surv
+        df = self.Surv(df, cn_num, cn_fac, cn_event='status', cn_time='time')
+        df = self.add_suffix(df, cn_num, cn_fac)
         # (v) Write
-
-        df_cancer['event'] = np.where(df_cancer['status'] == 2, 1, 0)
-        df_cancer['time'] = df_cancer['time'].astype(int)
-        # Define 0 as missing institution
-        df_cancer['inst'] = df_cancer['inst'].fillna(0).astype(int)
-        # Define -1 as missing
-        df_cancer['ph.ecog'] = df_cancer['ph.ecog'].fillna(-1).astype(int)
-        df_cancer['sex'] = df_cancer['sex'].map({1:'M',2:'F'})
-        # Clean up 
-        add_pid(df_cancer)
-        df_cancer = df_cancer[self.cn_surv + cn_num + cn_fac]
-        df_cancer = rename_cols(df_cancer , cn_num, cn_fac)
-        # Save
-        path_write = os.path.join(self.dir_output, 'cancer.csv')
-        df_cancer.to_csv(path_write, index=False)
+        self.write_csv('%s.csv' % fn, df)
 
 
     # --- (ii) cgd --- #
+    # https://stat.ethz.ch/R-manual/R-devel/library/survival/html/cgd.html
     def process_cgd(self):
-        df_cgd = load_rda(self.dir_process, 'cgd.rda')
-        df_cgd.reset_index(drop=True, inplace=True)
-        # Assign
-        df_cgd.rename(columns={'id':'pid', 'tstart':'time', 'tstop':'time2', 'status':'event'}, inplace=True)
-        df_cgd['steroids'] = df_cgd['steroids'].map({0:'N', 1:'Y'})
-        df_cgd['propylac'] = df_cgd['propylac'].map({0:'N', 1:'Y'})
-        # Clean up
+        fn = 'cgd'
+        df = load_rda(self.dir_process, '%s.rda' % fn)
         cn_fac = ['center', 'treat', 'sex', 'inherit', 'steroids', 'propylac', 'hos.cat']
         cn_num = ['age', 'height', 'weight']
-        df_cgd = df_cgd[self.cn_surv2 + cn_num + cn_fac]
-        df_cgd = rename_cols(df_cgd , cn_num, cn_fac)
-        # Save
-        path_write = os.path.join(self.dir_output, 'cgd.csv')
-        df_cgd.to_csv(path_write, index=False)
+        # (i) Create event, time, and id
+        # (ii) Subset (covariate features do not change)
+        #       This is the time to first infection
+        df = df.sort_values(['id','status'],ascending=False)
+        df = df.groupby('id').head(1).sort_values('id').reset_index(drop=True)
+        # (iii) Feature transform
+        di_map = {'steroids':{0:'N', 1:'Y'}, 'propylac':{0:'N', 1:'Y'}}
+        self.df_map(df, di_map)
+        # (iv) Define num, fac, and Surv
+        df = self.Surv(df, cn_num, cn_fac, 'status', 'tstart', 'tstop', 'id')
+        df = self.add_suffix(df, cn_num, cn_fac)
+        # (v) Write
+        self.write_csv('%s.csv' % fn, df)
+
 
     # --- (iii) colon --- #
     def process_colon(self):
@@ -80,10 +94,6 @@ class package(baseline):
         df_colon.to_csv(path_write, index=False)
 
 
-        
-
-        df_colon['id'].isnull().any()
-
 # # (iv) colon
 # tmp.dat <- data.table(survival::colon)
 # tmp.dat <- tmp.dat[tmp.dat[,.I[etype == max(etype)],by=id]$V1]
@@ -92,13 +102,6 @@ class package(baseline):
 #                 differ = ifelse(is.na(differ), as.numeric(names(sort(table
 
 
-
-cn_surv = ['pid', 'time', 'event']
-cn_surv2 = ['pid', 'time', 'time2', 'event']
-dir_base = os.getcwd()
-dir_output = os.path.join(dir_base, 'output')
-dir_pkgs = os.path.join(dir_base, 'pkgs')
-self = package(pkg='survival', dir_pkgs=dir_pkgs, dir_output=dir_output, cn_surv=cn_surv, cn_surv2=cn_surv2)
 
 
 
