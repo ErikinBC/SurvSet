@@ -2,28 +2,24 @@
 import numpy as np
 import pandas as pd
 from funs_class import baseline
-from funs_support import load_rda
+from funs_support import load_rda, str_subset
 
 # (i) Create event, time, and id
 # (ii) Subset
 # (iii) Feature transform
 # (iv) Define num, fac, and Surv
-# (v) Write
-
-# import os
-# cn_surv = ['pid', 'time', 'event']
-# cn_surv2 = ['pid', 'time', 'time2', 'event']
-# dir_base = os.getcwd()
-# dir_output = os.path.join(dir_base, 'output')
-# dir_pkgs = os.path.join(dir_base, 'pkgs')
-# self = package(pkg='survival', dir_pkgs=dir_pkgs, dir_output=dir_output, cn_surv=cn_surv, cn_surv2=cn_surv2)
-
 
 class package(baseline):
+    def run_all(self):
+        # Get list of process functions
+        methods = str_subset(pd.Series(dir(self)), '^process\\_')
+        for method in methods:
+            fun_process = getattr(self, method)
+            fn, df = fun_process()
+            self.write_csv('%s.csv' % fn, df)
+
     # --- (i) cancer --- #
-    # https://stat.ethz.ch/R-manual/R-devel/library/survival/html/lung.html
-    def process_cancer(self):
-        fn = 'cancer'
+    def process_cancer(self, fn = 'cancer'):
         df = load_rda(self.dir_process, '%s.rda' % fn)
         df.reset_index(drop=True, inplace=True)
         cn_fac = ['inst', 'ph.ecog', 'sex']
@@ -39,14 +35,10 @@ class package(baseline):
         # (iv) Define num, fac, and Surv
         df = self.Surv(df, cn_num, cn_fac, cn_event='status', cn_time='time')
         df = self.add_suffix(df, cn_num, cn_fac)
-        # (v) Write
-        self.write_csv('%s.csv' % fn, df)
-
+        return fn, df
 
     # --- (ii) cgd --- #
-    # https://stat.ethz.ch/R-manual/R-devel/library/survival/html/cgd.html
-    def process_cgd(self):
-        fn = 'cgd'
+    def process_cgd(self, fn = 'cgd'):
         df = load_rda(self.dir_process, '%s.rda' % fn)
         cn_fac = ['center', 'treat', 'sex', 'inherit', 'steroids', 'propylac', 'hos.cat']
         cn_num = ['age', 'height', 'weight']
@@ -61,50 +53,43 @@ class package(baseline):
         # (iv) Define num, fac, and Surv
         df = self.Surv(df, cn_num, cn_fac, 'status', 'tstart', 'tstop', 'id')
         df = self.add_suffix(df, cn_num, cn_fac)
-        # (v) Write
-        self.write_csv('%s.csv' % fn, df)
-
+        return fn, df
 
     # --- (iii) colon --- #
-    def process_colon(self):
-        df_colon = load_rda(self.dir_process, 'colon.rda')
-        # Subset to death event (100% event rate for this dataset)
-        df_colon = df_colon[df_colon['etype'] == 2]
-        df_colon.reset_index(drop=True, inplace=True)
-        # Assign features
-        df_colon['id'] = df_colon['id'].astype(int)
-        df_colon.rename(columns={'id':'pid', 'status':'event'}, inplace=True)
-        df_colon['sex'] = df_colon['sex'].map({1:'M',0:'F'})
-        df_colon['surg'] = df_colon['surg'].map({1:'long',0:'short'})
+    def process_colon(self, fn = 'colon'):
+        df = load_rda(self.dir_process, '%s.rda' % fn)
         cn_bin = ['obstruct', 'perfor', 'adhere', 'node4']
-        df_colon[cn_bin] = df_colon[cn_bin].apply(lambda x: x.map({1:'Y',0:'N'}))
-        # Missing to zero
-        df_colon['differ']
-        
-        # Convert floats to integers with no decimals
-        cn_int = ['time', 'age', 'event', 'differ', 'extent']
-        df_colon[cn_int] = df_colon[cn_int].apply(num2int)
-        # Clean up
-        cn_fac = ['sex', 'differ', 'extent', 'surg'] + cn_bin
+        cn_fac = ['rx', 'sex', 'differ'] + cn_bin
         cn_num = ['age', 'nodes']
-        df_colon = df_colon[self.cn_surv + cn_num + cn_fac]
-        df_colon = rename_cols(df_colon , cn_num, cn_fac)
-        # Save
-        path_write = os.path.join(self.dir_output, 'colon.csv')
-        df_colon.to_csv(path_write, index=False)
+        # (i) Create event, time, and id
+        # (ii) Subset
+        df = df[df['etype'] == 2]  # Time to death
+        df.drop(columns=['etype','study'], inplace=True)
+        df.reset_index(drop=True, inplace=True)
+        
+        # (iii) Feature transform
+        di_map = {'sex':{1:'M',0:'F'}, 'surg':{1:'long',0:'short'}, 'differ':{1:'well', 2:'moderate', 3:'poor'}, 'extent':{1:'submucosa', 2:'muscle', 3:'serosa', 4:'contiguous structures'}}
+        di_map = {**di_map, **{cn:{1:'Y',0:'N'} for cn in cn_bin}}
+        self.df_map(df, di_map)
+        self.float2int(df)  # Floats to integers
+        df[cn_fac] = self.fill_fac(df[cn_fac])  # Fill missing factors
+        
+        # (iv) Define num, fac, and Surv
+        df = self.Surv(df, cn_num, cn_fac, 'status', 'time', cn_pid='id')
+        df = self.add_suffix(df, cn_num, cn_fac)
+        return fn, df
 
 
-# # (iv) colon
-# tmp.dat <- data.table(survival::colon)
-# tmp.dat <- tmp.dat[tmp.dat[,.I[etype == max(etype)],by=id]$V1]
-# # Median/mode fill for NAs
-# tmp.dat[, `:=` (nodes = ifelse(is.na(nodes),median(nodes,na.rm=T),nodes),
-#                 differ = ifelse(is.na(differ), as.numeric(names(sort(table
+# IS ADD SUFFIX UNIVERSAL??
 
-
-
-
-
+import os
+cn_surv = ['pid', 'time', 'event']
+cn_surv2 = ['pid', 'time', 'time2', 'event']
+dir_base = os.getcwd()
+dir_output = os.path.join(dir_base, 'output')
+dir_pkgs = os.path.join(dir_base, 'pkgs')
+self = package(pkg='survival', dir_pkgs=dir_pkgs, dir_output=dir_output, cn_surv=cn_surv, cn_surv2=cn_surv2)
+self.run_all()
 
 
 

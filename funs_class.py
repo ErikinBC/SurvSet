@@ -75,19 +75,20 @@ class baseline():
     """Fill missing factors
     df:         DataFrame with factor columns
     """
-    def fill_fac(self, df):
+    def fill_fac(self, df, missing='missing'):
+        # df=df[cn_fac]; 'missing'
         assert isinstance(df, pd.DataFrame)
         # Check to see whether non-missing factors can be made to integers
         cn_dtypes = df.apply(lambda x: x.dropna().unique().dtype,0)
         cn_float = df.columns[np.where(cn_dtypes == float)[0]]
         if len(cn_float) > 0:
-            holder = []
-            for cn in cn_float:
-                holder.append(self.num2int(df[cn]))
-            z = pd.concat(holder,axis=1)
-            # z = df[cn_float].apply(self.num2int(df[cn_float]))
+            z = df[cn_float].apply(self.num2int(df[cn_float]))
             df = pd.concat(objs=[z, df.drop(columns=cn_float)],axis=1)
-        df = df.fillna('missing')
+        cn_cat = df.columns[np.where(cn_dtypes == 'category')[0]]
+        if len(cn_cat) > 0:
+            z = df[cn_cat].apply(lambda x: x.cat.add_categories('missing'))
+            df = pd.concat(objs=[z, df.drop(columns=cn_cat)],axis=1)
+        df = df.fillna(missing)
         return df
 
     # Replace missing and make int

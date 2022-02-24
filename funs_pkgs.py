@@ -1,3 +1,9 @@
+# Dictionary of dataset references
+di_ref = {
+    # survival
+    'cancer':'https://stat.ethz.ch/R-manual/R-devel/library/survival/html/lung.html', 
+    'cgd':'https://stat.ethz.ch/R-manual/R-devel/library/survival/html/cgd.html',
+    'colon':'https://stat.ethz.ch/R-manual/R-devel/library/survival/html/colon.html'}
 
 # Contains list of packages that have data
 di_pkgs = {'joineR':'https://cran.r-project.org/src/contrib/Archive/joineR/joineR_1.2.5.tar.gz', # 2020-02-08
