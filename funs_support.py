@@ -5,14 +5,15 @@ import rdata
 import shutil
 import tarfile
 import warnings
-import numpy as np
 import pandas as pd
 from zipfile import ZipFile
 from urllib.request import urlretrieve
 
 # Remove annoying warning from load_rda
-warnings.filterwarnings('ignore', message='Unknown encoding. Assumed ASCII.')
-warnings.filterwarnings('ignore', message='Missing constructor for R class "Date". The underlying R object is returned instead.')
+lst_warnings = ['Unknown encoding. Assumed ASCII.', 'Missing constructor for R class "Date". The underlying R object is returned instead.']
+lst_warnings += ['Tag not implemented for type RObjectType.%s and ignored' % k for k in ['STR', 'CHAR', 'REAL', 'VEC']]
+for warning in lst_warnings:
+    warnings.filterwarnings('ignore', message=warning)
 
 # Make a folder if it does not exist
 def makeifnot(path):

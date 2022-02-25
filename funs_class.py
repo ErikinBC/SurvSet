@@ -2,6 +2,7 @@
 import os
 import numpy as np
 import pandas as pd
+from funs_support import str_subset
 
 """
 pkg:                Name of R package downloaded
@@ -17,7 +18,17 @@ class baseline():
         self.cn_surv = cn_surv
         self.cn_surv2 = cn_surv2
 
-    
+    """
+    Wrapper to run through all the process_{} methods in the inheriting class
+    """
+    def run_all(self):
+        # Get list of process functions
+        methods = str_subset(pd.Series(dir(self)), '^process\\_')
+        for method in methods:
+            fun_process = getattr(self, method)
+            fn, df = fun_process()
+            self.write_csv('%s.csv' % fn, df)
+
     """Create the Surv-style columns
     df:                 DataFrame with processed data
     cn_event:           Column name for event binary event indicator
@@ -40,8 +51,8 @@ class baseline():
         else:
             assert cn_pid in cn_df, 'cn_pid not found in cn_df'
         cn_surv = [v for k,v in di_Surv.items() if k is not None]
-        df = df[cn_surv + cn_num + cn_fac]
-        df.reset_index(drop=True, inplace=True)
+        cn_rest = list(np.unique(cn_num + cn_fac))
+        df = df[cn_surv + cn_rest].reset_index(drop=True)
         return df
 
     # Wrapper for writing to csv
@@ -76,13 +87,14 @@ class baseline():
     df:         DataFrame with factor columns
     """
     def fill_fac(self, df, missing='missing'):
+        # breakpoint()
         # df=df[cn_fac]; 'missing'
         assert isinstance(df, pd.DataFrame)
         # Check to see whether non-missing factors can be made to integers
         cn_dtypes = df.apply(lambda x: x.dropna().unique().dtype,0)
         cn_float = df.columns[np.where(cn_dtypes == float)[0]]
         if len(cn_float) > 0:
-            z = df[cn_float].apply(self.num2int(df[cn_float]))
+            z = df[cn_float].apply(self.num2int)
             df = pd.concat(objs=[z, df.drop(columns=cn_float)],axis=1)
         cn_cat = df.columns[np.where(cn_dtypes == 'category')[0]]
         if len(cn_cat) > 0:
@@ -106,6 +118,7 @@ class baseline():
         assert isinstance(df, pd.DataFrame)
         cn_df = df.columns
         di_cn = {'num':cn_num, 'fac':cn_fac}
+        holder = []
         for k, v in di_cn.items():
             if v is not None:
                 if isinstance(v, str):
@@ -114,10 +127,13 @@ class baseline():
                 cn_err = np.setdiff1d(v, cn_df)
                 assert len(cn_err)==0, 'Columns %s from %s were not found in columns' % (cn_err,k)
                 di_v = dict(zip(v,['%s_%s'%(k,cn) for cn in v]))
-                df = df.rename(columns=di_v)
+                holder.append(df[list(di_v)].rename(columns=di_v))
+        res = pd.concat(holder,axis=1)
+        cn_orig = sum([v for v in di_cn.values() if v is not None],[])
+        res = pd.concat(objs=[df.drop(columns=cn_orig), res], axis=1)
         # Replace any periods with underscores
-        df.columns = df.columns.str.replace('\\.','_',regex=True)
-        return df
+        res.columns = res.columns.str.replace('\\.','_',regex=True)
+        return res
 
     # If a column can be converted to integer, do so (assignment happens inplace)
     @staticmethod

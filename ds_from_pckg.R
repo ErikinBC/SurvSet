@@ -41,14 +41,7 @@ for (pp in pckgs) {
 ##################################################################
 ####### ------- BUILT IN SURVIVAL DATASETS ----------- ###########
 
-# ------------------ COXPHF DATASETS ---------------- #
 
-# --- (xvi) coxphf::breast --- #
-tmp.dat <- coxphf::breast
-So.breast <- with(tmp.dat, Surv(time=TIME, event=CENS))
-X.breast <- model.matrix(~T+N+G+CD,data=tmp.dat)[,-1]
-id.breast <- seq(nrow(X.breast))
-cr.breast <- NULL
 
 # ------------------ TIMEREG DATASETS ---------------- #
 

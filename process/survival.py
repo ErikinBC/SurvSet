@@ -1,32 +1,16 @@
 # Process the Survival package
 import numpy as np
-import pandas as pd
 from funs_class import baseline
-from funs_support import load_rda, str_subset
-
-# (i) Create event, time, and id
-# (ii) Subset
-# (iii) Feature transform
-# (iv) Define num, fac, and Surv
+from funs_support import load_rda
 
 class package(baseline):
-    def run_all(self):
-        # Get list of process functions
-        methods = str_subset(pd.Series(dir(self)), '^process\\_')
-        for method in methods:
-            fun_process = getattr(self, method)
-            fn, df = fun_process()
-            self.write_csv('%s.csv' % fn, df)
-
     # --- (i) cancer --- #
     def process_cancer(self, fn = 'cancer'):
         df = load_rda(self.dir_process, '%s.rda' % fn)
-        df.reset_index(drop=True, inplace=True)
         cn_fac = ['inst', 'ph.ecog', 'sex']
         cn_num = ['wt.loss', 'ph.karno', 'pat.karno', 'meal.cal', 'age']
         # (i) Create event, time, and id
         df['status'] = np.where(df['status'] == 2, 1, 0)
-        # (ii) Subset
         # (iii) Feature transform
         di_map = {'sex':{1:'M',2:'F'}}
         self.df_map(df, di_map)
@@ -42,7 +26,6 @@ class package(baseline):
         df = load_rda(self.dir_process, '%s.rda' % fn)
         cn_fac = ['center', 'treat', 'sex', 'inherit', 'steroids', 'propylac', 'hos.cat']
         cn_num = ['age', 'height', 'weight']
-        # (i) Create event, time, and id
         # (ii) Subset (covariate features do not change)
         #       This is the time to first infection
         df = df.sort_values(['id','status'],ascending=False)
@@ -61,103 +44,146 @@ class package(baseline):
         cn_bin = ['obstruct', 'perfor', 'adhere', 'node4']
         cn_fac = ['rx', 'sex', 'differ'] + cn_bin
         cn_num = ['age', 'nodes']
-        # (i) Create event, time, and id
         # (ii) Subset
         df = df[df['etype'] == 2]  # Time to death
         df.drop(columns=['etype','study'], inplace=True)
         df.reset_index(drop=True, inplace=True)
-        
         # (iii) Feature transform
         di_map = {'sex':{1:'M',0:'F'}, 'surg':{1:'long',0:'short'}, 'differ':{1:'well', 2:'moderate', 3:'poor'}, 'extent':{1:'submucosa', 2:'muscle', 3:'serosa', 4:'contiguous structures'}}
         di_map = {**di_map, **{cn:{1:'Y',0:'N'} for cn in cn_bin}}
         self.df_map(df, di_map)
         self.float2int(df)  # Floats to integers
         df[cn_fac] = self.fill_fac(df[cn_fac])  # Fill missing factors
-        
         # (iv) Define num, fac, and Surv
         df = self.Surv(df, cn_num, cn_fac, 'status', 'time', cn_pid='id')
         df = self.add_suffix(df, cn_num, cn_fac)
         return fn, df
 
 
-# IS ADD SUFFIX UNIVERSAL??
+    # --- (iv) flchain --- #
+    def process_flchain(self, fn = 'flchain'):
+        df = load_rda(self.dir_process, '%s.rda' % fn)
+        cn_fac = ['sex', 'chapter', 'sample.yr', 'mgus']
+        cn_num = ['age', 'kappa', 'lambda', 'flc.grp', 'creatinine', 'sample.yr']
+        # (i) Create event, time, and id
+        # (ii) Subset
+        # (iii) Feature transform
+        di_map = {'mgus':{1:'Y',0:'N'}}
+        self.df_map(df, di_map)
+        self.float2int(df)  # Floats to integers
+        df[cn_fac] = self.fill_fac(df[cn_fac])  # Fill missing factors
+        # (iv) Define num, fac, and Surv
+        df = self.Surv(df, cn_num, cn_fac, 'death', 'futime')
+        df = self.add_suffix(df, cn_num, cn_fac)
+        return fn, df
 
-import os
-cn_surv = ['pid', 'time', 'event']
-cn_surv2 = ['pid', 'time', 'time2', 'event']
-dir_base = os.getcwd()
-dir_output = os.path.join(dir_base, 'output')
-dir_pkgs = os.path.join(dir_base, 'pkgs')
-self = package(pkg='survival', dir_pkgs=dir_pkgs, dir_output=dir_output, cn_surv=cn_surv, cn_surv2=cn_surv2)
-self.run_all()
+    # --- (v) heart --- #
+    def process_heart(self, fn = 'heart'):
+        df = load_rda(self.dir_process, '%s.rda' % fn)
+        cn_num = ['age', 'year']
+        cn_fac = ['surgery', 'transplant']
+        # (iii) Feature transform
+        df['transplant'] = df['transplant'].astype(int)
+        di_map = {k:{1:'Y',0:'N'} for k in cn_fac}
+        self.df_map(df, di_map)
+        self.float2int(df)  # Floats to integers
+        # (iv) Define num, fac, and Surv
+        df = self.Surv(df, cn_num, cn_fac, 'event', 'start', 'stop', 'id')
+        df = self.add_suffix(df, cn_num, cn_fac)
+        return fn, df
+
+
+    # --- (vi) mgus --- #
+    def process_mgus(self, fn = 'mgus'):
+        df = load_rda(self.dir_process, '%s.rda' % fn)
+        cn_num = ['age', 'dxyr', 'pctime', 'alb', 'creat', 'hgb', 'mspike']
+        'death'
+        cn_fac = ['sex', 'pcdx']
+        # (iii) Feature transform
+        self.float2int(df)  # Floats to integers
+        df[cn_fac] = self.fill_fac(df[cn_fac])  # Fill missing factors
+        # (iv) Define num, fac, and Surv
+        df = self.Surv(df, cn_num, cn_fac, 'death', 'futime', cn_pid='id')
+        df = self.add_suffix(df, cn_num, cn_fac)
+        return fn, df
+
+    # --- (vii) ovarian --- #
+    def process_ovarian(self, fn = 'ovarian'):
+        df = load_rda(self.dir_process, '%s.rda' % fn)
+        cn_num = ['age']
+        cn_fac = ['resid.ds', 'rx', 'ecog.ps']
+        # (iii) Feature transform
+        di_map = {'resid.ds':{1:'N',2:'Y'}, 'rx':{1:'Grp1',2:'Grp2'}, 'ecog.ps':{1:'Better',2:'Worse'}}
+        self.df_map(df, di_map)
+        self.float2int(df)  # Floats to integers
+        # (iv) Define num, fac, and Surv
+        df = self.Surv(df, cn_num, cn_fac, 'fustat', 'futime')
+        df = self.add_suffix(df, cn_num, cn_fac)
+        return fn, df
+
+    # --- (viii) pbs --- #
+    def process_pbc(self, fn = 'pbc'):
+        df = load_rda(self.dir_process, '%s.rda' % fn)
+        cn_num = ['age']
+        cn_bin = ['ascites', 'hepato', 'spiders']
+        cn_fac = ['sex', 'trt'] + cn_bin
+        # (i) Create event, time, and id
+        df['status'] = np.where(df['status'] == 2, 1, 0)  # Death only
+        # (ii) Subset
+        df = df[df['trt'] != -2147483648]  # RCT only
+        # (iii) Feature transform
+        di_map = {'trt':{1:'D-penicillmain', 2:'Placebo'}, 'edema':{0:'none', 0.5:'successful', 1:'unsuccessful'}}
+        tmp = {k:{1:'Y',0:'N',-2147483648:'missing'} for k in cn_bin}
+        di_map = {**di_map, **tmp}
+        self.df_map(df, di_map)
+        # (iv) Define num, fac, and Surv
+        df = self.Surv(df, cn_num, cn_fac, 'status', 'time', cn_pid='id')
+        df = self.add_suffix(df, cn_num, cn_fac)
+        return fn, df
+
+    # --- (ix) retinopathy --- #
+    def process_retinopathy(self, fn = 'retinopathy'):
+        df = load_rda(self.dir_process, '%s.rda' % fn)
+        cn_num = ['age', 'risk']
+        cn_fac = ['laser', 'eye', 'type', 'trt', 'risk']
+        # (iii) Feature transform
+        di_map = {'trt':{1:'Treatment',0:'Control'}}
+        self.df_map(df, di_map)
+        # (iv) Define num, fac, and Surv
+        df = self.Surv(df, cn_num, cn_fac, 'status', 'futime', cn_pid='id')
+        df = self.add_suffix(df, cn_num, cn_fac)
+        return fn, df
+
+    # --- (x) retinopathy --- #
+    def process_veteran(self, fn = 'veteran'):
+        df = load_rda(self.dir_process, '%s.rda' % fn)
+        df.loc['1']
+        cn_num = ['karno', 'diagtime', 'age']
+        cn_fac = ['trt', 'celltype', 'prior']
+        # (iii) Feature transform
+        di_map = {'trt':{1:'standard',2:'test'}, 'prior':{0:'N', 10:'Y'}}
+        self.df_map(df, di_map)
+        self.float2int(df)  # Floats to integers
+        # (iv) Define num, fac, and Surv
+        df = self.Surv(df, cn_num, cn_fac, 'status', 'time')
+        df = self.add_suffix(df, cn_num, cn_fac)
+        return fn, df
+
+
+    # --- (xi) nwtco --- #
+    def process_nwtco(self, fn = 'nwtco'):
+        df = load_rda(self.dir_process, '%s.rda' % fn)
+        cn_num = ['age', 'stage']
+        cn_bin = ['instit','histol']
+        cn_fac = ['stage', 'study', 'in.subcohort'] + cn_bin
+        # (iii) Feature transform
+        di_map = {k:{1:'Favourable',2:'Unfavourable'} for k in cn_bin}
+        self.df_map(df, di_map)
+        # (iv) Define num, fac, and Surv
+        df = self.Surv(df, cn_num, cn_fac, 'rel', 'edrel', cn_pid='seqno')
+        df = self.add_suffix(df, cn_num, cn_fac)
+        return fn, df
 
 
 
-# # (v) flchain
-# tmp.dat <- survival::flchain
-# So.flchain <- with(tmp.dat, Surv(futime,death))
-# tmp.dat$creatinine <- ifelse(is.na(tmp.dat$creatinine),median(tmp.dat$creatinine,na.rm = T),tmp.dat$creatinine)
-# X.flchain <- model.matrix(~age+sex+sample.yr+kappa+lambda+creatinine+mgus,data=tmp.dat)[,-1]
-# id.flchain <- seq(nrow(X.flchain))
-# cr.flchain <- NULL
 
-# # (vi) heart
-# So.heart <- with(survival::heart, Surv(start,stop,event))
-# X.heart <- model.matrix(~age+year+surgery+transplant,data=survival::heart)[,-1]
-# id.heart <- as.numeric(as.factor(survival::heart$id))
-# cr.heart <- NULL
-
-# # (vii) lung
-# tmp.dat <- data.table(survival::lung)
-# tmp.dat[, (colnames(tmp.dat)) := lapply(.SD, function(ll) ifelse(is.na(ll),median(ll,na.rm=T),ll)), .SDcols=colnames(tmp.dat) ]
-# tmp.dat[, `:=` (inst = fct_lump(as.factor(inst),prop=0.05))]
-# X.lung <- model.matrix(~inst+age+sex+ph.ecog+ph.karno+pat.karno+meal.cal+wt.loss,data=tmp.dat)[,-1]
-# So.lung <- with(tmp.dat,Surv(time,status==2))
-# id.lung <- seq(nrow(X.lung))
-# cr.lung <- NULL
-
-# # (viii) mgus2
-# tmp.dat <- data.table(survival::mgus2)
-# cn <- c('mspike','hgb','creat')
-# tmp.dat[, (cn) := lapply(.SD, function(ll) ifelse(is.na(ll),median(ll,na.rm=T),ll)), .SDcols=cn ]
-# So.mgus2 <- with(mgus2, Surv(futime, death))
-# X.mgus2 <- model.matrix(~age+sex+hgb+creat+mspike+ptime+pstat,data=tmp.dat)[,-1]
-# id.mgus2 <- as.numeric(as.factor(tmp.dat$id))
-# cr.mgus2 <- NULL
-
-# # (ix) ovarian
-# So.ovarian <- with(survival::ovarian,Surv(futime,fustat))
-# X.ovarian <- model.matrix(~age+factor(resid.ds)+factor(rx)+factor(ecog.ps),data=survival::ovarian)[,-1]
-# id.ovarian <- seq(nrow(X.ovarian))
-# cr.ovarian <- NULL
-
-# # (x) pbc
-# tmp.dat <- data.table(survival::pbc)
-# tmp.dat <- tmp.dat[-which(apply(tmp.dat,1,function(rr) sum(is.na(rr)))>2)]
-# # Fill in the missing values < 5%
-# cn <- c('copper','platelet')
-# tmp.dat[, (cn) := lapply(.SD, function(ll) ifelse(is.na(ll),median(ll,na.rm=T),ll)), .SDcols=cn ]
-# tmp.dat[, edema := fct_recode(as.character(edema),'none'='0','untreated'='0.5','edema'='1')]
-# X.pbc <- model.matrix(~factor(trt)+age+sex+ascites+hepato+spiders+factor(edema)+bili+
-#                albumin+copper+alk.phos+ast+platelet+protime+factor(stage),data=tmp.dat)[,-1]
-# So.pbc <- with(tmp.dat,Surv(time=time,event=(status==2)))
-# id.pbc <- as.numeric(as.factor(tmp.dat$id))
-# cr.pbc <- data.table(time=tmp.dat$time, event=tmp.dat$status)
-
-# # (xi) retinopathy
-# So.retinopathy <- with(survival::retinopathy, Surv(futime,status))
-# X.retinopathy <- model.matrix(~laser+eye+age+type+trt+risk,data=retinopathy)[,-1]
-# id.retinopathy <- as.numeric(as.factor(survival::retinopathy$id))
-# cr.retinopathy <- NULL
-
-# # (xii) veteran
-# So.veteran <- with(survival::veteran, Surv(time,status))
-# X.veteran <- model.matrix(~factor(trt)+celltype+karno+diagtime+age+factor(prior),data=survival::veteran)[,-1]
-# id.veteran <- seq(nrow(X.veteran))
-# cr.veteran <- NULL
-
-# # (xiii) nwtco
-# So.nwtco <- with(survival::nwtco, Surv(time=edrel, event=rel))
-# X.nwtco <- model.matrix(~factor(instit)+factor(histol)+factor(stage)+factor(study)+age+in.subcohort,data=nwtco)[,-1]
-# id.nwtco <- as.numeric(as.factor(survival::nwtco$seqno))
-# cr.nwtco <- NULL

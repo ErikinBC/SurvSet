@@ -1,9 +1,23 @@
 # Dictionary of dataset references
 di_ref = {
+    # coxphf
+    'breast':'https://rdrr.io/cran/coxphf/man/breast.html',
+    # MASS
+    'Aids2':'https://stat.ethz.ch/R-manual/R-devel/library/MASS/html/Aids2.html',
+    'Melanoma':'https://stat.ethz.ch/R-manual/R-devel/library/MASS/html/Melanoma.html',
     # survival
     'cancer':'https://stat.ethz.ch/R-manual/R-devel/library/survival/html/lung.html', 
     'cgd':'https://stat.ethz.ch/R-manual/R-devel/library/survival/html/cgd.html',
-    'colon':'https://stat.ethz.ch/R-manual/R-devel/library/survival/html/colon.html'}
+    'colon':'https://stat.ethz.ch/R-manual/R-devel/library/survival/html/colon.html',
+    'flchain':'https://stat.ethz.ch/R-manual/R-devel/library/survival/html/flchain.html',
+    'heart':'https://stat.ethz.ch/R-manual/R-devel/library/survival/html/heart.html',
+    'mgus':'https://stat.ethz.ch/R-manual/R-devel/library/survival/html/mgus.html',
+    'ovarian':'https://stat.ethz.ch/R-manual/R-devel/library/survival/html/ovarian.html',
+    'pbc':'https://stat.ethz.ch/R-manual/R-devel/library/survival/html/pbc.html',
+    'retinopathy':'https://stat.ethz.ch/R-manual/R-devel/library/survival/html/retinopathy.html',
+    'veteran':'https://stat.ethz.ch/R-manual/R-devel/library/survival/html/veteran.html',
+    'nwtco':'https://stat.ethz.ch/R-manual/R-devel/library/survival/html/nwtco.html',
+    }
 
 # Contains list of packages that have data
 di_pkgs = {'joineR':'https://cran.r-project.org/src/contrib/Archive/joineR/joineR_1.2.5.tar.gz', # 2020-02-08

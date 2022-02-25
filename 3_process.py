@@ -33,9 +33,6 @@ for j, fn_py in enumerate(fn_process):
     processor = getattr(locate(path_fn), 'package')
     # Set attributes
     processor = processor(pkg=fn, dir_pkgs=dir_pkgs, dir_output=dir_output, cn_surv=cn_surv, cn_surv2=cn_surv2)
-    # Get list of methods
-    methods = str_subset(dir(processor),'^process\\_')
-    for method in methods:
-        getattr(processor, method)()
+    processor.run_all()
 
 print('~~~ End of 3_process.py ~~~')
