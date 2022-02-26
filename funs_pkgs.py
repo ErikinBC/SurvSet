@@ -11,12 +11,39 @@ di_ref = {
     # bujar
     'chop':'https://rdrr.io/cran/bujar/man/chop.html',
     # coin
-    
+    'glioma':'https://rdrr.io/cran/coin/man/glioma.html',
+    # CoxRidge
+    'glioma':'https://rdrr.io/cran/CoxRidge/man/ova.html',
     # coxphf
     'breast':'https://rdrr.io/cran/coxphf/man/breast.html',
+    # Ecdat
+    'UnempDur':'https://rdrr.io/cran/Ecdat/man/UnempDur.html',
+    'Unemployment':'https://rdrr.io/cran/Ecdat/man/Unemployment.html',
+    # EHA
+    'scania':'https://www.rdocumentation.org/packages/eha/versions/2.9.0/topics/scania',
+    'oldmort':'https://www.rdocumentation.org/packages/eha/versions/2.9.0/topics/oldmort',
+    # frailtySurv
+    'hdfail':'https://www.rdocumentation.org/packages/frailtySurv/versions/1.3.7/topics/hdfail',
+    # hdnom
+    # IPWsurvival
+    # JM
+    # joineR
+    # jointCox
     # MASS
     'Aids2':'https://stat.ethz.ch/R-manual/R-devel/library/MASS/html/Aids2.html',
     'Melanoma':'https://stat.ethz.ch/R-manual/R-devel/library/MASS/html/Melanoma.html',
+    # NestedCohort
+    # pec
+    # penalized
+    # randomForestSRC
+    # RCASPAR
+    # RcmdrPlugin
+    # relsurv
+    # RobustAFT
+    # rpart
+    # smcure
+    # smoothHR
+    # spBayesSurv
     # survival
     'cancer':'https://stat.ethz.ch/R-manual/R-devel/library/survival/html/lung.html', 
     'cgd':'https://stat.ethz.ch/R-manual/R-devel/library/survival/html/cgd.html',
@@ -29,6 +56,9 @@ di_ref = {
     'retinopathy':'https://stat.ethz.ch/R-manual/R-devel/library/survival/html/retinopathy.html',
     'veteran':'https://stat.ethz.ch/R-manual/R-devel/library/survival/html/veteran.html',
     'nwtco':'https://stat.ethz.ch/R-manual/R-devel/library/survival/html/nwtco.html',
+    # survJamda
+    # TH
+    # timereg
     }
 
 # Contains list of packages that have data

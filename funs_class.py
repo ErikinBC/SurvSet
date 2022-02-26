@@ -47,7 +47,8 @@ class baseline():
         df = df.rename(columns=di_Surv, errors='ignore')
         n_df = len(df)
         if cn_pid is None:
-            df.insert(0, 'pid', range(n_df))
+            df = df.assign(pid=range(n_df))
+            di_Surv = {**{'pid':'pid'}, **di_Surv}
         else:
             assert cn_pid in cn_df, 'cn_pid not found in cn_df'
             df = df.rename(columns={cn_pid:'pid'})
