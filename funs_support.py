@@ -35,9 +35,10 @@ def str_subset(x, pat, regex=True):
 # Load an RDA file
 def load_rda(fold, fn):
     path = os.path.join(fold, fn)
+    assert os.path.exists(path), 'Cannot find path!'
     parsed = rdata.parser.parse_file(path)
     converted = rdata.conversion.convert(parsed)
-    fn_rda = fn.replace('.rda', '')
+    fn_rda = '.'.join(fn.split('.')[:-1])
     df = converted[fn_rda]
     return df
 

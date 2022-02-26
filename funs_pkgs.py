@@ -1,5 +1,17 @@
 # Dictionary of dataset references
 di_ref = {
+    # AdapEnetClass
+    'MCLcleaned':'https://rdrr.io/cran/AdapEnetClass/man/MCLcleaned.html',
+    # AF
+    'rott2':'https://rdrr.io/cran/AF/man/rott2.html',
+    # asaur
+    'hepatoCellular':'https://rdrr.io/cran/asaur/man/hepatoCellular.html',
+    'pharmacoSmoking':'https://rdrr.io/cran/asaur/man/pharmacoSmoking.html',
+    'prostateSurvival':'https://rdrr.io/cran/asaur/man/prostateSurvival.html',
+    # bujar
+    'chop':'https://rdrr.io/cran/bujar/man/chop.html',
+    # coin
+    
     # coxphf
     'breast':'https://rdrr.io/cran/coxphf/man/breast.html',
     # MASS

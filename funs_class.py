@@ -50,6 +50,7 @@ class baseline():
             df.insert(0, 'pid', range(n_df))
         else:
             assert cn_pid in cn_df, 'cn_pid not found in cn_df'
+            df = df.rename(columns={cn_pid:'pid'})
         cn_surv = [v for k,v in di_Surv.items() if k is not None]
         cn_rest = list(np.unique(cn_num + cn_fac))
         df = df[cn_surv + cn_rest].reset_index(drop=True)

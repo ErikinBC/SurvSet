@@ -1,26 +1,38 @@
+# Process asaur datasets
+import numpy as np
+from funs_class import baseline
+from funs_support import load_rda
 
-# --- (xlvi) hepatoCellular --- #
-tmp.dat <- data.table(asaur::hepatoCellular)
-tmp.dat <- tmp.dat[,which(apply(tmp.dat,2,function(cc) sum(is.na(cc)))==0),with=F]
-So.hepato <- with(tmp.dat, Surv(time=OS, event=Death))
-# Make sure binaries are factors
-cn.fac <- colnames(tmp.dat)[c(3:15)]
-tmp.dat[, (cn.fac) := lapply(.SD, as.factor), .SDcols=cn.fac]
-X.hepato <- model.matrix(~.,data=tmp.dat[,-which(colnames(tmp.dat) %in% c('OS','Death','Number','Recurrence')),with=F])[,-1]
-id.hepato <- tmp.dat$Number
-cr.hepato <- NULL
+class package(baseline):
+    # --- (i) hepatoCellular --- #
+    def process_hepatoCellular(self, fn = 'hepatoCellular'):
+        df = load_rda(self.dir_process, '%s.rda' % fn)
+        cn_fac = list(df.columns[2:15])
+        cn_num = ['Age'] + list(df.columns[19:])
+        # (iv) Define num, fac, and Surv
+        df = self.Surv(df, cn_num, cn_fac, cn_event='Death', cn_time='OS')
+        df = self.add_suffix(df, cn_num, cn_fac)
+        return fn, df
 
-# --- (xlvii) pharmacoSmoking --- #
-tmp.dat <- data.table(asaur::pharmacoSmoking)[order(id)]
-tmp.dat[, race := ifelse(race == 'white','white','non-white')]
-So.smoking <- with(tmp.dat, Surv(time = ttr, event=relapse))
-X.smoking <- model.matrix(~.,data=tmp.dat[,-(1:3)])[,-1]
-id.smoking <- tmp.dat$id
-cr.smoking <- NULL
+    # --- (ii) pharmacoSmoking --- #
+    def process_pharmacoSmoking(self, fn = 'pharmacoSmoking'):
+        df = load_rda(self.dir_process, '%s.rda' % fn)
+        cn_fac = ['grp', 'gender', 'race', 'employment', 'levelSmoking', 'ageGroup2', 'ageGroup4']
+        cn_num = ['age', 'yearsSmoking', 'priorAttempts', 'longestNoSmoke']
+        # (iv) Define num, fac, and Surv
+        df = self.Surv(df, cn_num, cn_fac, cn_event='relapse', cn_time='ttr', cn_pid='id')
+        df = self.add_suffix(df, cn_num, cn_fac)
+        return fn, df
 
-# --- (xlviii) prostateSurvival --- #
-tmp.dat <- data.table(asaur::prostateSurvival)
-So.prostate <- with(tmp.dat, Surv(time=survTime, event=status!=0))
-X.prostate <- model.matrix(~grade+stage+ageGroup, data=tmp.dat)[,-1]
-id.prostate <- seq(nrow(X.prostate))
-cr.prostate <- data.table(time=tmp.dat$survTime, event=tmp.dat$status)
+    # --- (iii) prostateSurvival --- #
+    def process_prostateSurvival(self, fn = 'prostateSurvival'):
+        df = load_rda(self.dir_process, '%s.rda' % fn)
+        cn_fac = ['grade', 'stage', 'ageGroup']
+        cn_num = []
+        # (i) Create event, time, and id
+        df['status'] = np.where(df['status'] == 1, 1, 0)
+        # (iv) Define num, fac, and Surv
+        df = self.Surv(df, cn_num, cn_fac, cn_event='status', cn_time='survTime')
+        df = self.add_suffix(df, cn_num, cn_fac)
+        return fn, df
+
