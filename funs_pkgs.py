@@ -39,10 +39,18 @@ di_ref = {
     'Aids2':'https://stat.ethz.ch/R-manual/R-devel/library/MASS/html/Aids2.html',
     'Melanoma':'https://stat.ethz.ch/R-manual/R-devel/library/MASS/html/Melanoma.html',
     # NestedCohort
+    'zinc':'https://rdrr.io/cran/NestedCohort/man/zinc.html',
     # pec
+    'Pbc3':'https://rdrr.io/cran/pec/man/Pbc3.html',
+    'cost':'https://rdrr.io/cran/pec/man/cost.html',
+    'GBSG2':'https://rdrr.io/cran/pec/man/GBSG2.html',
     # penalized
+    'nki70':'https://rdrr.io/cran/penalized/man/nki70.html',
     # randomForestSRC
+    'follic':'https://rdrr.io/cran/randomForestSRC/man/follic.html',
+    'vdv':'https://rdrr.io/cran/randomForestSRC/man/vdv.html',
     # RCASPAR
+    'Bergamaschi':'https://rdrr.io/bioc/RCASPAR/man/Bergamaschi.html',
     # RcmdrPlugin
     # relsurv
     # RobustAFT

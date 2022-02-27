@@ -1,10 +1,21 @@
-# --- (xxxvii) zinc --- #
-utils::data(zinc, package = "NestedCohort")
-tmp.dat <- data.table(zinc)[order(as.numeric(as.factor(id8)))]
-So.zinc <- with(tmp.dat, Surv(time=futime01, event=ec01))
-X.zinc <- model.matrix(~sex+agepill+smoke+drink+basehist+factor(dysp1)+zincset,data=tmp.dat)[,-1]
-# Remove perfectly collinear factor
-X.zinc <- X.zinc[,colnames(X.zinc) != 'basehistEsophagitis']
-id.zinc <- as.numeric(as.factor(tmp.dat$id8))
-cr.zinc <- NULL
+# Process NestedCohort datasets
+import numpy as np
+from funs_class import baseline
+from funs_support import load_rda
+
+class package(baseline):
+    # --- (i) zinc --- #
+    def process_zinc(self, fn = 'zinc'):
+        df = load_rda(self.dir_process, '%s.RData' % fn)
+        df.replace(-2147483648,np.nan,inplace=True)
+        cn_fac = ['sex', 'agestr','dysp1','dysp2', 'smoke', 'drink', 'basehist','sevdysp','moddysp','mildysp','zincset',]        
+        cn_num = ['agepill','stdagepill']
+        # (iii) Feature transform
+        self.float2int(df)  # Floats to integers
+        # (iv) Define num, fac, and Surv
+        df = self.Surv(df, cn_num, cn_fac, cn_event='ec01', cn_time='futime01')
+        df = self.add_suffix(df, cn_num, cn_fac)
+        return fn, df
+
+
 

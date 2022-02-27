@@ -81,6 +81,7 @@ cr.larynx <- NULL
 ####### ------- VANDERBILT DATASETS ----------- ###########
 
 # http://biostat.mc.vanderbilt.edu/wiki/Main/DataSets
+# https://biostat.app.vumc.org/wiki/Main/DataSets
 
 dir.vanderbilt <- file.path(dir.dataset, 'vanderbilt')
 
@@ -106,13 +107,13 @@ So.support2 <- with(tmp, Surv(time=d.time, event=death)) # For overall death
 id.support2 <- seq(nrow(X.support2))
 cr.support2 <- NULL
 
-# --- (ii) german breast cancer --- #
-tmp <- data.table(read.delim(file.path(dir.vanderbilt, 'gbsg_ba_ca.dat')))
-# matrix and surv
-X.gbr <- model.matrix(~age+meno+size+factor(grade)+nodes+enodes+pgr+er+hormon,data=tmp)[,-1]
-So.gbr <- with(tmp, Surv(time=X_t, event=X_d))
-id.gbr <- as.numeric(as.factor(tmp$id))
-cr.gbr <- NULL
+# # --- (ii) german breast cancer --- #
+# tmp <- data.table(read.delim(file.path(dir.vanderbilt, 'gbsg_ba_ca.dat')))
+# # matrix and surv
+# X.gbr <- model.matrix(~age+meno+size+factor(grade)+nodes+enodes+pgr+er+hormon,data=tmp)[,-1]
+# So.gbr <- with(tmp, Surv(time=X_t, event=X_d))
+# id.gbr <- as.numeric(as.factor(tmp$id))
+# cr.gbr <- NULL
 
 # --- (iii) Byar & Greene prostate cancer data --- #
 tmp <- fread(file.path(dir.vanderbilt, 'prostate.csv'))

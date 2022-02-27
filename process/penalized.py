@@ -1,9 +1,16 @@
-# --- (xxx) nki70 --- #
-utils::data(nki70)
-tmp.dat <- nki70
-So.nki70 <- with(tmp.dat, Surv(time,event))
-tmp.dat$Grade <- as.character(tmp.dat$Grade)
-X.nki70 <- model.matrix(~Diam+N+ER+factor(Grade)+Age,data=tmp.dat[,1:7])[,-1]
-X.nki70 <- cbind(X.nki70, as.matrix(tmp.dat[,-(1:7)]))
-id.nki70 <- seq(nrow(X.nki70))
-cr.nki70 <- NULL
+# Process penalized datasets
+from funs_class import baseline
+from funs_support import load_rda
+
+class package(baseline):
+    # --- (i) nki70 --- #
+    def process_nki70(self, fn = 'nki70'):
+        df = load_rda(self.dir_process, '%s.RData' % fn)
+        cn_fac = ['Diam', 'N', 'ER', 'Grade']
+        cn_num = list(df.columns[6:])        
+        # (iii) Feature transform
+        self.float2int(df)  # Floats to integers
+        # (iv) Define num, fac, and Surv
+        df = self.Surv(df, cn_num, cn_fac, 'event', 'time')
+        df = self.add_suffix(df, cn_num, cn_fac)
+        return fn, df

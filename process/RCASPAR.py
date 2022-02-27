@@ -1,17 +1,24 @@
-# --- (xxxix) Bergamaschi --- #
-utils::data(Bergamaschi, package = "RCASPAR")
-utils::data(survData, package = "RCASPAR")
-tmp.dat <- data.table(survData)
-setnames(tmp.dat, old=c('Overall.survival..mons.undivided','Relapse.free.survival..mons.','Status.0.A..1.AWD..2.DOD..3.DOC'),
-                  new=c('ost','rfst','tumor_status'))
-tmp.dat <- data.table(tmp.dat, Bergamaschi)
-tmp.dat[, id := as.numeric(as.factor(ExptID))]
-tmp.dat <- tmp.dat[order(id)]
-# Create a new censoring indicator for relapse free to boost N_event
-tmp.dat[, event_relapse := ifelse(rfst < ost, 1, 0)]
-tmp.dat[, event_relapse := ifelse(event_relapse==1,1, ifelse(censored==0,1,0))]
-So.bergamaschi <- with(tmp.dat, Surv(time=rfst, event=event_relapse))
-tmp.dat[, tumor_status := fct_recode(as.character(tumor_status),'2'='3')]
-X.bergamaschi <-  model.matrix(~.,data=tmp.dat[,str_which(colnames(tmp.dat),'IMAGE'),with=F])[,-1]
-id.bergamaschi <- as.numeric(as.factor(tmp.dat$ExptID))
-cr.bergamaschi <- NULL
+# Process RCASPAR datasets
+import numpy as np
+import pandas as pd
+from funs_class import baseline
+from funs_support import load_rda
+
+class package(baseline):
+    # --- (i) Bergamaschi --- #
+    def process_Bergamaschi(self, fn = 'Bergamaschi'):
+        # Combination of matrix of data and survival events
+        dat = load_rda(self.dir_process, '%s.RData' % fn)
+        dat = pd.DataFrame(dat.values, columns=dat.dim_1.values)
+        df = load_rda(self.dir_process, 'survData.RData')
+        df.reset_index(drop=True, inplace=True)
+        cn_fac = []
+        cn_num = list(dat.columns)
+        cn_surv = ['censored', 'True_STs']
+        df = pd.concat(objs=[df[cn_surv],dat],axis=1)
+        # (i) Create event, time, and id
+        df['event'] = np.where(df['censored'] == 0, 1, 0)
+        # (iv) Define num, fac, and Surv
+        df = self.Surv(df, cn_num, cn_fac, 'event', 'True_STs')
+        df = self.add_suffix(df, cn_num, cn_fac)
+        return fn, df
