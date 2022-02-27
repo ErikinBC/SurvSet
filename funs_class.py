@@ -90,15 +90,16 @@ class baseline():
     """
     def fill_fac(self, df, missing='missing'):
         # breakpoint()
-        # df=df[cn_fac]; 'missing'
+        # df, missing = df[cn_fac], 'missing'
         assert isinstance(df, pd.DataFrame)
-        # Check to see whether non-missing factors can be made to integers
+        cn_df = df.columns
         cn_dtypes = df.apply(lambda x: x.dropna().unique().dtype,0)
-        cn_float = df.columns[np.where(cn_dtypes == float)[0]]
+        cn_float = cn_df[np.where(cn_dtypes == float)[0]]
+        cn_cat = cn_df[np.where(cn_dtypes == 'category')[0]]
+        # Check to see whether non-missing factors can be made to integers
         if len(cn_float) > 0:
             z = df[cn_float].apply(self.num2int)
             df = pd.concat(objs=[z, df.drop(columns=cn_float)],axis=1)
-        cn_cat = df.columns[np.where(cn_dtypes == 'category')[0]]
         if len(cn_cat) > 0:
             z = df[cn_cat].apply(lambda x: x.cat.add_categories('missing'))
             df = pd.concat(objs=[z, df.drop(columns=cn_cat)],axis=1)

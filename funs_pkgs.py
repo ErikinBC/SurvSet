@@ -57,10 +57,15 @@ di_ref = {
     # relsurv
     'rdata':'https://www.rdocumentation.org/packages/relsurv/versions/2.2-6/topics/rdata',
     # RobustAFT
+    'Z243':'https://www.rdocumentation.org/packages/RobustAFT/versions/1.4-5/topics/Z243',
     # rpart
+    'stagec':'https://rdrr.io/cran/rpart/man/stagec.html',
     # smcure
+    'e1684':'https://www.rdocumentation.org/packages/smcure/versions/2.0/topics/e1684',
     # smoothHR
+    'whas500':'https://rdrr.io/cran/smoothHR/man/whas500.html',
     # spBayesSurv
+    'LeukSurv':'https://rdrr.io/cran/spBayesSurv/man/LeukSurv.html',
     # survival
     'cancer':'https://stat.ethz.ch/R-manual/R-devel/library/survival/html/lung.html', 
     'cgd':'https://stat.ethz.ch/R-manual/R-devel/library/survival/html/cgd.html',

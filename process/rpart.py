@@ -1,19 +1,20 @@
-# --- (xxxi) stagec --- #
-tmp.dat <- data.table(rpart::stagec)
-So.stagec <- with(tmp.dat, Surv(time=pgtime, event=pgstat))
-# Pad missing values with mode/median
-tmp.dat.na.mu <- apply(tmp.dat,2,function(cc) mean(is.na(cc)))
-cn.na <- names(which(tmp.dat.na.mu > 0))
-idx.na.class <- as.character(sapply(tmp.dat[,cn.na,with=F],class))
-cn.na.int <- cn.na[which(idx.na.class == 'integer')]
-cn.na.num <- cn.na[which(idx.na.class == 'numeric')]
-tmp.dat[, (cn.na.int) := lapply(.SD, function(cc) ifelse(is.na(cc),as.numeric(names(sort(table(cc),decreasing=T)[1])),cc)),
-        .SDcols=cn.na.int]
-tmp.dat[, (cn.na.num) := lapply(.SD, function(cc) ifelse(is.na(cc),median(cc,na.rm=T),cc)), .SDcols=cn.na.num]
-# Aggregate factor
-tmp.dat[, `:=` (grade = fct_recode(as.character(grade),'1+2'='1','1+2'='2','3+4'='3','3+4'='4'),
-                gleason = fct_recode(as.character(gleason),'3+4+5'='3','3+4+5'='4','3+4+5'='5','8+9+10'='8','8+9+10'='9','8+9+10'='10' ))]
-# model matrix
-X.stagec <- model.matrix(~pgtime+pgstat+age+factor(eet)+g2+factor(grade)+factor(gleason)+ploidy,data=tmp.dat)[,-1]
-id.stagec <- seq(nrow(X.stagec))
-cr.stagec <- NULL
+# Process rpart datasets
+import numpy as np
+from funs_class import baseline
+from funs_support import load_rda
+
+class package(baseline):
+    # --- (i) stagec --- #
+    def process_stagec(self, fn = 'stagec'):
+        df = load_rda(self.dir_process, '%s.rda' % fn)
+        df.replace(-2147483648,np.nan, inplace=True)
+        cn_fac = ['ploidy', 'eet', 'grade', 'gleason']
+        cn_num = ['age', 'g2', 'gleason']
+        # (iii) Feature transform
+        di_map = {'eet':{1:'No',2:'Yes'}}
+        self.df_map(df, di_map)
+        df[cn_fac] = self.fill_fac(df[cn_fac])
+        # (iv) Define num, fac, and Surv
+        df = self.Surv(df, cn_num, cn_fac, 'pgstat', 'pgtime')
+        df = self.add_suffix(df, cn_num, cn_fac)
+        return fn, df
