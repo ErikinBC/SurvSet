@@ -52,7 +52,10 @@ di_ref = {
     # RCASPAR
     'Bergamaschi':'https://rdrr.io/bioc/RCASPAR/man/Bergamaschi.html',
     # RcmdrPlugin
+    'Dialysis':'https://rdrr.io/cran/RcmdrPlugin.survival/man/Dialysis.html',
+    'Rossi':'https://rdrr.io/cran/RcmdrPlugin.survival/man/Rossi.html',
     # relsurv
+    'rdata':'https://www.rdocumentation.org/packages/relsurv/versions/2.2-6/topics/rdata',
     # RobustAFT
     # rpart
     # smcure
@@ -77,6 +80,7 @@ di_ref = {
 
 # Contains list of packages that have data
 di_pkgs = {'joineR':'https://cran.r-project.org/src/contrib/Archive/joineR/joineR_1.2.5.tar.gz', # 2020-02-08
+    'RcmdrPlugin.survival':'https://cran.r-project.org/src/contrib/RcmdrPlugin.survival_1.2-2.tar.gz', #2022-01-05
     'survival':'https://cran.r-project.org/src/contrib/Archive/survival/survival_3.1-11.tar.gz', #2020-04-10 
     'MASS':'https://cran.r-project.org/src/contrib/Archive/MASS/MASS_7.3-51.6.tar.gz', #2020-04-26 12:32
     'coxphf':'https://cran.r-project.org/src/contrib/Archive/coxphf/coxphf_1.13.tar.gz', #2018-03-03
