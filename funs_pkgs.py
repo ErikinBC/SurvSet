@@ -25,10 +25,16 @@ di_ref = {
     # frailtySurv
     'hdfail':'https://www.rdocumentation.org/packages/frailtySurv/versions/1.3.7/topics/hdfail',
     # hdnom
+    'smarto':'https://rdrr.io/cran/hdnom/man/smarto.html',
     # IPWsurvival
+    'DIVAT':'https://rdrr.io/cran/IPWsurvival/man/DIVAT.html',
     # JM
+    'aids':'https://www.rdocumentation.org/packages/JM/versions/1.5-1/topics/aids',
     # joineR
+    'heartvalve':'https://rdrr.io/cran/joineR/man/heart.valve.html',
+    'epileptic':'https://rdrr.io/cran/joineR/man/epileptic.html',
     # jointCox
+    'dataOvarian1':'https://rdrr.io/cran/joint.Cox/man/dataOvarian1.html',
     # MASS
     'Aids2':'https://stat.ethz.ch/R-manual/R-devel/library/MASS/html/Aids2.html',
     'Melanoma':'https://stat.ethz.ch/R-manual/R-devel/library/MASS/html/Melanoma.html',

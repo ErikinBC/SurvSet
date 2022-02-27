@@ -26,7 +26,6 @@ class package(baseline):
         return fn, df
 
 
-import os
 cn_surv = ['pid', 'time', 'event']
 cn_surv2 = ['pid', 'time', 'time2', 'event']
 dir_base = os.getcwd()

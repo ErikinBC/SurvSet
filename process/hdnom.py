@@ -1,10 +1,23 @@
-# --- (xl) smart --- #
-tmp.dat <- hdnom::smart
-colnames(tmp.dat) <- tolower(colnames(tmp.dat))
-X.smart <- model.matrix(~factor(sex)+factor(albumin)+factor(smoking)+factor(alcohol),data=tmp.dat)[,-1]
-cn.drop <- c('tevent','event','sex','albumin','smoking','alcohol')
-X.smart <- cbind(X.smart, as.matrix(tmp.dat[,setdiff(colnames(tmp.dat),cn.drop)]))
-So.smart <- with(tmp.dat, Surv(time=tevent, event=event))
-id.smart <- seq(nrow(X.smart))
-cr.smart <- NULL
+# Process hdnom datasets
+import numpy as np
+from funs_class import baseline
+from funs_support import load_rda
+
+class package(baseline):
+    # --- (i) smart --- #
+    def process_smarto(self, fn = 'smarto'):
+        df = load_rda(self.dir_process, '%s.rda' % fn)
+        df.columns = df.columns.str.lower()
+        cn_fac = ['sex', 'diabetes', 'cerebral', 'aaa', 'periph', 'stenosis', 'albumin', 'smoking', 'alcohol']
+        cn_num = ['age', 'systbp', 'diastbp', 'systh', 'diasth', 'length', 'weight', 'bmi', 'chol', 'hdl', 'ldl', 'trig', 'homoc', 'glut', 'creat', 'imt', 'packyrs']
+        # (ii) Subset
+        # (iii) Feature transform
+        df.replace(-2147483648,np.nan, inplace=True)
+        df[cn_fac] = self.fill_fac(df[cn_fac])
+        # (iv) Define num, fac, and Surv
+        df = self.Surv(df, cn_num, cn_fac, 'event', 'tevent')
+        df = self.add_suffix(df, cn_num, cn_fac)
+        return fn, df
+
+
 

@@ -10,7 +10,7 @@ from zipfile import ZipFile
 from urllib.request import urlretrieve
 
 # Remove annoying warning from load_rda
-lst_warnings = ['Unknown encoding. Assumed ASCII.', 'Missing constructor for R class "Date". The underlying R object is returned instead.']
+lst_warnings = ['Unknown encoding. Assumed ASCII.', 'Missing constructor for R class "Date". The underlying R object is returned instead.', 'Missing constructor for R class "impute". The underlying R object is returned instead.']
 lst_warnings += ['Tag not implemented for type RObjectType.%s and ignored' % k for k in ['STR', 'CHAR', 'REAL', 'VEC']]
 for warning in lst_warnings:
     warnings.filterwarnings('ignore', message=warning)
@@ -22,6 +22,9 @@ def makeifnot(path):
     else:
         print('Path already exists')
 
+# Get min and max of a Series
+def get_min_max(x):
+    return pd.DataFrame({'mi':x.min(), 'mx':x.max()}, index=[0])
 
 # stringr like
 def str_subset(x, pat, regex=True):
