@@ -7,7 +7,6 @@ class package(baseline):
     # --- (i) zinc --- #
     def process_zinc(self, fn = 'zinc'):
         df = load_rda(self.dir_process, '%s.RData' % fn)
-        df.replace(-2147483648,np.nan,inplace=True)
         cn_fac = ['sex', 'agestr','dysp1','dysp2', 'smoke', 'drink', 'basehist','sevdysp','moddysp','mildysp','zincset',]        
         cn_num = ['agepill','stdagepill']
         # (iii) Feature transform

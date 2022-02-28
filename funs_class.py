@@ -119,23 +119,28 @@ class baseline():
     @staticmethod
     def add_suffix(df, cn_num=None, cn_fac=None):
         assert isinstance(df, pd.DataFrame)
-        cn_df = df.columns
+        cn_df = pd.Series(df.columns)
         di_cn = {'num':cn_num, 'fac':cn_fac}
         holder = []
         for k, v in di_cn.items():
             if v is not None:
-                if isinstance(v, str):
-                    v = [v]
-                    di_cn[k] = v
-                cn_err = np.setdiff1d(v, cn_df)
-                assert len(cn_err)==0, 'Columns %s from %s were not found in columns' % (cn_err,k)
-                di_v = dict(zip(v,['%s_%s'%(k,cn) for cn in v]))
-                holder.append(df[list(di_v)].rename(columns=di_v))
+                n_v = len(v)
+                if n_v > 0:
+                    if isinstance(v, str):
+                        v = [v]
+                        di_cn[k] = v
+                    cn_v = pd.Series(v)
+                    cn_err = list(cn_v[~cn_v.isin(cn_df)])
+                    assert len(cn_err)==0, 'Columns %s from %s were not found in columns' % (cn_err,k)
+                    di_cn_v = dict(zip(cn_v, k+'_'+cn_v))
+                    holder.append(df[cn_v].rename(columns = di_cn_v))
         res = pd.concat(holder,axis=1)
-        cn_orig = sum([v for v in di_cn.values() if v is not None],[])
-        res = pd.concat(objs=[df.drop(columns=cn_orig), res], axis=1)
         # Replace any periods with underscores
         res.columns = res.columns.str.replace('\\.','_',regex=True)
+        cn_orig = sum([v for v in di_cn.values() if v is not None],[])
+        cn_keep = cn_df[~cn_df.isin(cn_orig)]
+        if len(cn_keep) > 0:
+            res = pd.concat(objs=[df[cn_keep], res], axis=1)
         return res
 
     # If a column can be converted to integer, do so (assignment happens inplace)

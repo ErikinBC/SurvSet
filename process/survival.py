@@ -130,10 +130,10 @@ class package(baseline):
         # (i) Create event, time, and id
         df['status'] = np.where(df['status'] == 2, 1, 0)  # Death only
         # (ii) Subset
-        df = df[df['trt'] != -2147483648]  # RCT only
+        df = df[df['trt'].notnull()]  # RCT only
         # (iii) Feature transform
         di_map = {'trt':{1:'D-penicillmain', 2:'Placebo'}, 'edema':{0:'none', 0.5:'successful', 1:'unsuccessful'}}
-        tmp = {k:{1:'Y',0:'N',-2147483648:'missing'} for k in cn_bin}
+        tmp = {k:{1:'Y',0:'N'} for k in cn_bin}
         di_map = {**di_map, **tmp}
         self.df_map(df, di_map)
         # (iv) Define num, fac, and Surv
@@ -183,7 +183,4 @@ class package(baseline):
         df = self.Surv(df, cn_num, cn_fac, 'rel', 'edrel', cn_pid='seqno')
         df = self.add_suffix(df, cn_num, cn_fac)
         return fn, df
-
-
-
 

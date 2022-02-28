@@ -1,4 +1,4 @@
-# Process X datasets
+# Process timereg datasets
 import os
 import numpy as np
 import pandas as pd
@@ -6,66 +6,73 @@ from funs_class import baseline
 from funs_support import load_rda
 
 class package(baseline):
-    # --- (i) X --- #
-    def process_X(self, fn = 'X'):
-        df = load_rda(self.dir_process, '%s.rda' % fn)
+    # --- (i) TRACE --- #
+    def process_TRACE(self, fn = 'TRACE'):
         path = os.path.join(self.dir_process, '%s.txt' % fn)
-        df = pd.read_csv(path, sep='\\s{1,}', engine='python')
-        cn_fac = []
-        cn_num = []
+        df = pd.read_csv(path,sep='\\s',engine='python')
+        df.columns = df.columns.str.replace('\\"','',regex=True)
+        cn_bin = ['chf','diabetes','vf']
+        cn_fac = ['sex'] + cn_bin
+        cn_num = ['wmi','age']
         # (i) Create event, time, and id
-        # (ii) Subset
+        df['status'] = np.where(df['status'] == 9, 1, 0)
         # (iii) Feature transform
-        di_map = {}
+        di_map = {'sex':{1:'F',0:'M'}}
+        di_map = {**di_map,**{k:{1:'present',0:'absent'} for k in cn_bin}}
         self.df_map(df, di_map)
-        df[cn_fac] = self.fill_fac(df[cn_fac])
-        self.float2int(df)  # Floats to integers
         # (iv) Define num, fac, and Surv
-        df = self.Surv(df, cn_num, cn_fac, cn_event='', cn_time='')
+        df = self.Surv(df, cn_num, cn_fac, 'status', 'time')
         df = self.add_suffix(df, cn_num, cn_fac)
         return fn, df
 
+    # --- (ii) csl --- #
+    def process_csl(self, fn = 'csl'):
+        path = os.path.join(self.dir_process, '%s.txt' % fn)
+        df = pd.read_csv(path,sep='\\s',engine='python')
+        df.columns = df.columns.str.replace('\\"','',regex=True)
+        cn_fac = ['sex','treat']
+        cn_num = ['age','prot','prot.prev','prot.base']
+        # (i) Create event, time, and id
+        df['visit'] = df.groupby('id').cumcount()+1
+        dat_visit = df.groupby('id')[['visit','dc','eventT']].max().reset_index()
+        df.drop(columns=['dc','eventT','time'],inplace=True)
+        df = dat_visit.merge(df,'right',['id','visit'])
+        df['dc'] = df['dc'].fillna(0).astype(int)
+        df = df.assign(rt=lambda x: np.where(x['eventT'].notnull(),x['eventT'],x['rt']))
+        # (iii) Feature transform
+        di_map = {'sex':{0:'F',1:'M'},'treat':{0:'prednisone',1:'placebo'}}
+        self.df_map(df, di_map)
+        # (iv) Define num, fac, and Surv
+        df = self.Surv(df, cn_num, cn_fac, 'dc', 'lt', 'rt', 'id')
+        df = self.add_suffix(df, cn_num, cn_fac)
+        return fn, df
 
-cn_surv = ['pid', 'time', 'event']
-cn_surv2 = ['pid', 'time', 'time2', 'event']
-dir_base = os.getcwd()
-dir_output = os.path.join(dir_base, 'output')
-dir_pkgs = os.path.join(dir_base, 'pkgs')
-self = package(pkg='', dir_pkgs=dir_pkgs, dir_output=dir_output, cn_surv=cn_surv, cn_surv2=cn_surv2)
-# self.run_all()
+    # --- (iii) diabetes --- #
+    def process_diabetes(self, fn = 'diabetes'):
+        path = os.path.join(self.dir_process, '%s.txt' % fn)
+        df = pd.read_csv(path,sep='\\s',engine='python')
+        df.columns = df.columns.str.replace('\\"','',regex=True)
+        cn_num = ['agedx']
+        cn_fac = ['trteye', 'treat', 'adult']
+        # df.reset_index(drop=True, inplace=True)
+        # (iii) Feature transform
+        di_map = {'trteye':{1:'left',2:'right'},'treat':{1:'treated',0:'untreated'},'adult':{1:'<20',2:'>20'}}
+        self.df_map(df, di_map)
+        # (iv) Define num, fac, and Surv
+        df = self.Surv(df, cn_num, cn_fac, 'status', 'time', cn_pid='id')
+        df = self.add_suffix(df, cn_num, cn_fac)
+        return fn, df
 
-# --- (xvii) TRACE --- # 
-utils::data(TRACE)
-tmp.dat <- TRACE
-tmp.dat <- tmp.dat[order(as.numeric(as.factor(tmp.dat$id))),]
-So.trace <- with(tmp.dat, Surv(time=time, event=(status %in% 7:9)))
-X.trace <- model.matrix(~wmi+chf+age+sex+diabetes+vf,data=tmp.dat)[,-1]
-id.trace <- as.numeric(as.factor(tmp.dat$id))
-cr.trace <- data.table(time=tmp.dat$time,
-                       event=as.numeric(as.character(fct_recode(as.character(tmp.dat$status),'1'='9','2'='8','2'='7'))) )
-
-# --- (xviii) csl --- #
-utils::data(csl)
-tmp.dat <- data.table(csl)
-tmp.dat[, idx := seq(.N), by=id]
-tmp.dat[, rt2 := ifelse(idx == max(idx), eventT, rt) , by=id]
-tmp.dat[, event := ifelse(idx == max(idx),dc,as.integer(0)),by=id]
-# Survival
-So.csl <- with(tmp.dat, Surv(time=lt, time2=rt2, event=event))
-X.csl <- model.matrix(~prot+sex+age+treat+prot.base+prot.prev,data=tmp.dat)[,-1]
-id.csl <- as.numeric(as.factor(tmp.dat$id))
-cr.csl <- NULL
-
-# --- (xix) bmt --- #
-utils::data(bmt,package='timereg')
-So.bmt <- with(bmt, Surv(time=time, event=(cause != 0)))
-X.bmt <- model.matrix(~platelet+age+tcell,data=bmt)[,-1]
-id.bmt <- seq(nrow(X.bmt))
-cr.bmt <- data.table(time=bmt$time, event=bmt$cause)
-
-# --- (xx) diabetes --- #
-utils::data(diabetes,package = 'timereg')
-So.diabetes <- with(diabetes, Surv(time,status))
-X.diabetes <- model.matrix(~factor(trteye)+treat+factor(adult)+agedx,data=diabetes)[,-1]
-id.diabetes <- as.numeric(as.factor(diabetes$id))
-cr.diabetes <- NULL
+    # # --- (iv) bmt (simulated data) --- #
+    # def process_bmt(self, fn = 'bmt'):
+    #     path = os.path.join(self.dir_process, '%s.txt' % fn)
+    #     df = pd.read_csv(path,sep='\\s',engine='python')
+    #     df.columns = df.columns.str.replace('\\"','',regex=True)
+    #     cn_fac = ['platelet', 'tcell']
+    #     cn_num = ['age']
+    #     # (i) Create event, time, and id
+    #     df['event'] = np.where(df['cause'] == 0, 0, 1)  # Death or relapse
+    #     # (iv) Define num, fac, and Surv
+    #     df = self.Surv(df, cn_num, cn_fac, 'event', 'time')
+    #     df = self.add_suffix(df, cn_num, cn_fac)
+    #     return fn, df

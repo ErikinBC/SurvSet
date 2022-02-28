@@ -28,10 +28,13 @@ makeifnot(dir_pkgs)
 # https://vincentarelbundock.github.io/Rdatasets/datasets.html
 
 # (i) Find which have not been downloaded
-all_pkgs = list(di_pkgs)
-existing_pkgs = os.listdir(dir_pkgs)
+all_pkgs = pd.Series(list(di_pkgs))
+existing_pkgs = pd.Series(os.listdir(dir_pkgs))
+# Some packages may have the period removed
+p1 = all_pkgs.str.replace('\\.','',regex=True)
+p2 = existing_pkgs.str.replace('\\.','',regex=True)
 n_existing = len(existing_pkgs)
-needed_pkgs = np.setdiff1d(all_pkgs, existing_pkgs)
+needed_pkgs = list(all_pkgs.loc[p1[~p1.isin(p2)].index])
 n_pkgs = len(needed_pkgs)
 print('%i packages need to be installed (%i fold in folder)' % (n_pkgs,n_existing))
 
@@ -53,9 +56,14 @@ for j, pkg in enumerate(needed_pkgs):
         for fn in os.listdir(dir_fn):
             path = os.path.join(dir_fn, fn)
             unzip(path)
-        assert os.path.exists(fold_data), 'untar did not unzip in the expected plac!!'
+        assert os.path.exists(fold_data), 'untar did not unzip in the expected place!!'
         # Remove the tar file
         os.remove(dest_pkg)
+        # Remove period from package name if it exists
+        fold_src = os.path.join(dir_pkgs, pkg)
+        fold_dest = os.path.join(dir_pkgs, pkg.replace('.',''))
+        if fold_src != fold_dest:
+            os.rename(fold_src, fold_dest)
 
 
 print("~~~ End of 1_download_pkgs.py ~~~")

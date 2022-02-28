@@ -7,7 +7,6 @@ class package(baseline):
     # --- (i) stagec --- #
     def process_stagec(self, fn = 'stagec'):
         df = load_rda(self.dir_process, '%s.rda' % fn)
-        df.replace(-2147483648,np.nan, inplace=True)
         cn_fac = ['ploidy', 'eet', 'grade', 'gleason']
         cn_num = ['age', 'g2', 'gleason']
         # (iii) Feature transform

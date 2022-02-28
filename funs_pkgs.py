@@ -78,9 +78,17 @@ di_ref = {
     'retinopathy':'https://stat.ethz.ch/R-manual/R-devel/library/survival/html/retinopathy.html',
     'veteran':'https://stat.ethz.ch/R-manual/R-devel/library/survival/html/veteran.html',
     'nwtco':'https://stat.ethz.ch/R-manual/R-devel/library/survival/html/nwtco.html',
-    # survJamda
+    # survJamda.data
+    'gse4335':'https://www.rdocumentation.org/packages/survJamda.data/versions/1.0.2/topics/gse4335',
+    'gse3143':'https://www.rdocumentation.org/packages/survJamda.data/versions/1.0.2/topics/gse3143',
+    'gse1992':'https://www.rdocumentation.org/packages/survJamda.data/versions/1.0.2/topics/gse1992',
     # TH
+    'wpbc':'https://rdrr.io/cran/TH.data/man/wpbc.html',
     # timereg
+    'TRACE':'https://rdrr.io/cran/timereg/man/TRACE.html',
+    'csl':'https://rdrr.io/cran/timereg/man/csl.html',
+    # 'bmt':'https://rdrr.io/cran/timereg/man/bmt.html',
+    'diabetes':'https://rdrr.io/cran/timereg/man/diabetes.html',
     }
 
 # Contains list of packages that have data

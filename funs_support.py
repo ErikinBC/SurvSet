@@ -5,6 +5,7 @@ import rdata
 import shutil
 import tarfile
 import warnings
+import numpy as np
 import pandas as pd
 from zipfile import ZipFile
 from urllib.request import urlretrieve
@@ -43,6 +44,9 @@ def load_rda(fold, fn):
     converted = rdata.conversion.convert(parsed)
     fn_rda = '.'.join(fn.split('.')[:-1])
     df = converted[fn_rda]
+    # This is how missing values are encoded
+    if isinstance(df, pd.DataFrame):
+        df.replace(-2147483648, np.nan, inplace=True)
     return df
 
 # Download zipped folder
