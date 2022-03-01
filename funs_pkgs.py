@@ -26,8 +26,8 @@ di_pkgs = {
     'iBST':'https://cran.r-project.org/src/contrib/iBST_1.0.tar.gz', 
     # 2014-03-28
     'invGauss':'https://cran.r-project.org/src/contrib/invGauss_1.1.tar.gz', 
-    # 2017-03-24 
-    'IPWsurvival':'https://cran.r-project.org/src/contrib/Archive/IPWsurvival/IPWsurvival_0.5.tar.gz', 
+    # # 2017-03-24 
+    # 'IPWsurvival':'https://cran.r-project.org/src/contrib/Archive/IPWsurvival/IPWsurvival_0.5.tar.gz', 
     # 2017-06-27 
     'JM':'https://cran.r-project.org/src/contrib/Archive/JM/JM_1.4-7.tar.gz', 
     # 2020-02-08
@@ -54,6 +54,8 @@ di_pkgs = {
     'RcmdrPlugin.survival':'https://cran.r-project.org/src/contrib/RcmdrPlugin.survival_1.2-2.tar.gz',
     # 2018-11-30 
     'relsurv':'https://cran.r-project.org/src/contrib/Archive/relsurv/relsurv_2.2-3.tar.gz', 
+    # 2020-11-18
+    'RISCA':'https://cran.r-project.org/src/contrib/RISCA_0.9.tar.gz',
     # 2019-04-12
     'rpart':'https://cran.r-project.org/src/contrib/Archive/rpart/rpart_4.1-15.tar.gz', 
     # 2019-07-18 
@@ -63,7 +65,7 @@ di_pkgs = {
     # 2021-10-07
     'smoothHR':'https://cran.r-project.org/src/contrib/smoothHR_1.0.3.tar.gz', 
     # 2018-05-13
-    'sodavis':'https://cran.r-project.org/src/contrib/sodavis_1.2.tar.gz'
+    'sodavis':'https://cran.r-project.org/src/contrib/sodavis_1.2.tar.gz',
     # 2020-02-23 
     'spBayesSurv':'https://cran.r-project.org/src/contrib/Archive/spBayesSurv/spBayesSurv_1.1.4.tar.gz', 
     # 2020-04-10 

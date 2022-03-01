@@ -21,18 +21,20 @@ makeifnot(dir_output)
 cn_surv = ['pid', 'event', 'time']
 cn_surv2 = ['pid', 'event', 'time', 'time2']
 
-# (iii) Find all processing files and run
-fn_process = pd.Series(os.listdir('process'))
-fn_process = str_subset(fn_process, '\\.py$')
-n_process = len(fn_process)
+# (iii) Find all R processing files and run
+fn_Rprocess = pd.Series(os.listdir('Rprocess'))
+fn_Rprocess = str_subset(fn_Rprocess, '\\.py$')
+n_process = len(fn_Rprocess)
 
-for j, fn_py in enumerate(fn_process):
+for j, fn_py in enumerate(fn_Rprocess):
     fn = fn_py.replace('.py','')
-    print('--- Processing package %s (%i of %i) ---' % (fn, j+1, n_process))
-    path_fn = 'process.%s' % fn
+    print('--- Processing R package %s (%i of %i) ---' % (fn, j+1, n_process))
+    path_fn = 'Rprocess.%s' % fn
     processor = getattr(locate(path_fn), 'package')
     # Set attributes
     processor = processor(pkg=fn, dir_pkgs=dir_pkgs, dir_output=dir_output, cn_surv=cn_surv, cn_surv2=cn_surv2)
     processor.run_all()
+
+# (iv) Find all custom processing fules and run
 
 print('~~~ End of 3_process.py ~~~')

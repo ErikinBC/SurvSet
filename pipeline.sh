@@ -14,10 +14,10 @@ python 1_download_pkgs.py --fold_pkgs $fold_pkgs --mirror $mirror
 # echo "--- 2_download_custom.py ---"
 # python 2_download_custom.py --fold_custom $fold_custom
 
-# # (iii) Loop through package-specific scripts
-# fold_output='output'
-# echo "--- 3_process.py ---"
-# python 3_process.py --fold_output $fold_output
+# (iii) Loop through package-specific scripts
+fold_output='output'
+echo "--- 3_process.py ---"
+python 3_process.py --fold_output $fold_output
 
 
 

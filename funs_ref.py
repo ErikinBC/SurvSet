@@ -30,8 +30,8 @@ di_ref = {
     'burn':'https://rdrr.io/cran/iBST/man/burn.html',
     # invGauss
     'd.oropha.rec':'https://rdrr.io/cran/invGauss/man/d.oropha.rec.html',
-    # IPWsurvival
-    'DIVAT':'https://rdrr.io/cran/IPWsurvival/man/DIVAT.html',
+    # # IPWsurvival
+    # 'DIVAT':'https://rdrr.io/cran/IPWsurvival/man/DIVAT.html',
     # JM
     'aids':'https://www.rdocumentation.org/packages/JM/versions/1.5-1/topics/aids',
     # joineR
@@ -61,8 +61,17 @@ di_ref = {
     # RcmdrPlugin
     'Dialysis':'https://rdrr.io/cran/RcmdrPlugin.survival/man/Dialysis.html',
     'Rossi':'https://rdrr.io/cran/RcmdrPlugin.survival/man/Rossi.html',
+    # Reddy
+    'NSBCD':'https://dmkd.cs.vt.edu/projects/survival/data',
+    'AML_Bull':'https://dmkd.cs.vt.edu/projects/survival/data',
+    'DBCD':'https://dmkd.cs.vt.edu/projects/survival/data',   
+    'DLBCL':'https://dmkd.cs.vt.edu/projects/survival/data',
     # relsurv
     'rdata':'https://www.rdocumentation.org/packages/relsurv/versions/2.2-6/topics/rdata',
+    # RISCA
+    'DIVAT1':'https://rdrr.io/cran/RISCA/man/dataDIVAT1.html',
+    'DIVAT2':'https://rdrr.io/cran/RISCA/man/dataDIVAT2.html',
+    'DIVAT3':'https://rdrr.io/cran/RISCA/man/dataDIVAT3.html',
     # RobustAFT
     'Z243':'https://www.rdocumentation.org/packages/RobustAFT/versions/1.4-5/topics/Z243',
     # rpart

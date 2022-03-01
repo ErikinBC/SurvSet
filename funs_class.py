@@ -12,8 +12,13 @@ cn_surv:            Column names of core survival columns
 cn_surv2:           Includes second time element of cn_surv
 """
 class baseline():
-    def __init__(self, pkg, dir_pkgs, dir_output, cn_surv, cn_surv2):
-        self.dir_process = os.path.join(dir_pkgs, pkg, 'data')
+    def __init__(self, dir_output, cn_surv, cn_surv2, pkg=None, dir_pkgs=None, dir_custom=None):
+        assert (pkg == None) == (dir_pkgs == None), 'if pkg is (not) None, dir_pkgs must be (not) None'
+        assert (dir_pkgs == None) != (dir_custom == None), 'Either dir_pkgs OR dir_custom must be None'
+        if dir_pkgs != None:
+            self.dir_process = os.path.join(dir_pkgs, pkg, 'data')
+        else:
+            self.dir_process = os.path.join(dir_custom)
         self.dir_output = dir_output
         self.cn_surv = cn_surv
         self.cn_surv2 = cn_surv2

@@ -262,107 +262,11 @@ So.vlbw <- Surv(time=tmp.dat$time, event=rep(1,nrow(tmp.dat)))
 id.vlbw <- seq(nrow(X.vlbw))
 cr.vlbw <- NULL
 
-# ##############################################################
-# ####### ------- Chandan Reddy DATASETS ----------- ###########
-
-# dir.reddy <- file.path(dir.dataset , 'chandan_reddy')
-
-# # --- (i) worcester_heart_attack --- #
-# tmp.dat <- fread(file.path(dir.reddy, 'worcester_heart_attack.csv'))
-# So.worcester <- with(tmp.dat, Surv(time=days_in_hospital, event=(died_in_hospital == 'yes')))
-# X.worcester <- model.matrix(~age+sex+peak_cardiac+cardiac_shock+first_mycardia,data=tmp.dat)[,-1]
-# id.worcester <- tmp.dat$id
-# cr.worcester <- NULL
-
-# # --- (ii) vdv --- #
-# tmp.dat <- fread(file.path(dir.reddy, 'vdv.csv'))
-# So.vdv <- with(tmp.dat, Surv(time=Time, event=(Censoring==1)))
-# X.vdv <- as.matrix(tmp.dat[,-(1:2)])
-# id.vdv <- seq(nrow(X.vdv))
-# cr.vdv <- NULL
-
-# # --- (iii) AML_Bull.csv --- #
-# tmp.dat <- fread(file.path(dir.reddy, 'AML_Bull.csv'))
-# So.AML <- with(tmp.dat, Surv(time=A1, event=A2))
-# X.AML <- as.matrix(tmp.dat[,-(1:3)])
-# id.AML <- seq(nrow(X.AML))
-# cr.AML <- NULL
-
-# # --- (iv) DBCD.csv --- #
-# tmp.dat <- fread(file.path(dir.reddy, 'DBCD.csv'))
-# So.DBCD <- with(tmp.dat, Surv(time=A1, event=A2))
-# X.DBCD <- as.matrix(tmp.dat[,-(1:3)])
-# id.DBCD <- seq(nrow(X.DBCD))
-# cr.DBCD <- NULL
-
-# # --- (v) DLBCL --- #
-# tmp.dat <- fread(file.path(dir.reddy, 'DLBCL.csv'))
-# So.DLBCL <- with(tmp.dat, Surv(time=time, event=status))
-# X.DLBCL <- as.matrix(tmp.dat[,-(1:3)])
-# id.DLBCL <- seq(nrow(X.DLBCL))
-# cr.DLBCL <- NULL
-
-# # --- (vi) NSBCD.csv --- #
-# tmp.dat <- fread(file.path(dir.reddy, 'NSBCD.csv'))
-# So.NSBCD <- with(tmp.dat, Surv(time=A1, event=A2))
-# X.NSBCD <- as.matrix(tmp.dat[,-(1:3)])
-# id.NSBCD <- seq(nrow(X.NSBCD))
-# cr.NSBCD <- NULL
-
-# ######################################################
-# ####### ------- CUSTOMER CHURN ----------- ###########
-
-# dir.churn <- file.path(dir.dataset,'churn')
-
-# # --- (i) Telco Churn --- #
-# tmp.dat <- fread(file.path(dir.churn, 'WA_Fn-UseC_-Telco-Customer-Churn.csv'))[as.numeric(order(customerID))]
-# # Remove anyone who had tenure==0
-# tmp.dat <- tmp.dat[tenure > 0]
-# # design + Surv
-# So.telco <- with(tmp.dat, Surv(time=tenure, event=(Churn == 'Yes')))
-# X.telco <- model.matrix(~.,
-#         data=tmp.dat[,which(!colnames(tmp.dat) %in% c('customerID','TotalCharges','Churn','tenure')),with=F])[,-1]
-# id.telco <- as.numeric(as.factor(tmp.dat$customerID))
-# cr.telco <- NULL
-# # Remove perfectly correlated features
-# cc.telco <- abs(cor(X.telco))
-# X.telco <- X.telco[,!colnames(X.telco) %in% names(unlist(sapply(1:ncol(cc.telco), function(rr) which(cc.telco[rr,][-rr]==1))[c(5,9)]))]
-
-# ################################################################
-# ####### ------- OPENML SURVIVAL DATASETS ----------- ###########
-
-# dir.openml <- file.path(dir.dataset, 'openML')
-
-
-# # https://www.openml.org/d/213
-# # --- (ii)  Pharynx --- #
-# tmp.dat <- fread(file.path(dir.openml,'dataset_2199_pharynx.csv'))
-# # Drop unknown Grade or Conditon
-# tmp.dat <- tmp.dat[Grade != '?' & Condition != '?']
-# # Aggregated Condition
-# tmp.dat[, Condition:= fct_recode(Condition,'01'='0','01'='2','234'='2','234'='3','234'='4') ]
-
-# So.pharynx <- with(tmp.dat, Surv(time = class, event = Status))
-# X.pharynx <- model.matrix(~factor(Inst) + factor(sex) + factor(Treatment) + factor(Grade) + Age + 
-#                factor(Condition) + factor(Site) + factor(N), data=tmp.dat)[,-1]
-# id.pharynx <- seq(nrow(X.pharynx))
-# cr.pharynx <- NULL
 
 ######################################################
 ####### ------- OTHER DATASETS ----------- ###########
 
 dir.other <- file.path(dir.dataset, 'other')
-
-# --- (i) AIDS Clinical Trials Group Study 320 Data (actg320.dat) --- #
-tmp.dat <- fread(file.path(dir.other, 'actg320.dat'), header=F)
-colnames(tmp.dat) <- c('id','time','censor','time_d','censor_d','tx','txgrp','strat2','sex','raceth','ivdrug',
-                      'hemophil','karnof','cd4','priorzdv','age')
-So.aids320 <- with(tmp.dat, Surv(time=time, event=censor))
-tmp.dat[, `:=` (raceth = fct_recode(as.character(raceth),'4+5'='4','4+5'='5'),
-               ivdrug = fct_recode(as.character(ivdrug),'2+3'='2','2+3'='3'))]
-X.aids320 <- model.matrix(~tx+strat2+factor(sex)+factor(raceth)+factor(ivdrug)+hemophil+karnof+cd4+priorzdv+age,data=tmp.dat)[,-1]
-id.aids320 <- as.numeric(as.factor(tmp.dat$id))
-cr.aids320 <- NULL
 
 # --- (ii) micro.censure [from plsRcox] --- #
 
