@@ -26,6 +26,9 @@ di_ref = {
     'hdfail':'https://www.rdocumentation.org/packages/frailtySurv/versions/1.3.7/topics/hdfail',
     # hdnom
     'smarto':'https://rdrr.io/cran/hdnom/man/smarto.html',
+    # Hosmer
+    'uis':'https://github.com/graemeleehickey/hosmer-lemeshow/blob/master/edition2/uis.txt',
+    'FRTCS':'https://github.com/graemeleehickey/hosmer-lemeshow/blob/master/edition2/FRTCS%20.txt',
     # iBST
     'burn':'https://rdrr.io/cran/iBST/man/burn.html',
     # invGauss

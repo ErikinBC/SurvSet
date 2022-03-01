@@ -8,6 +8,7 @@ fold_custom = args.fold_custom
 
 # Load modules
 import os
+from urllib.request import urlretrieve
 from funs_support import makeifnot, download_csv, download_zip
 
 # Folder to write into
@@ -16,7 +17,15 @@ dir_custom = os.path.join(dir_base, fold_custom)
 makeifnot(dir_custom)
 
 
-# --- (1)  --- #
+# --- (1) Hosmer datasets --- #
+fn_hosmer = ['FRTCS', 'uis']
+dir_hosmer = os.path.join(dir_custom, 'hosmer')
+makeifnot(dir_hosmer)
+base_url = 'https://raw.githubusercontent.com/graemeleehickey/hosmer-lemeshow/master/edition2/%s.dat'
+for fn in fn_hosmer:
+    url = base_url % fn
+    path = os.path.join(dir_hosmer,fn+'.csv')
+    urlretrieve(url, path)
 
 
 # --- (2) Lung Cancer --- #
@@ -27,7 +36,4 @@ download_csv(url, dir_custom)
 # --- (3) Reddy Datasets --- #
 url = 'https://dmkd.cs.vt.edu/projects/survival/data/Gene_expression_data.zip'
 download_zip(url, dir_custom)
-
-
-# Note sure where the Chandan Reddy datasets are coming from: https://dmkd.cs.vt.edu/TUTORIAL/Survival/index.htm
 
