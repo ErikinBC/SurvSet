@@ -53,6 +53,8 @@ di_ref = {
     'GBSG2':'https://rdrr.io/cran/pec/man/GBSG2.html',
     # penalized
     'nki70':'https://rdrr.io/cran/penalized/man/nki70.html',
+    # plsRcox
+    'micro.censure':'https://rdrr.io/cran/plsRcox/man/micro.censure.html',
     # randomForestSRC
     'follic':'https://rdrr.io/cran/randomForestSRC/man/follic.html',
     'vdv':'https://rdrr.io/cran/randomForestSRC/man/vdv.html',

@@ -1,8 +1,3 @@
-# Survival datasets from textbook
-# https://github.com/graemeleehickey/hosmer-lemeshow/tree/master/edition2
-
-# Script to process datasets not found in R packages
-
 
 # # https://www.openml.org/d/1245
 # # --- (i) lungcancer - Shedden [phpl04K8a] --- #
