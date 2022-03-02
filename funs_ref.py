@@ -58,6 +58,8 @@ di_ref = {
     'nki70':'https://rdrr.io/cran/penalized/man/nki70.html',
     # plsRcox
     'micro.censure':'https://rdrr.io/cran/plsRcox/man/micro.censure.html',
+    # princton
+    'divorce':'https://data.princeton.edu/wws509/datasets/#divorce',
     # randomForestSRC
     'follic':'https://rdrr.io/cran/randomForestSRC/man/follic.html',
     'vdv':'https://rdrr.io/cran/randomForestSRC/man/vdv.html',
