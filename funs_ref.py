@@ -13,7 +13,7 @@ di_ref = {
     # coin
     'glioma':'https://rdrr.io/cran/coin/man/glioma.html',
     # CoxRidge
-    'glioma':'https://rdrr.io/cran/CoxRidge/man/ova.html',
+    'ova':'https://rdrr.io/cran/CoxRidge/man/ova.html',
     # coxphf
     'breast':'https://rdrr.io/cran/coxphf/man/breast.html',
     # Ecdat
@@ -50,6 +50,8 @@ di_ref = {
     'grace':'https://search.r-project.org/CRAN/refmans/mlr3proba/html/grace.html',
     # NestedCohort
     'zinc':'https://rdrr.io/cran/NestedCohort/man/zinc.html',
+    # openml
+    'phpl04K8a':'https://www.openml.org/d/1245',
     # pec
     'Pbc3':'https://rdrr.io/cran/pec/man/Pbc3.html',
     'cost':'https://rdrr.io/cran/pec/man/cost.html',
@@ -76,9 +78,9 @@ di_ref = {
     # relsurv
     'rdata':'https://www.rdocumentation.org/packages/relsurv/versions/2.2-6/topics/rdata',
     # RISCA
-    'DIVAT1':'https://rdrr.io/cran/RISCA/man/dataDIVAT1.html',
-    'DIVAT2':'https://rdrr.io/cran/RISCA/man/dataDIVAT2.html',
-    'DIVAT3':'https://rdrr.io/cran/RISCA/man/dataDIVAT3.html',
+    'dataDIVAT1':'https://rdrr.io/cran/RISCA/man/dataDIVAT1.html',
+    'dataDIVAT2':'https://rdrr.io/cran/RISCA/man/dataDIVAT2.html',
+    'dataDIVAT3':'https://rdrr.io/cran/RISCA/man/dataDIVAT3.html',
     # RobustAFT
     'Z243':'https://www.rdocumentation.org/packages/RobustAFT/versions/1.4-5/topics/Z243',
     # rpart

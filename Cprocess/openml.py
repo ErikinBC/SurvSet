@@ -1,6 +1,5 @@
 # Process openml datasets
 import os
-import numpy as np
 import pandas as pd
 from funs_class import baseline
 from funs_support import str_subset

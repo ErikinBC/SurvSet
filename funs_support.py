@@ -36,6 +36,15 @@ def str_subset(x, pat, regex=True):
     return z
 
 
+# stringr like
+def str_detect(x, pat, regex=True):
+    if not isinstance(x, pd.Series):
+        x = pd.Series(x)
+    z = x.str.contains(pat, regex=regex)
+    z.reset_index(drop=True, inplace=True)
+    return z
+
+
 # Load an RDA file
 def load_rda(fold, fn):
     path = os.path.join(fold, fn)

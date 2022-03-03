@@ -14,7 +14,7 @@ class package(baseline):
         # (iii) Feature transform
         di_map = {'sex':{1:'M',2:'F', 'treatm':{1:'standard',2:'test'}}}
         self.df_map(df, di_map)
-        df[cn_fac] = self.fill_fac(df[cn_fac])[cn_fac]
+        df[cn_fac] = self.fill_fac(df[cn_fac])
         self.float2int(df)  # Floats to integers
         # (iv) Define num, fac, and Surv
         df = self.Surv(df, cn_num, cn_fac, 'status', 'time')

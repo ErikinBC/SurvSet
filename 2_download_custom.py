@@ -58,3 +58,5 @@ for fn in fn_hb:
         download_csv(url, dir_vanderbilt)
     else:
         print('Unsure')
+
+print('~~~ End of 2_download_custom.py ~~~')

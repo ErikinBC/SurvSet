@@ -19,4 +19,5 @@ class package(baseline):
         df = df.assign(week = lambda x: x['admitdate'].dt.isocalendar()['week'])
         # (iv) Define num, fac, and Surv
         df = self.Surv(df, cn_num, cn_fac, 'fstat', 'lenfol')
+        df = self.add_suffix(df, cn_num, cn_fac)
         return fn, df
