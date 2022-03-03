@@ -12,7 +12,7 @@ class package(baseline):
         cn_num = ['age', 'systbp', 'diastbp', 'systh', 'diasth', 'length', 'weight', 'bmi', 'chol', 'hdl', 'ldl', 'trig', 'homoc', 'glut', 'creat', 'imt', 'packyrs']
         # (ii) Subset
         # (iii) Feature transform
-        df[cn_fac] = self.fill_fac(df[cn_fac])
+        df[cn_fac] = self.fill_fac(df[cn_fac])[cn_fac]
         # (iv) Define num, fac, and Surv
         df = self.Surv(df, cn_num, cn_fac, 'event', 'tevent')
         df = self.add_suffix(df, cn_num, cn_fac)

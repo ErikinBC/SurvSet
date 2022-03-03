@@ -101,6 +101,7 @@ class baseline():
         cn_dtypes = df.apply(lambda x: x.dropna().unique().dtype,0)
         cn_float = cn_df[np.where(cn_dtypes == float)[0]]
         cn_cat = cn_df[np.where(cn_dtypes == 'category')[0]]
+        cn_rest = list(np.setdiff1d(cn_df, cn_float.append(cn_cat)))
         # Check to see whether non-missing factors can be made to integers
         if len(cn_float) > 0:
             z = df[cn_float].apply(self.num2int)

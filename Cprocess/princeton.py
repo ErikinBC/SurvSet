@@ -1,4 +1,4 @@
-# Process divorce dataset
+# Process princeton datasets
 import os
 import numpy as np
 import pandas as pd

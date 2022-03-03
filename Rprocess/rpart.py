@@ -12,7 +12,7 @@ class package(baseline):
         # (iii) Feature transform
         di_map = {'eet':{1:'No',2:'Yes'}}
         self.df_map(df, di_map)
-        df[cn_fac] = self.fill_fac(df[cn_fac])
+        df[cn_fac] = self.fill_fac(df[cn_fac])[cn_fac]
         # (iv) Define num, fac, and Surv
         df = self.Surv(df, cn_num, cn_fac, 'pgstat', 'pgtime')
         df = self.add_suffix(df, cn_num, cn_fac)

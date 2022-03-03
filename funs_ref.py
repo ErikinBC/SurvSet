@@ -110,7 +110,13 @@ di_ref = {
     # timereg
     'TRACE':'https://rdrr.io/cran/timereg/man/TRACE.html',
     'csl':'https://rdrr.io/cran/timereg/man/csl.html',
-    # 'bmt':'https://rdrr.io/cran/timereg/man/bmt.html',
     'diabetes':'https://rdrr.io/cran/timereg/man/diabetes.html',
+    # vanderbilt
+    'support2':'https://hbiostat.org/data/repo/Csupport2.html',
+    'prostate':'https://hbiostat.org/data/repo/Cprostate.html',
+    'Framingham':'https://math.montana.edu/shancock/courses/stat439/R/Week4-GLMIntro-Framingham.html',
+    'rhc':'https://hbiostat.org/data/repo/rhc.html',
+    'acath':'https://hbiostat.org/data/repo/Cacath.html',
+    'vlbw':'https://hbiostat.org/data/repo/Cvlbw.html',
     }
 

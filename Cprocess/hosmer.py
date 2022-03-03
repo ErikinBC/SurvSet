@@ -18,7 +18,7 @@ class package(baseline):
         # (iii) Feature transform
         di_map = {'heroic':{'1':'Heroin&Cocaine','2':'Heroin','3':'Cocaine','4':'Neither',np.nan:np.nan}, 'ivhx':{'1':'Never','2':'Previous','3':'Recent', np.nan:np.nan}, 'race':{'0':'white','1':'other',np.nan:np.nan}, 'treat':{0:'short', 1:'long'}, 'site':{0:'A',1:'B'}}
         self.df_map(df, di_map)
-        df[cn_fac] = self.fill_fac(df[cn_fac])
+        df[cn_fac] = self.fill_fac(df[cn_fac])[cn_fac]
         # (iv) Define num, fac, and Surv
         df = self.Surv(df, cn_num, cn_fac, 'censor', 'time')
         df = self.add_suffix(df, cn_num, cn_fac)
