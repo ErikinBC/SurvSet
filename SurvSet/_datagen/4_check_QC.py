@@ -69,7 +69,7 @@ for i, fn in enumerate(fn_output):
     holder.append(res)
 # Merge and save
 df_ds = pd.concat(holder)
-df_ds.to_csv(os.path.join(dir_figures, 'ds_ds.csv'), index=False)
+df_ds.to_csv(os.path.join(dir_figures, 'df_ds.csv'), index=False)
 
 
 ###############################

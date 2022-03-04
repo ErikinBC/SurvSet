@@ -6,3 +6,6 @@ output/
 __pycache__/
 fold/
 .DS_store
+*egg-info*
+build/
+dist/
