@@ -5,7 +5,7 @@ from funs_support import load_rda
 
 class package(baseline):
     # --- (i) wpbc --- #
-    def process_X(self, fn = 'wpbc'):
+    def process_wpbc(self, fn = 'wpbc'):
         df = load_rda(self.dir_process, '%s.rda' % fn)
         cn_fac = []
         cn_num = list(df.columns[2:])

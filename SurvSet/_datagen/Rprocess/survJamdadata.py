@@ -19,7 +19,7 @@ class package(baseline):
         expr = expr.rename_axis('pid').reset_index()
         df = df.merge(expr)
         # (iii) Feature transform
-        df[cn_fac] = self.fill_fac(df[cn_fac])
+        
         # (iv) Define num, fac, and Surv
         df = self.Surv(df, cn_num, cn_fac, 'event', 'time', cn_pid='pid')
         df = self.add_suffix(df, cn_num, cn_fac)
@@ -40,7 +40,7 @@ class package(baseline):
         expr = expr.rename_axis('pid').reset_index()
         df = df.merge(expr)
         # (iii) Feature transform
-        df[cn_fac] = self.fill_fac(df[cn_fac])
+        
         # (iv) Define num, fac, and Surv
         df = self.Surv(df, cn_num, cn_fac, 'rfs_event', 'rfs_months', cn_pid='pid')
         df = self.add_suffix(df, cn_num, cn_fac)

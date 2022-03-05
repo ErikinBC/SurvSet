@@ -16,6 +16,7 @@ class SurvLoader():
     def __init__(self):
         # Link to dataset source
         dir_SurvSet = Path(__file__).parent
+        fold_datagen = os.path.join(dir_SurvSet, '_datagen')
         self.fold_ds = os.path.join(fold_datagen, 'output')
         lst_csv = pd.Series(os.listdir(self.fold_ds))
         fn_csv = lst_csv.str.replace('\\.csv$','',regex=True)

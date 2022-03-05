@@ -17,7 +17,7 @@ class package(baseline):
         # (iii) Feature transform
         di_map = {k:{1:'Y',0:'N'} for k in ['diabetes', 'dementia']}
         self.df_map(df, di_map)
-        df[cn_fac] = self.fill_fac(df[cn_fac])
+        
         # (iv) Define num, fac, and Surv
         df = self.Surv(df, cn_num, cn_fac, 'death', 'd.time')
         df = self.add_suffix(df, cn_num, cn_fac)
@@ -35,7 +35,7 @@ class package(baseline):
         # (iii) Feature transform
         di_map = {k:{1:'Y',0:'N'} for k in ['hx', 'bm']}
         self.df_map(df, di_map)
-        df[cn_fac] = self.fill_fac(df[cn_fac])
+        
         # (iv) Define num, fac, and Surv
         df = self.Surv(df, cn_num, cn_fac, 'status', 'dtime')
         df = self.add_suffix(df, cn_num, cn_fac)
@@ -73,7 +73,6 @@ class package(baseline):
         # (iii) Feature transform
         di_map = {k:{1:'Y',0:'N'} for k in cn_hx}
         self.df_map(df, di_map)
-        df[cn_fac] = self.fill_fac(df[cn_fac]).values
         # (iv) Define num, fac, and Surv
         df = self.Surv(df, cn_num, cn_fac, 'death', 'time')
         df = self.add_suffix(df, cn_num, cn_fac)
@@ -105,7 +104,7 @@ class package(baseline):
         # (ii) Subset
         df = df.query('hospstay > 0').reset_index(drop=True)
         # (iii) Feature transform
-        df[cn_fac] = self.fill_fac(df[cn_fac])
+        
         # (iv) Define num, fac, and Surv
         df = self.Surv(df, cn_num, cn_fac, 'dead', 'hospstay')
         df = self.add_suffix(df, cn_num, cn_fac)

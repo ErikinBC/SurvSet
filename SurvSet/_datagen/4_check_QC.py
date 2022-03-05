@@ -16,9 +16,9 @@ import pandas as pd
 import plotnine as pn
 from mizani.formatters import custom_format
 from funs_ref import di_ref
-from funs_support import str_detect, str_subset, makeifnot
+from funs_support import str_detect, str_subset, makeifnot, find_dir_base
 
-dir_base = os.getcwd()
+dir_base = find_dir_base()
 dir_output = os.path.join(dir_base, fold_output)
 dir_figures = os.path.join(dir_base, fold_figures)
 makeifnot(dir_figures)

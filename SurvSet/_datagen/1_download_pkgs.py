@@ -5,19 +5,17 @@ parser.add_argument('--mirror', help='Mirror address for the CRAN packages', def
 args = parser.parse_args()
 fold_pkgs = args.fold_pkgs
 mirror = args.mirror
-
 # fold_pkgs='pkgs';mirror='https://utstat.toronto.edu/cran'
 
 # Load other modules
 import os
-import numpy as np
 import pandas as pd
 from urllib.request import urlretrieve
 from funs_pkgs import di_pkgs
-from funs_support import makeifnot, unzip, untar
+from funs_support import makeifnot, unzip, untar, find_dir_base
 
 # Set up folders
-dir_base = os.getcwd()
+dir_base = find_dir_base()
 dir_pkgs = os.path.join(dir_base, fold_pkgs)
 makeifnot(dir_pkgs)
 

@@ -12,9 +12,9 @@ fold_custom = args.fold_custom
 import os
 import pandas as pd
 from pydoc import locate
-from funs_support import makeifnot, str_subset
+from funs_support import makeifnot, str_subset, find_dir_base
 
-dir_base = os.getcwd()
+dir_base = find_dir_base()
 dir_pkgs = os.path.join(dir_base, 'pkgs')
 dir_custom = os.path.join(dir_base, fold_custom)
 dir_output = os.path.join(dir_base, fold_output)
@@ -25,7 +25,8 @@ cn_surv = ['pid', 'event', 'time']
 cn_surv2 = ['pid', 'event', 'time', 'time2']
 
 # (iii) Find all R processing files and run
-fn_Rprocess = pd.Series(os.listdir('Rprocess'))
+dir_Rprocess = os.path.join(dir_base, 'Rprocess')
+fn_Rprocess = pd.Series(os.listdir(dir_Rprocess))
 fn_Rprocess = str_subset(fn_Rprocess, '\\.py$')
 n_process = len(fn_Rprocess)
 
@@ -39,18 +40,18 @@ for j, fn_py in enumerate(fn_Rprocess):
     processor.run_all()
 
 # (iv) Find all custom processing scripts
-fn_Cprocess = pd.Series(os.listdir('Cprocess'))
+dir_Cprocess = os.path.join(dir_base, 'Cprocess')
+fn_Cprocess = pd.Series(os.listdir(dir_Cprocess))
 fn_Cprocess = str_subset(fn_Cprocess, '\\.py$')
 n_process = len(fn_Cprocess)
 
 for j, fn_py in enumerate(fn_Cprocess):
     fn = fn_py.replace('.py','')
-    print('--- Processing custom package %s (%i of %i) ---' % (fn, j+1, n_process))
+    print('--- Processing R package %s (%i of %i) ---' % (fn, j+1, n_process))
     path_fn = 'Cprocess.%s' % fn
     processor = getattr(locate(path_fn), 'package')
     # Set attributes
     processor = processor(dir_custom=dir_custom, dir_output=dir_output, cn_surv=cn_surv, cn_surv2=cn_surv2)
     processor.run_all()
-
 
 print('~~~ End of 3_process.py ~~~')

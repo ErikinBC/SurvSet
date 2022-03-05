@@ -3,16 +3,15 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--fold_custom', help='Name of the folder where the custom datasets will be downloaded to (default="pkgs"', default='custom')
 args = parser.parse_args()
 fold_custom = args.fold_custom
-
 # fold_custom='custom'
 
 # Load modules
 import os
 from urllib.request import urlretrieve
-from funs_support import makeifnot, download_csv, download_zip
+from funs_support import makeifnot, download_csv, download_zip, find_dir_base
 
 # Folder to write into
-dir_base = os.getcwd()
+dir_base = find_dir_base()
 dir_custom = os.path.join(dir_base, fold_custom)
 makeifnot(dir_custom)
 

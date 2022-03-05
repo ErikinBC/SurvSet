@@ -7,6 +7,7 @@ import tarfile
 import warnings
 import numpy as np
 import pandas as pd
+from pathlib import Path
 from zipfile import ZipFile
 from urllib.request import urlretrieve
 
@@ -16,12 +17,20 @@ lst_warnings += ['Tag not implemented for type RObjectType.%s and ignored' % k f
 for warning in lst_warnings:
     warnings.filterwarnings('ignore', message=warning)
 
+# Find where the funs_support folder lives
+def find_dir_base():
+    dir_base = Path(__file__).parent
+    return dir_base
+
 # Make a folder if it does not exist
 def makeifnot(path):
     if not os.path.exists(path):
         os.makedirs(path, exist_ok=True)
     else:
         print('Path already exists')
+
+def test_fun(path):
+    print(path)
 
 # Get min and max of a Series
 def get_min_max(x):

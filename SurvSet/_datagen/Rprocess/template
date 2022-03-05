@@ -18,13 +18,14 @@ class package(baseline):
         # (iii) Feature transform
         di_map = {}
         self.df_map(df, di_map)
-        df[cn_fac] = self.fill_fac(df[cn_fac])
+        
         self.float2int(df)  # Floats to integers
         # (iv) Define num, fac, and Surv
         df = self.Surv(df, cn_num, cn_fac, cn_event='', cn_time='')
         df = self.add_suffix(df, cn_num, cn_fac)
         return fn, df
 
+import os
 cn_surv = ['pid', 'time', 'event']
 cn_surv2 = ['pid', 'time', 'time2', 'event']
 dir_base = os.getcwd()
@@ -33,12 +34,13 @@ dir_custom = os.path.join(dir_base, 'custom')
 self = package(dir_custom=dir_custom, dir_output=dir_output, cn_surv=cn_surv, cn_surv2=cn_surv2)
 # self.run_all()
 
-
+import os
 cn_surv = ['pid', 'time', 'event']
 cn_surv2 = ['pid', 'time', 'time2', 'event']
 dir_base = os.getcwd()
-dir_output = os.path.join(dir_base, 'output')
-dir_pkgs = os.path.join(dir_base, 'pkgs')
+dir_datagen = os.path.join(dir_base, 'SurvSet', '_datagen')
+dir_output = os.path.join(dir_datagen, 'output')
+dir_pkgs = os.path.join(dir_datagen, 'pkgs')
 self = package(pkg='', dir_pkgs=dir_pkgs, dir_output=dir_output, cn_surv=cn_surv, cn_surv2=cn_surv2)
 # self.run_all()
 

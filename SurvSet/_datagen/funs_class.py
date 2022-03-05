@@ -43,6 +43,7 @@ class baseline():
     cn_num:             List of columns that are numeric
     cn_fac:             List of columns that are factors
     """
+    # cn_event,cn_time,cn_time2,cn_pid='pgstat','pgtime',None,None
     def Surv(self, df, cn_num, cn_fac, cn_event, cn_time, cn_time2=None, cn_pid=None):
         assert isinstance(df, pd.DataFrame)
         cn_df = list(df.columns)
@@ -120,8 +121,7 @@ class baseline():
         return z
 
     # Add suffix to numerical and factor columns
-    @staticmethod
-    def add_suffix(df, cn_num=None, cn_fac=None):
+    def add_suffix(self, df, cn_num=None, cn_fac=None):
         assert isinstance(df, pd.DataFrame)
         cn_df = pd.Series(df.columns)
         di_cn = {'num':cn_num, 'fac':cn_fac}
@@ -139,6 +139,10 @@ class baseline():
                     di_cn_v = dict(zip(cn_v, k+'_'+cn_v))
                     holder.append(df[cn_v].rename(columns = di_cn_v))
         res = pd.concat(holder,axis=1)
+        # Fill missing values for category
+        if len(cn_fac) > 0:
+            cn_fac_new = 'fac_'+pd.Series(cn_fac)
+            res[cn_fac_new] = self.fill_fac(res[cn_fac_new]).values
         # Replace any periods with underscores
         res.columns = res.columns.str.replace('\\.','_',regex=True)
         cn_orig = sum([v for v in di_cn.values() if v is not None],[])

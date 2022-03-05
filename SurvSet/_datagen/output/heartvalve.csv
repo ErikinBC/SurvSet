@@ -93,7 +93,7 @@ pid,event,time,time2,num_age,num_grad,num_lvmi,num_ef,num_bsa,num_size,num_creat
 21,0,0.0,0.0547945,71.60822,,290.01,31,1.71,27,192,M,III/IV,moderate,elective,treated,stenosis,Stentless valve,Y,Y,Y,N,N
 21,0,0.0547945,0.1808219,71.60822,55.0,335.72,41,1.71,27,192,M,III/IV,moderate,elective,treated,stenosis,Stentless valve,Y,Y,Y,N,N
 21,0,0.1808219,4.821917808219,71.60822,10.0,196.01,42,1.71,27,192,M,III/IV,moderate,elective,treated,stenosis,Stentless valve,Y,Y,Y,N,N
-22,0,0.0,0.021917808219,65.28767,,113.68,63,1.62,22,264,F,I/II,moderate,,treated,mixed,Homograft,Y,Y,N,N,N
+22,0,0.0,0.021917808219,65.28767,,113.68,63,1.62,22,264,F,I/II,moderate,missing,treated,mixed,Homograft,Y,Y,N,N,N
 23,0,0.0,1.153425,47.67945,13.0,125.43,67,1.76,24,67,M,III/IV,moderate,elective,absent,regurgitation,Homograft,Y,N,N,N,N
 23,0,1.153425,2.169863,47.67945,8.0,108.65,71,1.76,24,67,M,III/IV,moderate,elective,absent,regurgitation,Homograft,Y,N,N,N,N
 23,0,2.169863,3.167123,47.67945,10.0,120.56,72,1.76,24,67,M,III/IV,moderate,elective,absent,regurgitation,Homograft,Y,N,N,N,N
@@ -167,8 +167,8 @@ pid,event,time,time2,num_age,num_grad,num_lvmi,num_ef,num_bsa,num_size,num_creat
 39,0,0.0,0.1205479,71.63836,55.0,236.3,35,1.89,23,73,M,III/IV,poor,elective,absent,stenosis,Stentless valve,Y,N,Y,N,N
 39,0,0.1205479,0.7424657,71.63836,4.0,197.17,72,1.89,23,73,M,III/IV,poor,elective,absent,stenosis,Stentless valve,Y,N,Y,N,N
 39,0,0.7424657,4.134246575342,71.63836,,115.79,73,1.89,23,73,M,III/IV,poor,elective,absent,stenosis,Stentless valve,Y,N,Y,N,N
-40,0,0.0,0.2575342,69.05206,,222.2,49,2.03,23,121,M,I/II,good,,treated,regurgitation,Homograft,Y,Y,N,N,N
-40,0,0.2575342,2.271233,69.05206,,219.12,54,2.03,23,121,M,I/II,good,,treated,regurgitation,Homograft,Y,Y,N,N,N
+40,0,0.0,0.2575342,69.05206,,222.2,49,2.03,23,121,M,I/II,good,missing,treated,regurgitation,Homograft,Y,Y,N,N,N
+40,0,0.2575342,2.271233,69.05206,,219.12,54,2.03,23,121,M,I/II,good,missing,treated,regurgitation,Homograft,Y,Y,N,N,N
 41,0,0.0,0.0191781,67.42192,10.0,292.18,54,1.7,29,125,M,III/IV,moderate,elective,absent,mixed,Stentless valve,Y,N,N,N,Y
 41,0,0.0191781,1.50137,67.42192,10.0,289.54,67,1.7,29,125,M,III/IV,moderate,elective,absent,mixed,Stentless valve,Y,N,N,N,Y
 41,0,1.50137,2.731507,67.42192,15.0,270.31,74,1.7,29,125,M,III/IV,moderate,elective,absent,mixed,Stentless valve,Y,N,N,N,Y
@@ -400,11 +400,11 @@ pid,event,time,time2,num_age,num_grad,num_lvmi,num_ef,num_bsa,num_size,num_creat
 85,0,0.0,0.4164384,79.4,,170.79,76,1.92,27,135,M,I/II,good,elective,absent,stenosis,Stentless valve,Y,N,Y,N,N
 85,1,0.4164384,2.441095890411,79.4,,107.01,58,1.92,27,135,M,I/II,good,elective,absent,stenosis,Stentless valve,Y,N,Y,N,N
 86,0,0.0,6.191780821918,60.8,,137.76,82,2.36,27,88,M,III/IV,good,elective,absent,stenosis,Stentless valve,Y,N,N,N,N
-87,0,0.0,0.0164384,76.74246,20.0,163.05,69,1.5,25,128,F,III/IV,good,,absent,mixed,Stentless valve,Y,N,Y,N,Y
-87,0,0.0164384,0.769863,76.74246,3.0,88.96,69,1.5,25,128,F,III/IV,good,,absent,mixed,Stentless valve,Y,N,Y,N,Y
-87,0,0.769863,4.049315,76.74246,9.0,140.4,71,1.5,25,128,F,III/IV,good,,absent,mixed,Stentless valve,Y,N,Y,N,Y
-87,0,4.049315,5.084931,76.74246,10.0,131.98,72,1.5,25,128,F,III/IV,good,,absent,mixed,Stentless valve,Y,N,Y,N,Y
-87,1,5.084931,6.854794520548,76.74246,14.0,127.08,67,1.5,25,128,F,III/IV,good,,absent,mixed,Stentless valve,Y,N,Y,N,Y
+87,0,0.0,0.0164384,76.74246,20.0,163.05,69,1.5,25,128,F,III/IV,good,missing,absent,mixed,Stentless valve,Y,N,Y,N,Y
+87,0,0.0164384,0.769863,76.74246,3.0,88.96,69,1.5,25,128,F,III/IV,good,missing,absent,mixed,Stentless valve,Y,N,Y,N,Y
+87,0,0.769863,4.049315,76.74246,9.0,140.4,71,1.5,25,128,F,III/IV,good,missing,absent,mixed,Stentless valve,Y,N,Y,N,Y
+87,0,4.049315,5.084931,76.74246,10.0,131.98,72,1.5,25,128,F,III/IV,good,missing,absent,mixed,Stentless valve,Y,N,Y,N,Y
+87,1,5.084931,6.854794520548,76.74246,14.0,127.08,67,1.5,25,128,F,III/IV,good,missing,absent,mixed,Stentless valve,Y,N,Y,N,Y
 88,1,0.0,1.279452054795,66.5726,,135.84,74,1.99,24,98,M,I/II,moderate,elective,absent,stenosis,Homograft,Y,N,N,N,Y
 89,0,0.0,1.657534,75.07397,12.0,98.57,89,1.45,25,97,F,I/II,good,elective,absent,stenosis,Stentless valve,Y,N,N,N,N
 89,0,1.657534,2.693151,75.07397,6.0,116.83,64,1.45,25,97,F,I/II,good,elective,absent,stenosis,Stentless valve,Y,N,N,N,N
@@ -421,13 +421,13 @@ pid,event,time,time2,num_age,num_grad,num_lvmi,num_ef,num_bsa,num_size,num_creat
 90,0,4.621918,6.10411,56.8,29.0,230.55,92,1.94,25,78,M,I/II,good,elective,absent,stenosis,Homograft,Y,N,N,N,N
 90,0,6.10411,7.019178,56.8,,213.19,84,1.94,25,78,M,I/II,good,elective,absent,stenosis,Homograft,Y,N,N,N,N
 90,0,7.019178,8.613698630137,56.8,,242.52,82,1.94,25,78,M,I/II,good,elective,absent,stenosis,Homograft,Y,N,N,N,N
-91,0,0.0,0.0273973,74.40822,10.0,179.64,42,1.76,23,75,M,III/IV,moderate,,absent,stenosis,Stentless valve,Y,N,N,N,Y
-91,0,0.0273973,1.106849,74.40822,,173.28,75,1.76,23,75,M,III/IV,moderate,,absent,stenosis,Stentless valve,Y,N,N,N,Y
-91,0,1.106849,2.106849,74.40822,16.0,225.03,59,1.76,23,75,M,III/IV,moderate,,absent,stenosis,Stentless valve,Y,N,N,N,Y
-91,0,2.106849,3.536986,74.40822,19.0,266.09,62,1.76,23,75,M,III/IV,moderate,,absent,stenosis,Stentless valve,Y,N,N,N,Y
-91,0,3.536986,5.117808,74.40822,25.0,209.75,78,1.76,23,75,M,III/IV,moderate,,absent,stenosis,Stentless valve,Y,N,N,N,Y
-91,0,5.117808,6.115068,74.40822,25.0,281.21,61,1.76,23,75,M,III/IV,moderate,,absent,stenosis,Stentless valve,Y,N,N,N,Y
-91,1,6.115068,7.542465753425,74.40822,,281.21,94,1.76,23,75,M,III/IV,moderate,,absent,stenosis,Stentless valve,Y,N,N,N,Y
+91,0,0.0,0.0273973,74.40822,10.0,179.64,42,1.76,23,75,M,III/IV,moderate,missing,absent,stenosis,Stentless valve,Y,N,N,N,Y
+91,0,0.0273973,1.106849,74.40822,,173.28,75,1.76,23,75,M,III/IV,moderate,missing,absent,stenosis,Stentless valve,Y,N,N,N,Y
+91,0,1.106849,2.106849,74.40822,16.0,225.03,59,1.76,23,75,M,III/IV,moderate,missing,absent,stenosis,Stentless valve,Y,N,N,N,Y
+91,0,2.106849,3.536986,74.40822,19.0,266.09,62,1.76,23,75,M,III/IV,moderate,missing,absent,stenosis,Stentless valve,Y,N,N,N,Y
+91,0,3.536986,5.117808,74.40822,25.0,209.75,78,1.76,23,75,M,III/IV,moderate,missing,absent,stenosis,Stentless valve,Y,N,N,N,Y
+91,0,5.117808,6.115068,74.40822,25.0,281.21,61,1.76,23,75,M,III/IV,moderate,missing,absent,stenosis,Stentless valve,Y,N,N,N,Y
+91,1,6.115068,7.542465753425,74.40822,,281.21,94,1.76,23,75,M,III/IV,moderate,missing,absent,stenosis,Stentless valve,Y,N,N,N,Y
 92,1,0.0,0.517808219178,76.26575,,155.65,58,1.68,21,128,F,III/IV,good,elective,absent,stenosis,Homograft,Y,N,Y,N,N
 93,0,0.0,0.0219178,76.09315,13.0,160.42,88,1.63,27,89,F,III/IV,moderate,elective,absent,regurgitation,Stentless valve,Y,N,Y,N,Y
 93,0,0.0219178,1.213699,76.09315,20.0,160.42,91,1.63,27,89,F,III/IV,moderate,elective,absent,regurgitation,Stentless valve,Y,N,Y,N,Y
@@ -440,10 +440,10 @@ pid,event,time,time2,num_age,num_grad,num_lvmi,num_ef,num_bsa,num_size,num_creat
 94,0,4.882192,6.279452,74.0411,,117.48,91,1.74,23,96,F,III/IV,good,elective,absent,stenosis,Homograft,Y,N,N,N,N
 94,0,6.279452,7.282192,74.0411,,91.01,79,1.74,23,96,F,III/IV,good,elective,absent,stenosis,Homograft,Y,N,N,N,N
 94,0,7.282192,8.282192,74.0411,,125.65,78,1.74,23,96,F,III/IV,good,elective,absent,stenosis,Homograft,Y,N,N,N,N
-95,0,0.0,0.0164384,79.98356,25.0,231.52,67,1.8,27,91,M,III/IV,good,,absent,mixed,Stentless valve,Y,N,N,N,N
-95,0,0.0164384,0.720548,79.98356,,349.21,62,1.8,27,91,M,III/IV,good,,absent,mixed,Stentless valve,Y,N,N,N,N
-95,0,0.720548,1.967123,79.98356,9.0,179.96,63,1.8,27,91,M,III/IV,good,,absent,mixed,Stentless valve,Y,N,N,N,N
-95,1,1.967123,4.89863,79.98356,,238.77,49,1.8,27,91,M,III/IV,good,,absent,mixed,Stentless valve,Y,N,N,N,N
+95,0,0.0,0.0164384,79.98356,25.0,231.52,67,1.8,27,91,M,III/IV,good,missing,absent,mixed,Stentless valve,Y,N,N,N,N
+95,0,0.0164384,0.720548,79.98356,,349.21,62,1.8,27,91,M,III/IV,good,missing,absent,mixed,Stentless valve,Y,N,N,N,N
+95,0,0.720548,1.967123,79.98356,9.0,179.96,63,1.8,27,91,M,III/IV,good,missing,absent,mixed,Stentless valve,Y,N,N,N,N
+95,1,1.967123,4.89863,79.98356,,238.77,49,1.8,27,91,M,III/IV,good,missing,absent,mixed,Stentless valve,Y,N,N,N,N
 96,0,0.0,1.095890410959,84.8274,,132.19,72,1.67,25,84,M,III/IV,good,elective,absent,stenosis,Stentless valve,Y,N,N,N,N
 97,0,0.0,7.383561643836,76.4,21.0,268.62,83,1.8,23,88,M,I/II,good,elective,absent,mixed,Homograft,Y,N,N,N,Y
 98,0,0.0,2.049315,60.77808,16.0,58.08,70,1.75,23,69,F,I/II,good,elective,absent,stenosis,Stentless valve,Y,N,N,N,N
@@ -475,9 +475,9 @@ pid,event,time,time2,num_age,num_grad,num_lvmi,num_ef,num_bsa,num_size,num_creat
 105,0,0.0,0.060274,69.67123,85.0,137.22,70,1.7,25,85,F,III/IV,poor,elective,absent,regurgitation,Stentless valve,Y,N,Y,N,Y
 105,0,0.060274,0.3260274,69.67123,25.0,139.03,67,1.7,25,85,F,III/IV,poor,elective,absent,regurgitation,Stentless valve,Y,N,Y,N,Y
 105,1,0.3260274,6.904109589041,69.67123,16.0,99.87,79,1.7,25,85,F,III/IV,poor,elective,absent,regurgitation,Stentless valve,Y,N,Y,N,Y
-106,0,0.0,1.010959,89.12054,13.0,120.39,56,2.21,27,96,M,III/IV,good,,absent,stenosis,Stentless valve,Y,N,Y,Y,N
-106,0,1.010959,2.183562,89.12054,15.0,105.26,39,2.21,27,96,M,III/IV,good,,absent,stenosis,Stentless valve,Y,N,Y,Y,N
-106,1,2.183562,4.402739726027,89.12054,13.0,99.02,88,2.21,27,96,M,III/IV,good,,absent,stenosis,Stentless valve,Y,N,Y,Y,N
+106,0,0.0,1.010959,89.12054,13.0,120.39,56,2.21,27,96,M,III/IV,good,missing,absent,stenosis,Stentless valve,Y,N,Y,Y,N
+106,0,1.010959,2.183562,89.12054,15.0,105.26,39,2.21,27,96,M,III/IV,good,missing,absent,stenosis,Stentless valve,Y,N,Y,Y,N
+106,1,2.183562,4.402739726027,89.12054,13.0,99.02,88,2.21,27,96,M,III/IV,good,missing,absent,stenosis,Stentless valve,Y,N,Y,Y,N
 107,0,0.0,0.5589041,70.56712,,114.58,89,1.86,27,81,M,III/IV,good,elective,absent,stenosis,Stentless valve,Y,N,Y,N,N
 107,0,0.5589041,1.556164,70.56712,10.0,102.72,91,1.86,27,81,M,III/IV,good,elective,absent,stenosis,Stentless valve,Y,N,Y,N,N
 107,0,1.556164,2.394521,70.56712,10.0,91.82,82,1.86,27,81,M,III/IV,good,elective,absent,stenosis,Stentless valve,Y,N,Y,N,N
@@ -485,8 +485,8 @@ pid,event,time,time2,num_age,num_grad,num_lvmi,num_ef,num_bsa,num_size,num_creat
 107,0,3.391781,4.586301,70.56712,,99.02,88,1.86,27,81,M,III/IV,good,elective,absent,stenosis,Stentless valve,Y,N,Y,N,N
 107,0,4.586301,5.583561,70.56712,7.0,102.72,79,1.86,27,81,M,III/IV,good,elective,absent,stenosis,Stentless valve,Y,N,Y,N,N
 107,0,5.583561,6.641095890411,70.56712,35.0,84.87,84,1.86,27,81,M,III/IV,good,elective,absent,stenosis,Stentless valve,Y,N,Y,N,N
-108,0,0.0,0.3150685,74.09315,,271.47,78,1.93,27,151,M,III/IV,moderate,,absent,mixed,Homograft,Y,N,Y,N,Y
-108,0,0.3150685,0.9671233,74.09315,30.0,313.45,65,1.93,27,151,M,III/IV,moderate,,absent,mixed,Homograft,Y,N,Y,N,Y
+108,0,0.0,0.3150685,74.09315,,271.47,78,1.93,27,151,M,III/IV,moderate,missing,absent,mixed,Homograft,Y,N,Y,N,Y
+108,0,0.3150685,0.9671233,74.09315,30.0,313.45,65,1.93,27,151,M,III/IV,moderate,missing,absent,mixed,Homograft,Y,N,Y,N,Y
 109,0,0.0,0.8465753,72.67397,10.0,125.57,73,1.58,21,120,M,III/IV,poor,elective,absent,regurgitation,Homograft,Y,N,N,N,Y
 109,0,0.8465753,1.843836,72.67397,,130.02,74,1.58,21,120,M,III/IV,poor,elective,absent,regurgitation,Homograft,Y,N,N,N,Y
 109,0,1.843836,2.821918,72.67397,9.0,248.45,80,1.58,21,120,M,III/IV,poor,elective,absent,regurgitation,Homograft,Y,N,N,N,Y
@@ -574,8 +574,8 @@ pid,event,time,time2,num_age,num_grad,num_lvmi,num_ef,num_bsa,num_size,num_creat
 133,0,1.147945,2.145205,77.87397,16.0,134.8,79,1.35,25,59,F,III/IV,moderate,elective,absent,stenosis,Stentless valve,Y,N,N,N,N
 133,0,2.145205,5.87397260274,77.87397,,163.02,74,1.35,25,59,F,III/IV,moderate,elective,absent,stenosis,Stentless valve,Y,N,N,N,N
 134,1,0.0,4.879452054795,72.56712,40.0,154.92,18,1.72,29,189,M,III/IV,moderate,elective,absent,stenosis,Stentless valve,Y,N,Y,N,N
-135,0,0.0,0.9561644,67.16712,34.0,117.09,54,1.92,23,112,F,III/IV,poor,,treated,stenosis,Stentless valve,Y,N,Y,N,N
-135,0,0.9561644,1.972603,67.16712,35.0,207.51,73,1.92,23,112,F,III/IV,poor,,treated,stenosis,Stentless valve,Y,N,Y,N,N
+135,0,0.0,0.9561644,67.16712,34.0,117.09,54,1.92,23,112,F,III/IV,poor,missing,treated,stenosis,Stentless valve,Y,N,Y,N,N
+135,0,0.9561644,1.972603,67.16712,35.0,207.51,73,1.92,23,112,F,III/IV,poor,missing,treated,stenosis,Stentless valve,Y,N,Y,N,N
 136,0,0.0,0.2630137,82.1452,67.0,162.11,76,1.9,23,80,F,III/IV,moderate,elective,absent,stenosis,Stentless valve,Y,N,N,N,N
 136,1,0.2630137,4.479452054795,82.1452,,142.62,64,1.9,23,80,F,III/IV,moderate,elective,absent,stenosis,Stentless valve,Y,N,N,N,N
 137,0,0.0,0.3452055,57.51507,,132.12,47,1.98,25,109,M,I/II,poor,elective,absent,stenosis,Stentless valve,Y,N,N,N,Y
@@ -676,8 +676,8 @@ pid,event,time,time2,num_age,num_grad,num_lvmi,num_ef,num_bsa,num_size,num_creat
 161,0,0.2,3.243835616438,80.12054,19.0,171.93,59,1.73,25,107,M,III/IV,good,elective,treated,mixed,Stentless valve,Y,N,Y,N,N
 162,0,0.0,0.0082192,79.40274,30.0,112.33,64,1.62,25,107,M,I/II,good,elective,absent,stenosis,Stentless valve,Y,N,Y,N,N
 162,1,0.0082192,2.224657534247,79.40274,15.0,108.85,66,1.62,25,107,M,I/II,good,elective,absent,stenosis,Stentless valve,Y,N,Y,N,N
-163,0,0.0,0.3123288,86.7,85.0,358.62,64,1.3,27,169,F,III/IV,moderate,,absent,stenosis,Stentless valve,Y,N,N,N,N
-163,1,0.3123288,0.3506849,86.7,15.0,187.75,59,1.3,27,169,F,III/IV,moderate,,absent,stenosis,Stentless valve,Y,N,N,N,N
+163,0,0.0,0.3123288,86.7,85.0,358.62,64,1.3,27,169,F,III/IV,moderate,missing,absent,stenosis,Stentless valve,Y,N,N,N,N
+163,1,0.3123288,0.3506849,86.7,15.0,187.75,59,1.3,27,169,F,III/IV,moderate,missing,absent,stenosis,Stentless valve,Y,N,N,N,N
 164,0,0.0,0.0246575,45.68219,65.0,210.76,61,1.9,23,77,M,I/II,good,elective,absent,mixed,Homograft,Y,N,N,N,N
 164,0,0.0246575,1.158904,45.68219,8.0,145.24,84,1.9,23,77,M,I/II,good,elective,absent,mixed,Homograft,Y,N,N,N,N
 164,0,1.158904,2.156164,45.68219,6.0,121.43,66,1.9,23,77,M,I/II,good,elective,absent,mixed,Homograft,Y,N,N,N,N
@@ -722,8 +722,8 @@ pid,event,time,time2,num_age,num_grad,num_lvmi,num_ef,num_bsa,num_size,num_creat
 180,0,0.0,4.008219178082,65.90959,,147.71,86,1.89,25,74,M,III/IV,poor,elective,absent,stenosis,Stentless valve,Y,N,N,N,N
 181,0,0.0,3.350684931507,56.5,,132.44,55,2.39,25,90,M,III/IV,good,elective,absent,mixed,Homograft,Y,N,N,N,N
 182,1,0.0,3.931506849315,62.3863,8.0,182.02,74,2.0,21,81,M,III/IV,moderate,elective,absent,stenosis,Homograft,Y,N,Y,N,Y
-183,0,0.0,0.0794521,86.80548,100.0,232.86,86,1.67,25,67,F,III/IV,good,,absent,stenosis,Stentless valve,Y,N,N,N,N
-183,1,0.0794521,2.613698630137,86.80548,,141.84,70,1.67,25,67,F,III/IV,good,,absent,stenosis,Stentless valve,Y,N,N,N,N
+183,0,0.0,0.0794521,86.80548,100.0,232.86,86,1.67,25,67,F,III/IV,good,missing,absent,stenosis,Stentless valve,Y,N,N,N,N
+183,1,0.0794521,2.613698630137,86.80548,,141.84,70,1.67,25,67,F,III/IV,good,missing,absent,stenosis,Stentless valve,Y,N,N,N,N
 184,0,0.0,0.2273973,70.35069,59.0,138.84,43,2.48,29,70,M,III/IV,moderate,elective,absent,stenosis,Stentless valve,Y,N,N,N,Y
 184,0,0.2273973,1.539726,70.35069,19.0,119.45,67,2.48,29,70,M,III/IV,moderate,elective,absent,stenosis,Stentless valve,Y,N,N,N,Y
 184,0,1.539726,2.556164,70.35069,9.0,80.0,89,2.48,29,70,M,III/IV,moderate,elective,absent,stenosis,Stentless valve,Y,N,N,N,Y
@@ -764,8 +764,8 @@ pid,event,time,time2,num_age,num_grad,num_lvmi,num_ef,num_bsa,num_size,num_creat
 198,0,0.0,0.0575342,39.36438,8.0,161.92,70,2.07,23,66,M,III/IV,good,urgent,absent,regurgitation,Homograft,Y,N,N,N,N
 198,0,0.0575342,1.715068,39.36438,10.0,134.87,81,2.07,23,66,M,III/IV,good,urgent,absent,regurgitation,Homograft,Y,N,N,N,N
 198,0,1.715068,3.142465753425,39.36438,5.0,134.87,77,2.07,23,66,M,III/IV,good,urgent,absent,regurgitation,Homograft,Y,N,N,N,N
-199,0,0.0,0.0273973,77.64931,18.0,196.94,58,1.81,27,86,F,III/IV,moderate,,absent,stenosis,Stentless valve,Y,N,N,N,N
-199,0,0.0273973,3.583561643836,77.64931,18.0,126.31,63,1.81,27,86,F,III/IV,moderate,,absent,stenosis,Stentless valve,Y,N,N,N,N
+199,0,0.0,0.0273973,77.64931,18.0,196.94,58,1.81,27,86,F,III/IV,moderate,missing,absent,stenosis,Stentless valve,Y,N,N,N,N
+199,0,0.0273973,3.583561643836,77.64931,18.0,126.31,63,1.81,27,86,F,III/IV,moderate,missing,absent,stenosis,Stentless valve,Y,N,N,N,N
 200,0,0.0,0.0109589,48.5,29.0,156.65,67,1.67,21,60,F,I/II,good,elective,treated,stenosis,Homograft,Y,N,N,N,N
 200,0,0.0109589,3.005479,48.5,28.0,145.88,78,1.67,21,60,F,I/II,good,elective,treated,stenosis,Homograft,Y,N,N,N,N
 200,0,3.005479,4.041096,48.5,,141.48,81,1.67,21,60,F,I/II,good,elective,treated,stenosis,Homograft,Y,N,N,N,N
@@ -780,9 +780,9 @@ pid,event,time,time2,num_age,num_grad,num_lvmi,num_ef,num_bsa,num_size,num_creat
 203,1,0.3452055,2.350684931507,77.96986,19.0,142.29,91,1.58,25,76,F,I/II,moderate,elective,absent,stenosis,Stentless valve,Y,N,N,N,N
 204,0,0.0,0.0082192,79.43562,6.0,138.82,66,1.88,23,130,M,I/II,good,elective,absent,stenosis,Homograft,Y,N,N,N,N
 204,0,0.0082192,3.58904109589,79.43562,6.0,156.99,82,1.88,23,130,M,I/II,good,elective,absent,stenosis,Homograft,Y,N,N,N,N
-205,0,0.0,0.0164384,50.56165,,225.3,36,1.47,22,50,M,I/II,moderate,,absent,mixed,Homograft,N,N,N,N,Y
-205,0,0.0164384,1.150685,50.56165,8.0,114.08,69,1.47,22,50,M,I/II,moderate,,absent,mixed,Homograft,N,N,N,N,Y
-205,0,1.150685,3.175342465753,50.56165,,119.96,72,1.47,22,50,M,I/II,moderate,,absent,mixed,Homograft,N,N,N,N,Y
+205,0,0.0,0.0164384,50.56165,,225.3,36,1.47,22,50,M,I/II,moderate,missing,absent,mixed,Homograft,N,N,N,N,Y
+205,0,0.0164384,1.150685,50.56165,8.0,114.08,69,1.47,22,50,M,I/II,moderate,missing,absent,mixed,Homograft,N,N,N,N,Y
+205,0,1.150685,3.175342465753,50.56165,,119.96,72,1.47,22,50,M,I/II,moderate,missing,absent,mixed,Homograft,N,N,N,N,Y
 206,0,0.0,1.854795,76.8,5.0,116.99,33,2.11,24,98,M,III/IV,moderate,elective,absent,mixed,Homograft,N,N,N,N,N
 206,0,1.854795,1.942466,76.8,,125.05,64,2.11,24,98,M,III/IV,moderate,elective,absent,mixed,Homograft,N,N,N,N,N
 206,0,1.942466,3.706849,76.8,,172.95,73,2.11,24,98,M,III/IV,moderate,elective,absent,mixed,Homograft,N,N,N,N,N
@@ -794,23 +794,23 @@ pid,event,time,time2,num_age,num_grad,num_lvmi,num_ef,num_bsa,num_size,num_creat
 209,0,0.0,1.221918,45.96438,6.0,282.57,48,2.15,25,134,M,I/II,good,urgent,absent,stenosis,Homograft,N,N,N,N,Y
 209,0,1.221918,2.312329,45.96438,4.0,161.16,40,2.15,25,134,M,I/II,good,urgent,absent,stenosis,Homograft,N,N,N,N,Y
 209,0,2.312329,3.331507,45.96438,,97.95,62,2.15,25,134,M,I/II,good,urgent,absent,stenosis,Homograft,N,N,N,N,Y
-210,0,0.0,0.7342466,54.43562,4.0,153.45,59,2.0,24,101,M,I/II,good,,absent,regurgitation,Homograft,Y,Y,N,N,N
-210,0,0.7342466,2.230137,54.43562,,148.35,64,2.0,24,101,M,I/II,good,,absent,regurgitation,Homograft,Y,Y,N,N,N
-210,0,2.230137,3.246575,54.43562,,210.09,69,2.0,24,101,M,I/II,good,,absent,regurgitation,Homograft,Y,Y,N,N,N
-211,0,0.0,2.728767123288,74.61096,19.0,134.09,76,2.47,27,116,M,III/IV,moderate,,treated,regurgitation,Stentless valve,Y,N,Y,N,N
-212,0,0.0,0.0219178,68.12603,14.0,202.41,57,2.15,27,114,M,III/IV,moderate,,absent,stenosis,Stentless valve,Y,N,Y,N,Y
-212,0,0.0219178,0.4465753,68.12603,9.0,114.12,94,2.15,27,114,M,III/IV,moderate,,absent,stenosis,Stentless valve,Y,N,Y,N,Y
-212,0,0.4465753,1.523288,68.12603,,146.49,72,2.15,27,114,M,III/IV,moderate,,absent,stenosis,Stentless valve,Y,N,Y,N,Y
-212,0,1.523288,2.928767123288,68.12603,16.0,175.43,73,2.15,27,114,M,III/IV,moderate,,absent,stenosis,Stentless valve,Y,N,Y,N,Y
-213,0,0.0,2.819178082192,59.40822,16.0,167.6,83,1.94,20,86,M,III/IV,good,,absent,mixed,Homograft,Y,N,N,Y,N
+210,0,0.0,0.7342466,54.43562,4.0,153.45,59,2.0,24,101,M,I/II,good,missing,absent,regurgitation,Homograft,Y,Y,N,N,N
+210,0,0.7342466,2.230137,54.43562,,148.35,64,2.0,24,101,M,I/II,good,missing,absent,regurgitation,Homograft,Y,Y,N,N,N
+210,0,2.230137,3.246575,54.43562,,210.09,69,2.0,24,101,M,I/II,good,missing,absent,regurgitation,Homograft,Y,Y,N,N,N
+211,0,0.0,2.728767123288,74.61096,19.0,134.09,76,2.47,27,116,M,III/IV,moderate,missing,treated,regurgitation,Stentless valve,Y,N,Y,N,N
+212,0,0.0,0.0219178,68.12603,14.0,202.41,57,2.15,27,114,M,III/IV,moderate,missing,absent,stenosis,Stentless valve,Y,N,Y,N,Y
+212,0,0.0219178,0.4465753,68.12603,9.0,114.12,94,2.15,27,114,M,III/IV,moderate,missing,absent,stenosis,Stentless valve,Y,N,Y,N,Y
+212,0,0.4465753,1.523288,68.12603,,146.49,72,2.15,27,114,M,III/IV,moderate,missing,absent,stenosis,Stentless valve,Y,N,Y,N,Y
+212,0,1.523288,2.928767123288,68.12603,16.0,175.43,73,2.15,27,114,M,III/IV,moderate,missing,absent,stenosis,Stentless valve,Y,N,Y,N,Y
+213,0,0.0,2.819178082192,59.40822,16.0,167.6,83,1.94,20,86,M,III/IV,good,missing,absent,mixed,Homograft,Y,N,N,Y,N
 214,0,0.0,0.0164384,77.65205,6.0,133.55,69,2.21,27,74,F,I/II,good,elective,treated,mixed,Stentless valve,Y,N,Y,N,Y
 214,0,0.0164384,1.172603,77.65205,8.0,103.21,70,2.21,27,74,F,I/II,good,elective,treated,mixed,Stentless valve,Y,N,Y,N,Y
 214,0,1.172603,2.265753424658,77.65205,8.0,96.43,76,2.21,27,74,F,I/II,good,elective,treated,mixed,Stentless valve,Y,N,Y,N,Y
 215,0,0.0,0.0164384,74.60822,16.0,141.29,42,1.85,23,140,M,III/IV,poor,elective,absent,stenosis,Stentless valve,Y,N,N,N,Y
 215,0,0.0164384,1.153425,74.60822,16.0,115.2,63,1.85,23,140,M,III/IV,poor,elective,absent,stenosis,Stentless valve,Y,N,N,N,Y
 215,0,1.153425,2.342466,74.60822,,115.2,74,1.85,23,140,M,III/IV,poor,elective,absent,stenosis,Stentless valve,Y,N,N,N,Y
-216,0,0.0,0.0328767,73.85206,34.0,94.44,79,2.23,23,149,M,III/IV,moderate,,absent,stenosis,Stentless valve,Y,N,N,N,Y
-216,0,0.0328767,2.402739726027,73.85206,29.0,65.21,81,2.23,23,149,M,III/IV,moderate,,absent,stenosis,Stentless valve,Y,N,N,N,Y
+216,0,0.0,0.0328767,73.85206,34.0,94.44,79,2.23,23,149,M,III/IV,moderate,missing,absent,stenosis,Stentless valve,Y,N,N,N,Y
+216,0,0.0328767,2.402739726027,73.85206,29.0,65.21,81,2.23,23,149,M,III/IV,moderate,missing,absent,stenosis,Stentless valve,Y,N,N,N,Y
 217,0,0.0,2.175342465753,71.24657,6.0,161.31,75,1.96,27,157,M,I/II,good,elective,absent,stenosis,Stentless valve,Y,N,Y,N,N
 218,0,0.0,0.4684932,56.41918,,90.69,74,2.17,25,101,M,I/II,moderate,elective,absent,regurgitation,Homograft,Y,N,N,N,Y
 219,0,0.0,0.690411,83.10959,6.0,113.54,79,1.98,22,105,M,III/IV,moderate,elective,absent,mixed,Homograft,Y,N,N,N,Y
@@ -821,13 +821,13 @@ pid,event,time,time2,num_age,num_grad,num_lvmi,num_ef,num_bsa,num_size,num_creat
 222,0,1.128767,2.164384,51.80548,,175.78,83,1.61,27,65,F,III/IV,good,elective,absent,stenosis,Stentless valve,Y,N,N,N,N
 223,0,0.0,0.969863,64.26575,4.0,120.0,79,1.64,23,84,M,I/II,good,elective,absent,stenosis,Homograft,Y,N,N,N,N
 223,0,0.969863,1.838356,64.26575,,105.23,70,1.64,23,84,M,I/II,good,elective,absent,stenosis,Homograft,Y,N,N,N,N
-224,0,0.0,0.6191781,75.79452,49.0,140.42,37,2.41,27,103,M,III/IV,poor,,absent,stenosis,Stentless valve,Y,N,N,N,Y
-224,0,0.6191781,0.8356164,75.79452,25.0,122.09,27,2.41,27,103,M,III/IV,poor,,absent,stenosis,Stentless valve,Y,N,N,N,Y
-224,0,0.8356164,1.315068,75.79452,,147.28,48,2.41,27,103,M,III/IV,poor,,absent,stenosis,Stentless valve,Y,N,N,N,Y
-224,0,1.315068,2.353424657534,75.79452,16.0,252.01,23,2.41,27,103,M,III/IV,poor,,absent,stenosis,Stentless valve,Y,N,N,N,Y
-225,0,0.0,0.0136986,82.13972,20.0,111.43,68,1.89,25,77,F,III/IV,good,,absent,stenosis,Stentless valve,Y,N,Y,N,Y
-225,0,0.0136986,0.4219178,82.13972,14.0,93.75,75,1.89,25,77,F,III/IV,good,,absent,stenosis,Stentless valve,Y,N,Y,N,Y
-225,0,0.4219178,1.61095890411,82.13972,20.0,115.79,58,1.89,25,77,F,III/IV,good,,absent,stenosis,Stentless valve,Y,N,Y,N,Y
+224,0,0.0,0.6191781,75.79452,49.0,140.42,37,2.41,27,103,M,III/IV,poor,missing,absent,stenosis,Stentless valve,Y,N,N,N,Y
+224,0,0.6191781,0.8356164,75.79452,25.0,122.09,27,2.41,27,103,M,III/IV,poor,missing,absent,stenosis,Stentless valve,Y,N,N,N,Y
+224,0,0.8356164,1.315068,75.79452,,147.28,48,2.41,27,103,M,III/IV,poor,missing,absent,stenosis,Stentless valve,Y,N,N,N,Y
+224,0,1.315068,2.353424657534,75.79452,16.0,252.01,23,2.41,27,103,M,III/IV,poor,missing,absent,stenosis,Stentless valve,Y,N,N,N,Y
+225,0,0.0,0.0136986,82.13972,20.0,111.43,68,1.89,25,77,F,III/IV,good,missing,absent,stenosis,Stentless valve,Y,N,Y,N,Y
+225,0,0.0136986,0.4219178,82.13972,14.0,93.75,75,1.89,25,77,F,III/IV,good,missing,absent,stenosis,Stentless valve,Y,N,Y,N,Y
+225,0,0.4219178,1.61095890411,82.13972,20.0,115.79,58,1.89,25,77,F,III/IV,good,missing,absent,stenosis,Stentless valve,Y,N,Y,N,Y
 226,0,0.0,0.5068493,79.47672,81.0,133.65,49,1.83,23,120,F,I/II,good,elective,absent,stenosis,Stentless valve,Y,N,N,Y,N
 226,0,0.5068493,2.024657534247,79.47672,19.0,124.93,78,1.83,23,120,F,I/II,good,elective,absent,stenosis,Stentless valve,Y,N,N,Y,N
 227,0,0.0,0.4986301,52.22466,55.0,35.04,54,1.45,21,71,F,III/IV,moderate,elective,absent,stenosis,Homograft,Y,N,N,N,N
@@ -894,12 +894,12 @@ pid,event,time,time2,num_age,num_grad,num_lvmi,num_ef,num_bsa,num_size,num_creat
 237,0,5.087671,6.413699,42.76439,,167.02,84,2.3,24,96,M,I/II,good,elective,absent,regurgitation,Homograft,Y,N,N,N,Y
 238,0,0.0,3.142466,71.96986,,117.0,79,1.8,23,76,M,III/IV,good,elective,absent,mixed,Homograft,Y,N,N,N,Y
 238,0,3.142466,7.52602739726,71.96986,,140.12,91,1.8,23,76,M,III/IV,good,elective,absent,mixed,Homograft,Y,N,N,N,Y
-239,0,0.0,0.860274,71.09041,15.0,181.91,69,1.74,25,117,M,I/II,poor,,treated,stenosis,Stentless valve,Y,Y,N,N,Y
-239,0,0.860274,2.126027,71.09041,,150.35,64,1.74,25,117,M,I/II,poor,,treated,stenosis,Stentless valve,Y,Y,N,N,Y
-239,0,2.126027,3.123288,71.09041,,189.76,68,1.74,25,117,M,I/II,poor,,treated,stenosis,Stentless valve,Y,Y,N,N,Y
-239,0,3.123288,4.287671,71.09041,16.0,200.52,64,1.74,25,117,M,I/II,poor,,treated,stenosis,Stentless valve,Y,Y,N,N,Y
-239,0,4.287671,5.117808,71.09041,,177.26,52,1.74,25,117,M,I/II,poor,,treated,stenosis,Stentless valve,Y,Y,N,N,Y
-239,0,5.117808,6.419178082192,71.09041,10.0,270.76,51,1.74,25,117,M,I/II,poor,,treated,stenosis,Stentless valve,Y,Y,N,N,Y
+239,0,0.0,0.860274,71.09041,15.0,181.91,69,1.74,25,117,M,I/II,poor,missing,treated,stenosis,Stentless valve,Y,Y,N,N,Y
+239,0,0.860274,2.126027,71.09041,,150.35,64,1.74,25,117,M,I/II,poor,missing,treated,stenosis,Stentless valve,Y,Y,N,N,Y
+239,0,2.126027,3.123288,71.09041,,189.76,68,1.74,25,117,M,I/II,poor,missing,treated,stenosis,Stentless valve,Y,Y,N,N,Y
+239,0,3.123288,4.287671,71.09041,16.0,200.52,64,1.74,25,117,M,I/II,poor,missing,treated,stenosis,Stentless valve,Y,Y,N,N,Y
+239,0,4.287671,5.117808,71.09041,,177.26,52,1.74,25,117,M,I/II,poor,missing,treated,stenosis,Stentless valve,Y,Y,N,N,Y
+239,0,5.117808,6.419178082192,71.09041,10.0,270.76,51,1.74,25,117,M,I/II,poor,missing,treated,stenosis,Stentless valve,Y,Y,N,N,Y
 240,0,0.0,0.5068493,33.25206,,128.06,81,2.18,23,74,M,III/IV,moderate,elective,absent,stenosis,Homograft,Y,N,N,N,N
 240,0,0.5068493,1.983562,33.25206,19.0,97.76,78,2.18,23,74,M,III/IV,moderate,elective,absent,stenosis,Homograft,Y,N,N,N,N
 240,0,1.983562,2.578082,33.25206,25.0,128.06,75,2.18,23,74,M,III/IV,moderate,elective,absent,stenosis,Homograft,Y,N,N,N,N
@@ -972,9 +972,9 @@ pid,event,time,time2,num_age,num_grad,num_lvmi,num_ef,num_bsa,num_size,num_creat
 253,0,3.180822,4.178082,75.23562,1.6,128.26,89,1.52,21,77,F,III/IV,good,elective,absent,stenosis,Homograft,Y,N,N,N,N
 253,0,4.178082,5.19452,75.23562,9.0,129.48,88,1.52,21,77,F,III/IV,good,elective,absent,stenosis,Homograft,Y,N,N,N,N
 253,0,5.19452,6.249315068493,75.23562,,118.35,73,1.52,21,77,F,III/IV,good,elective,absent,stenosis,Homograft,Y,N,N,N,N
-254,0,0.0,0.2410959,52.46027,,116.86,80,2.07,22,83,F,III/IV,good,,absent,stenosis,Homograft,Y,Y,N,N,Y
-254,0,0.2410959,0.5671233,52.46027,,134.22,78,2.07,22,83,F,III/IV,good,,absent,stenosis,Homograft,Y,Y,N,N,Y
-254,0,0.5671233,1.961643835616,52.46027,,110.2,88,2.07,22,83,F,III/IV,good,,absent,stenosis,Homograft,Y,Y,N,N,Y
+254,0,0.0,0.2410959,52.46027,,116.86,80,2.07,22,83,F,III/IV,good,missing,absent,stenosis,Homograft,Y,Y,N,N,Y
+254,0,0.2410959,0.5671233,52.46027,,134.22,78,2.07,22,83,F,III/IV,good,missing,absent,stenosis,Homograft,Y,Y,N,N,Y
+254,0,0.5671233,1.961643835616,52.46027,,110.2,88,2.07,22,83,F,III/IV,good,missing,absent,stenosis,Homograft,Y,Y,N,N,Y
 255,0,0.0,0.0136986,79.54794,16.0,117.09,77,1.92,29,115,M,III/IV,moderate,elective,absent,stenosis,Stentless valve,Y,N,N,N,N
 255,0,0.0136986,0.5123287,79.54794,16.0,172.5,66,1.92,29,115,M,III/IV,moderate,elective,absent,stenosis,Stentless valve,Y,N,N,N,N
 255,0,0.5123287,1.509589,79.54794,9.0,130.55,81,1.92,29,115,M,III/IV,moderate,elective,absent,stenosis,Stentless valve,Y,N,N,N,N

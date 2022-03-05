@@ -14,7 +14,7 @@ class package(baseline):
         # (iii) Feature transform
         di_map = {'sex':{1:'M',2:'F'}}
         self.df_map(df, di_map)
-        df[cn_fac] = self.fill_fac(df[cn_fac])
+        
         self.float2int(df)  # Floats to integers
         # (iv) Define num, fac, and Surv
         df = self.Surv(df, cn_num, cn_fac, cn_event='status', cn_time='time')
@@ -52,7 +52,7 @@ class package(baseline):
         di_map = {**di_map, **{cn:{1:'Y',0:'N'} for cn in cn_bin}}
         self.df_map(df, di_map)
         self.float2int(df)  # Floats to integers
-        df[cn_fac] = self.fill_fac(df[cn_fac])  # Fill missing factors
+          # Fill missing factors
         # (iv) Define num, fac, and Surv
         df = self.Surv(df, cn_num, cn_fac, 'status', 'time', cn_pid='id')
         df = self.add_suffix(df, cn_num, cn_fac)
@@ -70,7 +70,7 @@ class package(baseline):
         di_map = {'mgus':{1:'Y',0:'N'}}
         self.df_map(df, di_map)
         self.float2int(df)  # Floats to integers
-        df[cn_fac] = self.fill_fac(df[cn_fac])  # Fill missing factors
+          # Fill missing factors
         # (iv) Define num, fac, and Surv
         df = self.Surv(df, cn_num, cn_fac, 'death', 'futime')
         df = self.add_suffix(df, cn_num, cn_fac)
@@ -100,7 +100,7 @@ class package(baseline):
         cn_fac = ['sex', 'pcdx']
         # (iii) Feature transform
         self.float2int(df)  # Floats to integers
-        df[cn_fac] = self.fill_fac(df[cn_fac])  # Fill missing factors
+          # Fill missing factors
         # (iv) Define num, fac, and Surv
         df = self.Surv(df, cn_num, cn_fac, 'death', 'futime', cn_pid='id')
         df = self.add_suffix(df, cn_num, cn_fac)
