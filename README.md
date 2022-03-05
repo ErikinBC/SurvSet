@@ -114,7 +114,7 @@ gg_cindex = (pn.ggplot(df_cindex, pn.aes(y='cindex',x='ds')) +
 gg_cindex
 ```
 
-![gg_ds](SurvSet/_datagen/tests/gg_cindex.png)
+![gg_cindex](SurvSet/_datagen/tests/gg_cindex.png)
 
 
 ## Adding new datasets
