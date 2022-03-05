@@ -33,7 +33,10 @@ class SurvLoader():
 
         Returns:            
             A dictionary with elements {'df':pd.DataFrame, 'ref':url}
+            
             df has the following columns: pid (unique ID), time (time to event or start time), time2 (None or end tend), num_{} (numeric columns), fac_{} (categorical columns)
+
+            ref is the url which contains the feature description found from the original source
         """
         assert ds_name in self.df_ds['ds'].to_list(), '%s not found in dataset directory! See SurvLoader.df_ds["ds"] for a list of valid datasets' % ds_name
         path_ds = os.path.join(self.fold_ds, ds_name+'.csv')

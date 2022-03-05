@@ -6,7 +6,7 @@ README = (HERE / 'README.md').read_text()
 
 setup(
     name='SurvSet',
-    version='0.1',    
+    version='0.2.3',    
     description='SurvSet package',
     long_description=README,
     long_description_content_type="text/markdown",
@@ -15,7 +15,7 @@ setup(
     author_email='erikinwest@gmail.com',
     license='MIT',
     packages=['SurvSet'],
-    package_data={'SurvSet': ['_datagen/output/*','_datagen/figures/*']},
+    package_data={'SurvSet': ['_datagen/*','_datagen/output/*','_datagen/figures/*']},
     include_package_data=True,
     install_requires=['numpy', 'pandas'],
     classifiers=[
