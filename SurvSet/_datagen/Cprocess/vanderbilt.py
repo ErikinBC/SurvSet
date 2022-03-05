@@ -52,7 +52,7 @@ class package(baseline):
         di_map = {'sex':{2:'F',1:'M'}}
         self.df_map(df, di_map)
         # (iv) Define num, fac, and Surv
-        df = self.Surv(df, cn_num, cn_fac, 'followup', 'chdfate')
+        df = self.Surv(df, cn_num, cn_fac, 'chdfate', 'followup')
         df = self.add_suffix(df, cn_num, cn_fac)
         return fn, df
 

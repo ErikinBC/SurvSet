@@ -37,7 +37,12 @@ class SurvLoader():
         """
         assert ds_name in self.df_ds['ds'].to_list(), '%s not found in dataset directory! See SurvLoader.df_ds["ds"] for a list of valid datasets' % ds_name
         path_ds = os.path.join(self.fold_ds, ds_name+'.csv')
-        df = pd.read_csv(path_ds)
+        df = pd.read_csv(path_ds, low_memory=False, na_values='na')
         ref = di_ref[ds_name]
+        # Force categories to string
+        cn_df = df.columns
+        cn_fac = list(cn_df[cn_df.str.contains('^fac\\_',regex=True)])
+        if len(cn_fac) > 0:
+            df[cn_fac] = df[cn_fac].astype(str).values
         di = {'df':df, 'ref':ref}
         return di
