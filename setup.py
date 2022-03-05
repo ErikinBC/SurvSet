@@ -1,17 +1,19 @@
+import pathlib
 from setuptools import setup
-from glob import glob
 
-# ('_datagen', glob('output/**/*', recursive=True)
-# data_files = [('readme', 'SurvSet/README.md')]
+HERE = pathlib.Path(__file__).parent
+README = (HERE / 'README.md').read_text()
 
 setup(
     name='SurvSet',
     version='0.1',    
     description='SurvSet package',
+    long_description=README,
+    long_description_content_type="text/markdown",
     url='https://github.com/ErikinBC/SurvSet',
     author='Erik Drysdale',
     author_email='erikinwest@gmail.com',
-    license='BSD 2-clause',
+    license='MIT',
     packages=['SurvSet'],
     package_data={'SurvSet': ['_datagen/output/*','_datagen/figures/*']},
     include_package_data=True,

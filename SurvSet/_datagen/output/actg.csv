@@ -1,0 +1,1152 @@
+pid,event,time,num_karnof,num_cd4,num_priorzdv,num_age,fac_tx,fac_txgrp,fac_strat2,fac_sex,fac_raceth,fac_ivdrug,fac_hemophil
+0,0,189,100,169.0,39.0,34,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+1,0,287,90,149.5,15.0,34,Control,ZDV+3TC,CD4>50,F,Black Non-Hispanic,Never,N
+2,0,242,100,23.5,9.0,20,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,Y
+3,0,199,90,46.0,53.0,48,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+4,0,286,90,10.0,12.0,46,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Previously,N
+5,0,285,70,0.0,24.0,51,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+6,0,270,100,54.5,6.0,51,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Never,N
+7,0,285,80,117.5,24.0,40,IDV,ZDV+3TC+IDV,CD4>50,M,Black Non-Hispanic,Previously,N
+8,0,276,100,95.0,7.0,34,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+9,0,306,90,71.0,7.0,38,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+10,0,334,90,7.5,62.0,38,IDV,ZDV+3TC+IDV,CD4<=50,F,Hispanic,Never,N
+11,0,285,90,43.5,19.0,40,IDV,ZDV+3TC+IDV,CD4>50,F,Black Non-Hispanic,Previously,N
+12,0,265,100,186.5,7.0,35,IDV,ZDV+3TC+IDV,CD4>50,M,Black Non-Hispanic,Previously,N
+13,1,206,80,16.0,24.0,33,Control,ZDV+3TC,CD4<=50,F,Black Non-Hispanic,Never,N
+14,0,305,90,36.5,13.0,40,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Never,N
+15,0,110,90,8.0,18.0,33,Control,ZDV+3TC,CD4<=50,F,Hispanic,Never,N
+16,1,298,90,17.5,40.0,35,Control,ZDV+3TC,CD4<=50,M,Hispanic,Never,N
+17,0,287,90,134.5,36.0,33,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+18,0,103,90,20.0,17.0,32,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+19,0,291,90,44.5,12.0,29,Control,ZDV+3TC,CD4>50,M,Hispanic,Never,N
+20,0,180,90,81.5,6.0,24,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+21,0,298,90,76.0,8.0,47,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+22,1,190,90,23.0,6.0,33,Control,ZDV+3TC,CD4<=50,M,Hispanic,Never,N
+23,0,224,100,4.0,15.0,38,IDV,ZDV+3TC+IDV,CD4<=50,M,Hispanic,Never,N
+24,0,301,90,72.0,91.0,36,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+25,0,252,90,10.5,7.0,30,Control,ZDV+3TC,CD4<=50,M,Hispanic,Previously,N
+26,0,186,100,120.0,6.0,34,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+27,0,40,80,21.0,5.0,45,Control,ZDV+3TC,CD4<=50,M,Black Non-Hispanic,Previously,N
+28,0,66,90,245.0,48.0,37,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+29,1,82,90,11.0,12.0,31,Control,ZDV+3TC,CD4<=50,M,Black Non-Hispanic,Never,N
+30,0,213,100,17.0,28.0,47,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,Y
+31,0,271,80,12.5,31.0,44,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+32,0,214,70,33.0,21.0,39,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+33,0,236,100,222.0,48.0,52,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Previously,N
+34,0,222,90,160.0,32.0,46,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+35,0,320,100,110.0,24.0,35,IDV,ZDV+3TC+IDV,CD4>50,M,Black Non-Hispanic,Previously,N
+36,0,62,90,61.5,6.0,32,Control,ZDV+3TC,CD4<=50,F,Black Non-Hispanic,Never,N
+37,0,335,90,151.0,86.0,40,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+38,0,276,90,204.0,52.0,65,IDV,ZDV+3TC+IDV,CD4>50,M,Black Non-Hispanic,Never,N
+39,0,195,100,98.0,45.0,32,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+40,0,181,90,94.0,19.0,31,Control,ZDV+3TC,CD4>50,M,Hispanic,Previously,N
+41,0,187,90,165.0,11.75,37,IDV,ZDV+3TC+IDV,CD4>50,F,Hispanic,Never,N
+42,0,180,90,80.0,8.0,35,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+43,0,286,90,149.0,10.0,46,Control,ZDV+3TC,CD4>50,M,Hispanic,Never,N
+44,0,291,90,140.5,48.0,40,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+45,0,256,100,35.0,11.0,29,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+46,0,175,100,62.0,10.0,37,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Never,N
+47,0,328,90,14.5,23.0,34,IDV,ZDV+3TC+IDV,CD4<=50,F,White Non-Hispanic,Previously,N
+48,0,202,90,90.0,12.0,34,IDV,ZDV+3TC+IDV,CD4>50,M,Hispanic,Never,N
+49,0,119,100,94.0,40.0,31,IDV,ZDV+3TC+IDV,CD4>50,F,Hispanic,Never,N
+50,0,293,90,89.5,48.0,31,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Never,N
+51,0,284,90,72.5,15.0,43,IDV,ZDV+3TC+IDV,CD4>50,M,Black Non-Hispanic,Never,N
+52,0,277,90,132.5,18.0,29,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+53,0,54,100,43.5,5.0,39,Control,ZDV+3TC,CD4<=50,M,Hispanic,Never,N
+54,0,290,80,149.0,24.0,46,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Previously,N
+55,0,168,90,16.5,10.0,63,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+56,1,61,80,33.5,28.0,47,Control,ZDV+3TC,CD4<=50,M,Hispanic,Never,N
+57,0,334,90,60.0,51.0,30,Control,ZDV+3TC,CD4>50,M,Hispanic,Never,N
+58,0,265,90,14.0,26.0,30,IDV,ZDV+3TC+IDV,CD4<=50,M,Black Non-Hispanic,Never,N
+59,0,252,100,14.5,32.0,31,IDV,ZDV+3TC+IDV,CD4<=50,M,Hispanic,Never,N
+60,0,287,80,96.5,23.0,41,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+61,0,143,90,175.5,5.0,26,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+62,1,129,80,6.5,12.0,52,Control,ZDV+3TC,CD4<=50,F,White Non-Hispanic,Never,N
+63,0,271,90,60.0,86.0,32,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Never,N
+64,0,112,90,0.5,39.0,45,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+65,0,272,90,81.5,8.0,44,Control,ZDV+3TC,CD4>50,M,Hispanic,Never,N
+66,0,333,90,118.0,18.0,38,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+67,0,221,90,41.0,27.0,33,IDV,ZDV+3TC+IDV,CD4<=50,M,Hispanic,Never,N
+68,0,110,100,126.5,51.0,34,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Previously,N
+69,0,237,90,10.5,39.0,31,IDV,ZDV+3TC+IDV,CD4<=50,M,Hispanic,Never,N
+70,0,230,100,4.333333,17.0,25,IDV,ZDV+3TC+IDV,CD4<=50,M,Black Non-Hispanic,Never,N
+71,1,14,90,0.0,72.0,35,Control,ZDV+3TC,CD4<=50,M,Black Non-Hispanic,Never,N
+72,0,273,100,122.0,6.0,29,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Previously,N
+73,0,68,80,36.0,51.0,43,Control,ZDV+3TC,CD4<=50,F,Hispanic,Never,N
+74,0,25,90,31.5,6.0,49,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+75,0,257,90,33.5,42.0,46,IDV,ZDV+3TC+IDV,CD4<=50,M,Black Non-Hispanic,Previously,N
+76,0,339,90,5.5,30.0,34,IDV,ZDV+3TC+IDV,CD4<=50,M,Black Non-Hispanic,Never,N
+77,0,336,90,85.5,17.0,30,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Previously,N
+78,0,300,80,64.5,25.0,45,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+79,0,280,90,112.0,20.0,33,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+80,0,311,90,136.0,24.0,31,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+81,0,214,100,178.5,18.0,19,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,Y
+82,0,327,100,46.5,40.0,33,IDV,ZDV+3TC+IDV,CD4>50,M,Hispanic,Previously,N
+83,0,150,80,198.0,15.0,36,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+84,1,127,90,21.5,27.0,24,IDV,ZDV+3TC+IDV,CD4<=50,F,Black Non-Hispanic,Never,N
+85,0,255,90,195.0,66.0,35,IDV,ZDV+3TC+IDV,CD4>50,M,Black Non-Hispanic,Never,N
+86,0,334,90,201.5,18.0,29,Control,ZDV+3TC,CD4>50,M,Hispanic,Never,N
+87,1,181,100,144.0,10.0,35,Control,ZDV+3TC,CD4>50,F,Black Non-Hispanic,Never,N
+88,0,259,100,6.5,8.0,39,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+89,0,174,100,92.0,18.0,29,IDV,ZDV+3TC+IDV,CD4>50,F,Black Non-Hispanic,Never,N
+90,0,284,90,5.0,11.0,27,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Previously,N
+91,0,160,80,18.0,15.0,43,Control,ZDV+3TC,CD4<=50,M,Hispanic,Previously,N
+92,0,291,90,12.0,6.0,40,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+93,0,104,100,206.0,60.0,45,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+94,0,105,100,0.0,9.0,37,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+95,0,346,80,13.5,41.0,35,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Previously,N
+96,0,105,100,77.5,4.0,35,Control,ZDV+3TC,CD4>50,M,Hispanic,Never,N
+97,0,286,80,136.0,57.0,40,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Previously,N
+98,0,314,90,20.0,9.0,24,Control,ZDV+3TC,CD4<=50,F,Black Non-Hispanic,Never,N
+99,0,307,80,3.0,79.0,37,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+100,0,174,100,120.5,7.0,46,IDV,ZDV+3TC+IDV,CD4>50,F,Black Non-Hispanic,Previously,N
+101,0,81,80,100.0,5.0,55,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+102,0,54,80,87.5,6.0,43,Control,ZDV+3TC,CD4<=50,M,Black Non-Hispanic,Previously,N
+103,0,231,100,194.0,81.0,43,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Never,N
+104,0,271,100,132.5,12.0,45,Control,ZDV+3TC,CD4>50,M,"American Indian, Alaskan Native",Never,N
+105,1,77,90,10.0,25.0,33,Control,ZDV+3TC,CD4<=50,M,Black Non-Hispanic,Never,N
+106,0,290,80,157.5,73.0,66,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Never,N
+107,0,269,90,39.5,26.0,34,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+108,0,277,90,130.0,7.0,40,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Never,N
+109,0,294,100,183.0,12.0,33,IDV,ZDV+3TC+IDV,CD4>50,M,"American Indian, Alaskan Native",Never,N
+110,0,210,90,194.0,17.0,41,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+111,0,258,90,9.5,29.5,25,Control,ZDV+3TC,CD4<=50,M,Hispanic,Never,Y
+112,0,293,80,130.5,70.0,39,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+113,0,179,90,109.5,28.0,31,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+114,0,137,100,102.5,21.0,32,IDV,ZDV+3TC+IDV,CD4>50,M,Black Non-Hispanic,Never,N
+115,0,298,90,116.0,12.0,35,IDV,ZDV+3TC+IDV,CD4>50,M,"American Indian, Alaskan Native",Previously,N
+116,0,111,90,131.5,20.0,28,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Never,N
+117,0,257,90,6.5,12.0,25,Control,ZDV+3TC,CD4<=50,F,"Asian, Pacific Islander",Previously,N
+118,0,160,70,42.5,11.0,34,IDV,ZDV+3TC+IDV,CD4>50,F,Black Non-Hispanic,Previously,N
+119,0,291,90,118.0,40.0,55,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+120,0,236,90,25.0,8.0,30,IDV,ZDV+3TC+IDV,CD4<=50,M,Black Non-Hispanic,Never,N
+121,0,235,100,243.0,53.0,37,IDV,ZDV+3TC+IDV,CD4>50,F,Black Non-Hispanic,Previously,N
+122,0,69,80,88.5,5.0,33,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+123,0,271,90,40.0,45.0,40,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+124,0,223,80,33.0,60.0,36,Control,ZDV+3TC,CD4<=50,M,Hispanic,Never,N
+125,0,322,90,37.0,72.0,36,IDV,ZDV+3TC+IDV,CD4>50,M,Hispanic,Never,N
+126,0,86,90,153.0,60.0,38,Control,ZDV+3TC,CD4>50,M,Hispanic,Previously,N
+127,0,222,90,130.0,36.0,48,Control,ZDV+3TC,CD4>50,F,Black Non-Hispanic,Never,N
+128,0,27,90,15.0,13.0,38,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+129,0,216,100,117.0,25.0,38,IDV,ZDV+3TC+IDV,CD4>50,M,Black Non-Hispanic,Never,N
+130,0,10,100,108.0,55.0,41,Control,ZDV+3TC,CD4>50,F,Black Non-Hispanic,Never,N
+131,0,335,80,150.0,18.0,50,IDV,ZDV+3TC+IDV,CD4>50,M,Black Non-Hispanic,Never,N
+132,0,251,100,31.5,15.0,39,IDV,ZDV+3TC+IDV,CD4>50,M,Hispanic,Never,N
+133,0,144,90,83.5,36.0,33,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+134,0,319,70,21.5,18.0,42,IDV,ZDV+3TC+IDV,CD4<=50,M,Black Non-Hispanic,Previously,N
+135,0,287,90,81.5,12.0,30,IDV,ZDV+3TC+IDV,CD4<=50,F,Black Non-Hispanic,Never,N
+136,0,279,80,99.5,9.0,42,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+137,0,315,80,23.5,22.0,32,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+138,0,334,100,22.5,30.0,39,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+139,0,298,100,30.0,32.0,42,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+140,0,19,100,201.5,12.0,38,IDV,ZDV+3TC+IDV,CD4>50,F,Black Non-Hispanic,Never,N
+141,0,327,100,19.5,84.0,40,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+142,0,256,90,100.5,9.0,54,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+143,0,287,90,165.5,40.0,49,Control,ZDV+3TC,CD4>50,F,Black Non-Hispanic,Never,N
+144,0,132,90,55.0,36.0,29,Control,ZDV+3TC,CD4>50,F,White Non-Hispanic,Never,N
+145,1,20,80,11.5,10.0,43,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+146,0,300,90,263.5,61.0,45,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+147,1,91,90,17.5,25.0,41,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Previously,N
+148,0,220,100,114.0,6.0,59,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,Y
+149,0,189,90,90.0,78.0,42,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+150,0,322,90,49.5,64.0,26,Control,ZDV+3TC,CD4>50,F,White Non-Hispanic,Never,Y
+151,0,343,90,95.0,26.0,31,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+152,0,278,80,105.0,7.0,54,Control,ZDV+3TC,CD4>50,M,Hispanic,Previously,N
+153,0,230,90,58.5,7.0,42,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+154,0,285,90,260.0,6.0,20,Control,ZDV+3TC,CD4>50,F,White Non-Hispanic,Never,N
+155,0,152,100,57.0,54.0,43,IDV,ZDV+3TC+IDV,CD4>50,M,Black Non-Hispanic,Never,N
+156,0,252,80,100.5,56.0,49,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+157,0,251,90,4.0,56.0,34,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+158,0,144,90,110.0,67.0,50,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+159,0,313,90,10.0,51.0,34,Control,ZDV+3TC,CD4<=50,M,Hispanic,Never,N
+160,1,25,90,71.0,24.0,43,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+161,0,223,80,222.0,66.0,47,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+162,0,250,90,1.0,120.0,47,IDV,ZDV+3TC+IDV,CD4<=50,M,Black Non-Hispanic,Previously,N
+163,0,283,80,214.0,49.0,34,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Previously,N
+164,0,250,90,146.0,60.0,42,Control,ZDV+3TC,CD4>50,F,White Non-Hispanic,Previously,N
+165,0,285,90,8.0,16.0,40,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+166,0,145,70,5.0,41.0,35,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+167,0,251,90,40.0,18.0,42,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+168,0,342,80,4.5,7.0,44,Control,ZDV+3TC,CD4<=50,M,Hispanic,Never,N
+169,0,133,90,244.0,12.0,29,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+170,0,166,70,10.0,48.0,34,Control,ZDV+3TC,CD4<=50,M,Black Non-Hispanic,Never,N
+171,0,266,90,39.0,18.0,46,IDV,ZDV+3TC+IDV,CD4<=50,F,Hispanic,Never,N
+172,0,94,90,38.0,18.0,34,IDV,ZDV+3TC+IDV,CD4<=50,M,Black Non-Hispanic,Never,N
+173,0,293,100,139.0,28.0,30,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+174,0,322,80,15.0,17.0,43,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+175,0,271,80,16.5,23.0,39,IDV,ZDV+3TC+IDV,CD4<=50,M,Hispanic,Never,N
+176,0,319,90,21.0,10.0,32,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+177,0,244,100,47.5,41.0,40,IDV,ZDV+3TC+IDV,CD4>50,M,Hispanic,Previously,N
+178,0,362,90,117.0,76.0,61,IDV,ZDV+3TC+IDV,CD4>50,M,Hispanic,Never,N
+179,0,308,100,5.5,65.0,33,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+180,1,171,100,43.0,10.0,53,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+181,0,320,100,44.5,6.0,46,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+182,0,287,100,107.5,16.0,41,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Previously,N
+183,0,364,100,178.5,7.0,33,IDV,ZDV+3TC+IDV,CD4>50,F,Hispanic,Never,N
+184,0,308,80,22.0,47.0,41,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+185,0,70,90,128.0,74.0,42,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+186,0,271,100,136.5,96.0,42,IDV,ZDV+3TC+IDV,CD4>50,F,White Non-Hispanic,Never,N
+187,0,257,90,90.0,21.0,36,Control,ZDV+3TC,CD4>50,F,Black Non-Hispanic,Never,N
+188,0,243,100,148.0,32.0,48,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+189,0,322,90,145.5,72.0,48,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Never,N
+190,0,311,90,31.0,85.0,43,Control,ZDV+3TC,CD4<=50,M,Hispanic,Never,N
+191,0,133,100,2.0,24.0,24,Control,ZDV+3TC,CD4<=50,M,Black Non-Hispanic,Never,N
+192,0,229,90,100.0,91.0,50,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,Y
+193,0,276,80,17.5,13.0,44,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+194,0,91,90,66.0,7.0,39,IDV,ZDV+3TC+IDV,CD4>50,F,Black Non-Hispanic,Previously,N
+195,0,300,90,126.0,36.0,32,Control,ZDV+3TC,CD4>50,M,Hispanic,Never,N
+196,0,244,90,197.0,132.0,45,Control,ZDV+3TC,CD4>50,M,Hispanic,Previously,N
+197,0,4,90,144.0,10.0,34,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+198,0,224,100,230.0,81.0,50,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Previously,N
+199,0,205,100,49.0,312.0,33,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+200,0,255,100,87.5,7.0,41,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+201,0,109,80,94.0,6.0,37,Control,ZDV+3TC,CD4>50,F,Black Non-Hispanic,Never,N
+202,0,319,90,128.0,24.0,28,IDV,ZDV+3TC+IDV,CD4>50,M,Hispanic,Never,N
+203,0,308,90,131.0,25.0,32,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+204,0,46,80,14.0,24.0,43,Control,ZDV+3TC,CD4<=50,F,Black Non-Hispanic,Never,N
+205,0,110,100,74.5,18.0,39,Control,ZDV+3TC,CD4>50,F,White Non-Hispanic,Previously,N
+206,0,181,90,14.5,6.0,49,Control,ZDV+3TC,CD4>50,F,White Non-Hispanic,Never,N
+207,0,187,90,98.5,54.0,40,IDV,ZDV+3TC+IDV,CD4>50,F,White Non-Hispanic,Never,N
+208,0,300,80,11.5,30.0,57,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+209,0,300,100,182.0,22.0,42,Control,ZDV+3TC,CD4>50,M,"Asian, Pacific Islander",Never,N
+210,0,66,100,164.5,6.5,32,IDV,ZDV+3TC+IDV,CD4>50,M,Hispanic,Never,N
+211,0,161,100,90.0,18.0,28,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,Y
+212,0,326,90,22.5,8.0,26,Control,ZDV+3TC,CD4<=50,F,Hispanic,Never,N
+213,0,285,100,19.5,15.0,38,Control,ZDV+3TC,CD4<=50,M,Hispanic,Never,N
+214,0,305,100,148.0,68.0,53,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+215,0,138,100,27.0,77.0,35,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+216,0,152,90,33.5,42.0,56,Control,ZDV+3TC,CD4<=50,M,Hispanic,Never,N
+217,0,214,90,44.0,15.0,31,IDV,ZDV+3TC+IDV,CD4>50,M,Hispanic,Never,N
+218,0,189,90,181.0,21.0,33,IDV,ZDV+3TC+IDV,CD4>50,M,Hispanic,Never,N
+219,0,329,90,42.5,21.0,36,IDV,ZDV+3TC+IDV,CD4<=50,M,Black Non-Hispanic,Previously,N
+220,0,201,100,196.0,6.0,40,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+221,0,263,100,11.5,28.0,36,IDV,ZDV+3TC+IDV,CD4<=50,M,Black Non-Hispanic,Never,Y
+222,0,263,100,56.0,21.0,36,IDV,ZDV+3TC+IDV,CD4<=50,F,Hispanic,Never,N
+223,0,265,90,25.0,17.0,46,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+224,0,305,100,78.5,6.0,34,Control,ZDV+3TC,CD4>50,F,Hispanic,Never,N
+225,0,88,90,37.0,6.0,35,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Never,N
+226,0,293,90,152.5,31.0,37,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+227,0,300,90,180.5,58.0,44,IDV,ZDV+3TC+IDV,CD4>50,F,White Non-Hispanic,Never,N
+228,0,284,100,48.0,11.0,24,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Previously,N
+229,0,304,90,120.5,7.0,31,IDV,ZDV+3TC+IDV,CD4>50,M,"American Indian, Alaskan Native",Never,N
+230,0,291,100,7.5,172.0,37,IDV,ZDV+3TC+IDV,CD4<=50,F,"Asian, Pacific Islander",Never,N
+231,1,18,80,47.5,69.0,59,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+232,0,327,100,155.5,33.0,38,IDV,ZDV+3TC+IDV,CD4>50,M,Hispanic,Never,N
+233,0,236,90,140.5,36.0,40,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+234,0,278,100,111.0,16.0,36,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Never,N
+235,0,88,90,55.5,12.0,31,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+236,0,227,80,80.0,60.0,49,Control,ZDV+3TC,CD4>50,M,Hispanic,Previously,N
+237,0,284,100,26.5,18.0,37,Control,ZDV+3TC,CD4<=50,M,Black Non-Hispanic,Never,N
+238,0,210,90,93.0,30.0,32,Control,ZDV+3TC,CD4>50,F,Hispanic,Never,N
+239,0,182,100,50.0,7.0,57,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+240,0,264,80,27.0,24.0,40,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+241,0,313,90,241.0,25.0,37,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Never,N
+242,1,39,90,29.0,9.0,27,IDV,ZDV+3TC+IDV,CD4<=50,F,White Non-Hispanic,Never,N
+243,0,227,90,48.5,6.5,47,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+244,0,292,80,21.5,26.0,37,IDV,ZDV+3TC+IDV,CD4<=50,M,Hispanic,Never,N
+245,0,280,80,204.0,18.0,48,IDV,ZDV+3TC+IDV,CD4>50,M,Black Non-Hispanic,Previously,N
+246,0,60,100,80.0,30.0,45,Control,ZDV+3TC,CD4<=50,M,Black Non-Hispanic,Never,N
+247,1,126,80,9.5,22.0,33,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+248,0,251,80,13.5,54.0,18,IDV,ZDV+3TC+IDV,CD4<=50,M,Black Non-Hispanic,Never,Y
+249,0,290,100,191.0,31.0,37,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+250,0,17,100,82.5,3.0,30,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Never,N
+251,0,293,90,140.5,84.0,39,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+252,0,236,100,57.0,22.0,56,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,Y
+253,0,341,100,54.5,9.0,44,IDV,ZDV+3TC+IDV,CD4>50,M,Black Non-Hispanic,Never,N
+254,0,227,90,8.0,10.0,25,IDV,ZDV+3TC+IDV,CD4<=50,M,Black Non-Hispanic,Never,N
+255,0,242,90,50.0,39.0,51,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+256,0,265,100,74.0,63.0,45,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+257,1,90,90,111.5,46.0,51,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Previously,N
+258,0,189,90,206.0,12.0,23,IDV,ZDV+3TC+IDV,CD4>50,M,Hispanic,Never,N
+259,0,322,90,37.0,6.0,43,IDV,ZDV+3TC+IDV,CD4<=50,M,Black Non-Hispanic,Never,N
+260,0,278,100,258.5,53.0,38,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+261,0,293,100,47.0,16.0,39,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+262,0,280,100,19.5,37.0,40,Control,ZDV+3TC,CD4<=50,M,Black Non-Hispanic,Previously,N
+263,0,354,90,332.5,10.0,51,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+264,0,250,100,159.5,11.0,33,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+265,0,248,80,0.0,6.0,16,IDV,ZDV+3TC+IDV,CD4<=50,F,Black Non-Hispanic,Never,N
+266,0,349,80,69.5,66.0,51,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+267,0,329,90,71.5,8.0,56,Control,ZDV+3TC,CD4>50,F,Hispanic,Never,N
+268,0,305,90,117.5,19.0,30,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+269,0,307,90,24.0,36.0,34,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+270,0,290,100,103.0,60.0,45,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+271,0,119,80,75.0,81.0,45,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Never,N
+272,0,329,100,17.0,21.0,43,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+273,0,277,100,15.0,16.0,41,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+274,0,264,100,2.0,29.0,55,IDV,ZDV+3TC+IDV,CD4<=50,M,Black Non-Hispanic,Never,N
+275,0,329,100,58.0,30.0,31,Control,ZDV+3TC,CD4>50,F,Black Non-Hispanic,Never,N
+276,0,237,100,16.0,58.0,52,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,Y
+277,0,305,90,28.0,24.0,45,Control,ZDV+3TC,CD4<=50,M,Black Non-Hispanic,Never,Y
+278,0,263,80,4.5,6.0,49,Control,ZDV+3TC,CD4<=50,M,Black Non-Hispanic,Never,N
+279,0,196,90,42.5,68.0,57,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+280,0,189,100,49.5,6.0,47,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Never,N
+281,0,181,100,155.5,14.0,43,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+282,0,104,90,9.5,7.0,47,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+283,0,228,100,106.0,6.0,38,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+284,0,263,100,107.5,6.0,37,IDV,ZDV+3TC+IDV,CD4>50,M,Black Non-Hispanic,Never,N
+285,0,276,100,158.5,31.0,32,IDV,ZDV+3TC+IDV,CD4>50,M,Hispanic,Never,N
+286,0,272,100,25.5,61.0,30,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+287,0,179,90,48.0,61.0,27,Control,ZDV+3TC,CD4<=50,F,Black Non-Hispanic,Never,N
+288,1,244,90,10.5,8.0,47,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+289,0,342,100,16.0,46.0,34,IDV,ZDV+3TC+IDV,CD4<=50,M,Hispanic,Never,N
+290,0,265,80,12.5,6.0,42,Control,ZDV+3TC,CD4<=50,M,Black Non-Hispanic,Never,N
+291,0,322,100,139.0,9.0,51,IDV,ZDV+3TC+IDV,CD4>50,M,Hispanic,Never,N
+292,1,46,80,1.0,36.0,29,Control,ZDV+3TC,CD4<=50,F,White Non-Hispanic,Never,N
+293,0,259,80,120.0,72.0,36,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+294,0,271,100,112.5,25.0,35,IDV,ZDV+3TC+IDV,CD4>50,F,Black Non-Hispanic,Previously,N
+295,0,95,70,3.5,48.0,47,Control,ZDV+3TC,CD4<=50,M,Black Non-Hispanic,Previously,N
+296,0,300,90,190.5,108.0,67,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+297,1,115,90,12.5,6.0,34,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+298,1,15,90,15.5,8.0,50,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+299,0,299,90,107.5,45.0,48,Control,ZDV+3TC,CD4>50,F,White Non-Hispanic,Never,N
+300,0,203,100,216.0,67.0,48,Control,ZDV+3TC,CD4>50,M,Hispanic,Never,N
+301,0,308,90,151.0,7.0,30,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+302,0,301,90,63.5,6.0,31,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+303,0,265,90,103.5,42.0,30,IDV,ZDV+3TC+IDV,CD4>50,F,White Non-Hispanic,Never,N
+304,0,348,90,24.0,17.0,29,Control,ZDV+3TC,CD4<=50,M,Hispanic,Never,N
+305,0,216,90,24.5,6.0,35,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Never,N
+306,0,47,90,169.5,4.0,40,IDV,ZDV+3TC+IDV,CD4>50,F,Black Non-Hispanic,Never,N
+307,0,256,90,63.0,24.0,33,IDV,ZDV+3TC+IDV,CD4>50,M,Black Non-Hispanic,Never,N
+308,0,208,90,188.5,45.0,40,Control,ZDV+3TC,CD4>50,F,Black Non-Hispanic,Never,N
+309,0,250,90,10.5,36.0,44,Control,ZDV+3TC,CD4<=50,M,"Asian, Pacific Islander",Never,N
+310,0,308,90,173.5,6.0,45,IDV,ZDV+3TC+IDV,CD4>50,M,Black Non-Hispanic,Never,N
+311,0,152,80,128.5,96.0,38,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,Y
+312,0,321,100,13.5,23.0,47,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+313,0,257,100,14.5,15.0,21,IDV,ZDV+3TC+IDV,CD4<=50,F,Black Non-Hispanic,Never,N
+314,0,143,90,146.0,60.0,58,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+315,0,146,90,25.5,52.0,52,IDV,ZDV+3TC+IDV,CD4<=50,F,Black Non-Hispanic,Never,N
+316,0,110,90,8.0,9.0,16,Control,ZDV+3TC,CD4<=50,F,Hispanic,Never,N
+317,0,318,100,128.0,83.0,40,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+318,0,312,90,7.5,9.0,33,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+319,1,117,100,84.5,24.0,55,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+320,0,308,90,310.0,55.0,45,IDV,ZDV+3TC+IDV,CD4>50,M,Black Non-Hispanic,Previously,N
+321,0,313,90,0.0,8.0,35,Control,ZDV+3TC,CD4<=50,M,Black Non-Hispanic,Never,N
+322,0,55,100,159.0,11.0,48,IDV,ZDV+3TC+IDV,CD4>50,M,Black Non-Hispanic,Never,N
+323,0,126,80,79.0,74.0,36,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+324,0,320,80,11.5,8.0,33,IDV,ZDV+3TC+IDV,CD4<=50,M,"American Indian, Alaskan Native",Never,N
+325,0,151,90,88.0,7.0,34,Control,ZDV+3TC,CD4<=50,F,White Non-Hispanic,Never,N
+326,0,136,90,118.0,16.0,32,IDV,ZDV+3TC+IDV,CD4>50,F,Black Non-Hispanic,Never,N
+327,0,228,90,45.0,8.0,39,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+328,0,272,100,40.0,24.0,26,Control,ZDV+3TC,CD4>50,F,White Non-Hispanic,Never,N
+329,0,192,80,3.0,6.0,36,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+330,1,64,80,18.0,31.0,38,Control,ZDV+3TC,CD4<=50,M,"Asian, Pacific Islander",Never,N
+331,1,149,70,1.0,88.0,41,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+332,1,52,80,37.0,26.0,32,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+333,0,305,90,196.5,48.0,31,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+334,0,215,90,11.0,6.0,32,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+335,0,306,80,17.5,8.0,30,Control,ZDV+3TC,CD4<=50,M,Black Non-Hispanic,Never,N
+336,1,103,90,111.5,8.0,25,IDV,ZDV+3TC+IDV,CD4>50,F,White Non-Hispanic,Never,N
+337,0,349,90,139.5,96.0,42,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+338,0,346,90,58.5,12.0,35,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+339,0,319,90,105.0,13.0,53,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Never,N
+340,0,234,100,96.0,50.0,37,IDV,ZDV+3TC+IDV,CD4>50,M,Black Non-Hispanic,Never,N
+341,0,214,90,44.5,36.0,35,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+342,0,306,90,21.0,47.0,45,IDV,ZDV+3TC+IDV,CD4<=50,M,Black Non-Hispanic,Previously,N
+343,0,329,90,21.5,93.0,46,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+344,1,123,80,29.5,92.0,39,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+345,0,347,90,3.0,18.0,43,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+346,0,224,90,168.0,12.0,36,IDV,ZDV+3TC+IDV,CD4>50,F,White Non-Hispanic,Previously,N
+347,0,272,80,14.0,14.0,39,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+348,0,286,100,69.0,22.0,38,IDV,ZDV+3TC+IDV,CD4>50,F,Black Non-Hispanic,Never,N
+349,0,256,90,59.5,30.0,26,IDV,ZDV+3TC+IDV,CD4>50,F,White Non-Hispanic,Never,N
+350,0,188,100,3.5,7.0,31,IDV,ZDV+3TC+IDV,CD4<=50,M,Black Non-Hispanic,Never,N
+351,1,233,100,9.5,28.0,37,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+352,0,242,100,42.5,24.0,34,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Never,N
+353,0,213,90,128.5,8.0,31,IDV,ZDV+3TC+IDV,CD4>50,M,Black Non-Hispanic,Never,N
+354,0,311,90,96.0,30.0,37,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+355,0,319,100,10.0,27.0,32,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+356,1,117,80,14.0,16.0,31,Control,ZDV+3TC,CD4<=50,M,Hispanic,Never,N
+357,0,273,90,99.0,27.0,44,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+358,0,285,90,15.0,12.0,42,IDV,ZDV+3TC+IDV,CD4<=50,F,Black Non-Hispanic,Never,N
+359,1,91,90,10.0,6.0,36,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+360,0,319,80,60.0,20.0,43,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Previously,N
+361,0,336,100,145.0,48.0,55,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+362,0,318,90,50.5,6.0,44,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+363,0,70,100,245.0,8.0,35,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+364,0,276,100,90.0,18.0,49,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+365,0,314,100,74.0,9.0,35,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Previously,N
+366,0,180,100,205.5,53.0,49,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+367,0,216,90,203.0,47.0,52,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+368,0,306,100,42.0,20.0,32,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+369,0,242,100,54.0,6.0,36,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+370,1,13,100,140.0,18.0,46,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+371,0,297,90,118.5,38.0,42,IDV,ZDV+3TC+IDV,CD4>50,M,Hispanic,Never,N
+372,0,291,90,50.0,11.0,35,IDV,ZDV+3TC+IDV,CD4>50,F,Hispanic,Previously,N
+373,0,292,80,28.5,41.0,34,Control,ZDV+3TC,CD4<=50,M,Hispanic,Previously,N
+374,0,216,80,130.0,25.0,24,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+375,0,258,90,15.0,16.0,37,IDV,ZDV+3TC+IDV,CD4<=50,M,Hispanic,Never,N
+376,0,263,100,209.0,44.0,43,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+377,0,326,100,70.0,58.0,44,Control,ZDV+3TC,CD4>50,F,Black Non-Hispanic,Never,N
+378,0,257,100,2.0,44.0,29,IDV,ZDV+3TC+IDV,CD4<=50,F,Black Non-Hispanic,Never,N
+379,0,84,100,60.5,12.0,31,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+380,0,237,100,9.0,32.0,56,Control,ZDV+3TC,CD4<=50,M,Black Non-Hispanic,Previously,N
+381,1,91,90,8.0,7.0,33,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+382,0,279,100,38.5,14.0,26,Control,ZDV+3TC,CD4>50,M,Hispanic,Never,N
+383,0,244,100,187.5,65.0,32,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+384,0,292,100,6.0,42.0,41,IDV,ZDV+3TC+IDV,CD4<=50,F,Black Non-Hispanic,Previously,N
+385,0,273,100,50.0,6.0,48,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+386,0,228,80,25.5,19.0,30,Control,ZDV+3TC,CD4<=50,M,Black Non-Hispanic,Never,N
+387,0,259,90,0.0,25.0,33,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+388,0,70,90,14.5,82.0,28,Control,ZDV+3TC,CD4<=50,M,Black Non-Hispanic,Never,N
+389,0,216,90,58.0,12.0,35,Control,ZDV+3TC,CD4<=50,F,Black Non-Hispanic,Never,N
+390,0,313,90,169.5,8.0,31,IDV,ZDV+3TC+IDV,CD4>50,F,Hispanic,Previously,N
+391,0,257,90,88.0,6.0,43,Control,ZDV+3TC,CD4>50,F,Black Non-Hispanic,Previously,N
+392,0,223,90,104.0,29.0,33,IDV,ZDV+3TC+IDV,CD4>50,F,Black Non-Hispanic,Never,N
+393,0,327,100,110.0,7.0,31,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+394,0,328,100,133.0,11.0,36,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+395,0,265,100,35.5,37.0,59,Control,ZDV+3TC,CD4<=50,M,Black Non-Hispanic,Never,N
+396,0,235,80,199.5,15.0,34,IDV,ZDV+3TC+IDV,CD4>50,M,Hispanic,Never,N
+397,0,221,80,11.0,13.0,59,IDV,ZDV+3TC+IDV,CD4<=50,M,Black Non-Hispanic,Never,N
+398,1,255,100,81.0,60.0,36,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+399,0,266,90,136.5,72.0,47,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+400,0,313,100,119.0,7.0,30,IDV,ZDV+3TC+IDV,CD4>50,M,Hispanic,Never,N
+401,0,271,100,221.5,54.0,31,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+402,0,293,80,88.5,16.0,33,Control,ZDV+3TC,CD4>50,M,"Asian, Pacific Islander",Never,N
+403,0,277,90,17.5,16.0,42,Control,ZDV+3TC,CD4<=50,M,Hispanic,Never,N
+404,0,228,90,231.5,24.0,32,Control,ZDV+3TC,CD4>50,M,Hispanic,Never,N
+405,0,313,90,42.5,8.0,43,IDV,ZDV+3TC+IDV,CD4>50,M,Black Non-Hispanic,Never,N
+406,1,81,70,4.5,10.0,63,IDV,ZDV+3TC+IDV,CD4<=50,M,Hispanic,Never,N
+407,0,39,100,127.5,105.0,41,IDV,ZDV+3TC+IDV,CD4>50,F,Hispanic,Never,N
+408,0,333,90,10.0,24.0,46,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+409,1,82,90,5.0,12.5,56,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+410,0,313,90,134.5,6.0,27,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+411,0,320,90,78.5,38.0,42,Control,ZDV+3TC,CD4>50,M,Hispanic,Previously,N
+412,0,217,90,77.0,24.0,33,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+413,0,315,80,288.0,92.0,62,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+414,0,66,90,210.5,18.0,33,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Never,N
+415,0,179,90,0.0,19.0,40,IDV,ZDV+3TC+IDV,CD4<=50,M,Black Non-Hispanic,Never,N
+416,0,235,80,32.0,26.0,29,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+417,0,230,100,172.0,18.0,42,Control,ZDV+3TC,CD4>50,M,Hispanic,Previously,N
+418,0,98,100,100.0,11.0,36,Control,ZDV+3TC,CD4>50,F,Black Non-Hispanic,Never,N
+419,0,192,80,8.0,8.0,41,Control,ZDV+3TC,CD4<=50,M,Black Non-Hispanic,Never,N
+420,0,73,100,185.0,16.0,26,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+421,0,273,90,301.0,20.0,45,IDV,ZDV+3TC+IDV,CD4>50,M,Black Non-Hispanic,Previously,N
+422,0,227,100,87.0,24.0,50,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+423,0,200,100,200.5,7.0,42,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Never,N
+424,0,273,100,13.5,10.5,39,Control,ZDV+3TC,CD4<=50,M,Hispanic,Never,N
+425,0,306,90,132.0,19.0,56,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+426,0,180,90,243.0,108.0,44,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Never,N
+427,0,272,100,0.0,71.0,33,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+428,0,299,70,73.5,72.0,51,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+429,0,311,90,15.0,9.0,52,Control,ZDV+3TC,CD4<=50,M,Black Non-Hispanic,Never,N
+430,0,333,100,88.0,8.0,35,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+431,0,269,80,12.0,24.0,39,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+432,0,244,100,157.5,6.0,41,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+433,0,244,100,145.5,6.0,26,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+434,0,307,80,13.5,79.0,40,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+435,0,313,90,33.5,18.0,35,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+436,0,315,80,53.0,78.0,39,IDV,ZDV+3TC+IDV,CD4>50,M,Black Non-Hispanic,Never,N
+437,0,132,80,141.0,12.0,33,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+438,0,334,90,0.0,14.0,47,Control,ZDV+3TC,CD4<=50,M,Black Non-Hispanic,Never,N
+439,0,154,90,99.0,51.0,44,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+440,0,294,80,57.5,19.0,62,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+441,1,105,80,51.5,11.5,45,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+442,0,252,90,65.0,6.0,30,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+443,0,280,100,173.0,96.0,27,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+444,0,233,100,108.5,12.0,51,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+445,0,221,90,9.0,6.0,44,Control,ZDV+3TC,CD4<=50,F,Black Non-Hispanic,Never,N
+446,0,265,90,192.0,7.0,45,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+447,1,108,80,10.0,65.0,39,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+448,0,257,80,106.5,13.0,37,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+449,0,224,80,10.0,24.0,29,Control,ZDV+3TC,CD4<=50,M,Black Non-Hispanic,Never,N
+450,1,35,100,34.5,36.0,29,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+451,0,150,100,256.0,6.2,32,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Never,N
+452,0,342,80,0.0,19.0,42,Control,ZDV+3TC,CD4<=50,M,Hispanic,Never,N
+453,0,217,100,197.0,18.0,44,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+454,0,40,90,30.5,8.0,41,IDV,ZDV+3TC+IDV,CD4<=50,M,Black Non-Hispanic,Never,N
+455,0,124,100,3.0,17.0,25,IDV,ZDV+3TC+IDV,CD4<=50,F,Black Non-Hispanic,Never,N
+456,0,280,90,57.0,9.0,30,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+457,0,252,100,0.0,6.0,32,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+458,0,230,90,128.0,8.0,43,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+459,0,341,90,5.5,21.0,45,IDV,ZDV+3TC+IDV,CD4<=50,F,Black Non-Hispanic,Never,N
+460,0,193,100,171.0,6.0,33,Control,ZDV+3TC,CD4>50,M,Hispanic,Never,N
+461,0,270,90,170.5,38.0,27,IDV,ZDV+3TC+IDV,CD4>50,F,White Non-Hispanic,Previously,N
+462,0,1,100,187.0,34.0,40,IDV,ZDV+3TC+IDV,CD4>50,M,Hispanic,Never,N
+463,0,243,90,184.0,34.0,38,IDV,ZDV+3TC+IDV,CD4>50,M,"Asian, Pacific Islander",Never,N
+464,0,277,100,3.0,24.0,51,IDV,ZDV+3TC+IDV,CD4<=50,M,Black Non-Hispanic,Previously,N
+465,0,235,90,9.5,10.0,34,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+466,0,329,100,131.0,8.0,63,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+467,0,349,90,16.5,93.0,41,IDV,ZDV+3TC+IDV,CD4<=50,F,Hispanic,Never,N
+468,0,278,80,78.0,24.0,38,IDV,ZDV+3TC+IDV,CD4>50,M,Black Non-Hispanic,Never,N
+469,0,313,100,69.5,24.0,41,Control,ZDV+3TC,CD4>50,F,Black Non-Hispanic,Never,N
+470,0,263,100,37.0,6.0,41,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+471,0,348,100,215.5,13.0,32,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Previously,N
+472,0,277,90,68.0,107.0,37,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+473,0,206,100,138.0,6.0,38,IDV,ZDV+3TC+IDV,CD4>50,M,Black Non-Hispanic,Never,N
+474,0,291,90,10.5,7.0,39,Control,ZDV+3TC,CD4<=50,M,Hispanic,Never,N
+475,0,307,80,151.0,60.0,39,Control,ZDV+3TC,CD4>50,M,Hispanic,Never,N
+476,0,201,90,28.5,6.0,44,Control,ZDV+3TC,CD4<=50,M,Black Non-Hispanic,Never,N
+477,0,328,90,6.5,19.5,57,IDV,ZDV+3TC+IDV,CD4<=50,F,Black Non-Hispanic,Never,N
+478,0,325,90,14.0,11.0,29,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+479,0,329,90,120.0,48.0,48,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+480,0,80,100,149.0,76.0,37,Control,ZDV+3TC,CD4>50,F,Black Non-Hispanic,Previously,N
+481,0,242,90,124.5,9.0,73,Control,ZDV+3TC,CD4>50,M,Hispanic,Never,N
+482,1,1,90,11.0,36.0,45,Control,ZDV+3TC,CD4<=50,M,Hispanic,Never,N
+483,0,315,100,97.0,14.0,33,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Previously,N
+484,0,346,100,100.5,16.0,35,IDV,ZDV+3TC+IDV,CD4>50,F,White Non-Hispanic,Never,N
+485,0,116,90,132.5,6.0,36,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+486,0,326,100,53.5,23.0,31,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+487,1,288,90,18.0,12.0,46,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+488,0,328,90,173.0,6.0,46,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+489,0,272,90,17.0,72.0,33,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+490,0,124,90,17.5,16.0,32,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+491,1,144,70,57.0,17.0,56,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Currently,N
+492,0,179,90,172.0,51.75,54,Control,ZDV+3TC,CD4>50,M,Hispanic,Never,N
+493,0,175,90,81.0,21.0,30,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+494,0,217,90,27.5,61.0,34,IDV,ZDV+3TC+IDV,CD4<=50,M,Black Non-Hispanic,Never,N
+495,0,243,90,0.0,17.0,21,Control,ZDV+3TC,CD4<=50,M,Black Non-Hispanic,Never,N
+496,0,342,100,116.5,31.0,35,Control,ZDV+3TC,CD4>50,F,White Non-Hispanic,Never,N
+497,0,145,100,140.5,8.0,37,IDV,ZDV+3TC+IDV,CD4>50,F,Black Non-Hispanic,Previously,N
+498,0,341,100,140.0,14.0,28,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+499,0,293,100,130.0,8.0,36,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+500,0,319,90,52.5,6.0,34,IDV,ZDV+3TC+IDV,CD4<=50,F,Hispanic,Never,N
+501,0,249,80,27.5,13.0,31,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+502,0,250,100,33.5,24.0,42,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Previously,N
+503,0,138,90,167.0,100.0,38,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,Y
+504,0,273,100,155.0,6.0,37,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+505,0,322,90,123.5,11.0,54,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+506,0,263,100,12.0,24.0,51,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+507,0,203,90,147.0,38.0,35,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+508,0,321,90,28.5,160.0,45,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+509,0,242,100,102.5,6.0,23,IDV,ZDV+3TC+IDV,CD4>50,M,Hispanic,Never,N
+510,0,312,90,10.5,12.0,59,IDV,ZDV+3TC+IDV,CD4<=50,M,Black Non-Hispanic,Never,N
+511,0,287,90,201.0,17.5,38,Control,ZDV+3TC,CD4>50,F,Black Non-Hispanic,Never,N
+512,0,228,90,30.0,13.0,43,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+513,0,137,90,160.0,38.0,31,Control,ZDV+3TC,CD4>50,F,White Non-Hispanic,Never,N
+514,0,279,100,69.0,6.0,33,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+515,0,294,90,159.5,48.0,34,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Never,N
+516,0,283,100,99.5,10.0,33,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Previously,N
+517,0,286,90,97.0,30.0,35,IDV,ZDV+3TC+IDV,CD4>50,F,Hispanic,Never,N
+518,0,214,100,46.5,6.0,46,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+519,0,158,100,64.5,78.0,35,IDV,ZDV+3TC+IDV,CD4>50,M,Black Non-Hispanic,Never,N
+520,0,273,100,20.0,6.0,42,IDV,ZDV+3TC+IDV,CD4<=50,M,Black Non-Hispanic,Never,N
+521,0,133,100,51.0,57.0,39,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+522,0,313,80,133.0,57.0,35,IDV,ZDV+3TC+IDV,CD4>50,F,Hispanic,Never,N
+523,0,306,70,145.0,20.0,38,Control,ZDV+3TC,CD4>50,F,Black Non-Hispanic,Previously,N
+524,0,154,80,148.0,6.0,34,Control,ZDV+3TC,CD4>50,F,White Non-Hispanic,Previously,N
+525,0,3,90,34.5,3.0,39,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Previously,N
+526,0,75,100,182.0,52.0,39,Control,ZDV+3TC,CD4>50,F,Hispanic,Never,N
+527,0,335,100,99.0,15.0,44,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Previously,N
+528,0,159,100,170.5,44.0,49,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+529,0,313,100,131.0,24.0,36,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+530,1,56,90,4.0,62.0,44,Control,ZDV+3TC,CD4<=50,M,Hispanic,Previously,N
+531,0,264,100,90.0,33.0,46,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+532,0,311,90,110.0,48.0,33,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+533,0,102,90,169.5,7.0,33,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Previously,N
+534,0,318,80,181.0,14.0,35,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+535,0,257,100,48.5,6.0,51,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+536,0,158,90,151.5,28.0,35,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+537,0,293,100,202.5,10.0,32,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+538,0,168,90,130.5,12.0,33,IDV,ZDV+3TC+IDV,CD4>50,M,Black Non-Hispanic,Never,N
+539,0,194,80,0.0,18.0,45,Control,ZDV+3TC,CD4<=50,M,Black Non-Hispanic,Previously,N
+540,0,208,90,15.0,20.0,34,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+541,0,217,100,50.5,12.0,29,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+542,0,194,100,92.5,30.0,27,IDV,ZDV+3TC+IDV,CD4>50,M,Black Non-Hispanic,Never,N
+543,0,276,90,35.5,24.0,31,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+544,0,322,90,98.0,6.0,34,Control,ZDV+3TC,CD4>50,M,Hispanic,Never,N
+545,0,230,90,132.5,49.0,42,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+546,0,250,100,23.5,65.0,38,IDV,ZDV+3TC+IDV,CD4<=50,M,Black Non-Hispanic,Never,N
+547,0,305,100,50.5,9.0,36,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Previously,N
+548,0,202,90,119.5,44.0,53,IDV,ZDV+3TC+IDV,CD4>50,F,Hispanic,Never,N
+549,0,271,80,119.5,72.0,39,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Never,N
+550,0,362,90,234.5,99.0,31,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+551,0,343,90,16.0,13.0,27,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+552,0,292,100,4.0,55.0,28,Control,ZDV+3TC,CD4<=50,M,Hispanic,Never,Y
+553,0,194,90,143.0,84.0,39,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+554,0,322,90,12.0,9.0,45,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+555,0,170,100,4.0,30.0,27,Control,ZDV+3TC,CD4<=50,F,White Non-Hispanic,Never,N
+556,0,321,100,170.0,7.0,22,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+557,0,277,90,165.0,104.0,35,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+558,0,117,100,86.5,9.0,39,IDV,ZDV+3TC+IDV,CD4>50,M,Hispanic,Previously,N
+559,1,135,100,76.5,72.0,44,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+560,0,304,100,221.0,22.0,39,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+561,0,276,100,174.0,23.0,35,Control,ZDV+3TC,CD4>50,F,Black Non-Hispanic,Never,N
+562,0,130,100,87.5,7.0,38,Control,ZDV+3TC,CD4>50,F,White Non-Hispanic,Never,N
+563,0,269,90,100.0,18.0,35,IDV,ZDV+3TC+IDV,CD4>50,F,Black Non-Hispanic,Never,N
+564,0,186,90,153.0,20.0,42,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+565,0,221,90,35.0,40.0,43,IDV,ZDV+3TC+IDV,CD4<=50,M,Black Non-Hispanic,Previously,N
+566,1,7,100,68.0,35.0,29,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+567,0,173,90,70.5,64.0,38,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+568,0,321,90,3.0,136.0,60,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+569,0,161,90,131.5,7.0,43,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+570,0,335,90,146.0,38.0,35,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Never,N
+571,1,46,80,11.0,6.0,41,IDV,ZDV+3TC+IDV,CD4<=50,F,White Non-Hispanic,Never,N
+572,0,286,80,149.5,92.0,58,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+573,0,321,90,20.0,15.0,60,IDV,ZDV+3TC+IDV,CD4<=50,M,Black Non-Hispanic,Previously,N
+574,0,117,100,72.0,36.0,41,Control,ZDV+3TC,CD4>50,M,Hispanic,Never,Y
+575,0,256,90,197.0,9.75,41,IDV,ZDV+3TC+IDV,CD4>50,F,Hispanic,Never,N
+576,0,326,80,10.0,19.0,36,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+577,0,273,100,195.5,6.0,25,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+578,0,319,80,56.0,25.0,45,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+579,0,255,100,19.5,12.0,34,Control,ZDV+3TC,CD4<=50,M,Black Non-Hispanic,Never,N
+580,0,297,90,137.0,10.0,41,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+581,0,159,100,80.0,6.0,36,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Never,N
+582,0,334,90,6.5,14.0,28,IDV,ZDV+3TC+IDV,CD4<=50,F,Black Non-Hispanic,Never,N
+583,0,194,100,85.5,50.0,31,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+584,0,327,90,47.5,48.0,43,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Previously,N
+585,1,112,90,0.0,31.0,34,Control,ZDV+3TC,CD4<=50,M,Hispanic,Never,N
+586,0,283,100,57.5,6.0,38,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+587,0,333,90,1.5,36.0,39,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+588,0,262,100,86.0,22.0,33,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+589,0,307,90,21.0,12.0,53,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Previously,N
+590,0,236,90,247.0,36.0,33,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+591,0,152,80,16.0,16.0,40,Control,ZDV+3TC,CD4<=50,M,"Asian, Pacific Islander",Never,N
+592,0,276,100,98.0,17.0,62,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+593,0,271,90,5.0,96.0,29,IDV,ZDV+3TC+IDV,CD4<=50,M,Black Non-Hispanic,Never,N
+594,0,242,80,31.0,19.0,28,IDV,ZDV+3TC+IDV,CD4<=50,M,Black Non-Hispanic,Previously,N
+595,0,130,90,232.0,12.0,31,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+596,0,271,80,189.5,11.0,31,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+597,0,294,90,186.0,31.0,34,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Previously,N
+598,0,189,100,83.5,26.0,41,IDV,ZDV+3TC+IDV,CD4>50,F,Hispanic,Never,N
+599,0,229,90,169.5,27.0,31,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+600,0,315,100,112.0,26.0,31,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+601,0,257,90,0.0,63.5,40,IDV,ZDV+3TC+IDV,CD4<=50,M,Black Non-Hispanic,Never,N
+602,0,258,100,13.0,16.0,31,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+603,0,312,90,243.0,24.0,38,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+604,0,124,90,107.0,46.5,30,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Never,N
+605,0,269,80,137.0,26.0,35,Control,ZDV+3TC,CD4>50,M,Hispanic,Previously,N
+606,0,264,90,1.0,36.0,42,IDV,ZDV+3TC+IDV,CD4<=50,M,Black Non-Hispanic,Previously,N
+607,0,257,100,151.0,60.0,30,IDV,ZDV+3TC+IDV,CD4>50,M,Hispanic,Never,N
+608,0,70,100,121.5,25.0,30,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+609,1,18,100,5.5,34.0,43,IDV,ZDV+3TC+IDV,CD4<=50,M,Hispanic,Never,N
+610,0,242,100,118.5,32.0,36,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+611,1,138,90,63.0,6.0,63,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+612,0,262,80,63.5,16.0,42,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Previously,N
+613,0,131,90,120.0,8.0,49,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Previously,N
+614,0,116,100,140.0,32.0,27,IDV,ZDV+3TC+IDV,CD4>50,F,Hispanic,Previously,N
+615,0,215,100,12.5,48.0,31,Control,ZDV+3TC,CD4<=50,M,Black Non-Hispanic,Never,N
+616,0,244,90,4.5,24.0,41,Control,ZDV+3TC,CD4<=50,M,Hispanic,Never,N
+617,0,238,90,168.0,23.0,24,Control,ZDV+3TC,CD4>50,F,Hispanic,Never,N
+618,0,196,70,132.0,14.5,33,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+619,0,136,100,82.5,6.0,44,IDV,ZDV+3TC+IDV,CD4>50,M,Black Non-Hispanic,Never,N
+620,0,292,100,232.0,60.0,49,IDV,ZDV+3TC+IDV,CD4>50,M,Black Non-Hispanic,Never,N
+621,0,346,70,138.0,86.0,62,Control,ZDV+3TC,CD4>50,F,White Non-Hispanic,Never,N
+622,0,342,90,180.0,60.0,63,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Previously,N
+623,0,305,90,86.5,33.0,35,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+624,0,62,80,104.5,12.0,34,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+625,0,298,90,12.5,24.0,26,Control,ZDV+3TC,CD4<=50,F,Black Non-Hispanic,Never,N
+626,0,152,90,52.5,5.0,28,Control,ZDV+3TC,CD4>50,M,"Asian, Pacific Islander",Never,N
+627,0,300,80,78.0,38.0,45,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+628,0,321,90,57.5,24.0,37,IDV,ZDV+3TC+IDV,CD4<=50,F,White Non-Hispanic,Never,N
+629,0,312,100,41.0,47.0,43,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Never,N
+630,0,200,90,87.5,60.0,27,IDV,ZDV+3TC+IDV,CD4>50,F,Black Non-Hispanic,Never,N
+631,0,327,80,6.0,7.0,30,Control,ZDV+3TC,CD4<=50,F,White Non-Hispanic,Previously,N
+632,1,65,70,18.0,28.0,33,IDV,ZDV+3TC+IDV,CD4<=50,F,White Non-Hispanic,Never,N
+633,0,151,90,2.5,7.0,23,IDV,ZDV+3TC+IDV,CD4<=50,F,Black Non-Hispanic,Never,N
+634,0,321,100,126.0,41.0,33,IDV,ZDV+3TC+IDV,CD4>50,F,Hispanic,Never,N
+635,0,238,100,90.0,38.0,34,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+636,1,42,100,3.0,22.0,45,Control,ZDV+3TC,CD4<=50,M,Black Non-Hispanic,Never,N
+637,0,290,70,6.0,12.0,58,Control,ZDV+3TC,CD4<=50,M,Black Non-Hispanic,Never,N
+638,0,235,100,136.5,34.0,21,IDV,ZDV+3TC+IDV,CD4>50,F,Black Non-Hispanic,Never,N
+639,0,140,90,54.0,12.0,42,IDV,ZDV+3TC+IDV,CD4<=50,F,Black Non-Hispanic,Never,N
+640,0,167,90,247.0,46.0,26,IDV,ZDV+3TC+IDV,CD4>50,M,Hispanic,Never,N
+641,0,256,80,10.5,39.0,51,IDV,ZDV+3TC+IDV,CD4<=50,M,Black Non-Hispanic,Previously,N
+642,1,231,90,14.5,13.0,32,Control,ZDV+3TC,CD4<=50,M,Black Non-Hispanic,Never,N
+643,0,230,100,102.5,11.0,30,IDV,ZDV+3TC+IDV,CD4>50,M,Black Non-Hispanic,Never,N
+644,0,293,80,52.0,7.0,38,Control,ZDV+3TC,CD4<=50,M,Hispanic,Previously,N
+645,0,265,90,132.5,48.0,36,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+646,0,255,100,143.5,32.0,41,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+647,0,217,90,226.5,72.0,53,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Previously,N
+648,0,173,90,165.5,6.0,25,IDV,ZDV+3TC+IDV,CD4>50,M,Black Non-Hispanic,Never,N
+649,0,335,90,148.0,8.0,53,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Previously,N
+650,0,329,80,153.5,31.0,34,IDV,ZDV+3TC+IDV,CD4>50,M,Black Non-Hispanic,Never,N
+651,0,301,100,47.0,89.0,57,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+652,0,98,100,165.0,16.0,29,IDV,ZDV+3TC+IDV,CD4>50,M,Black Non-Hispanic,Never,N
+653,0,364,90,134.5,13.0,22,Control,ZDV+3TC,CD4>50,F,Black Non-Hispanic,Never,N
+654,0,118,90,185.0,60.0,51,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+655,0,308,80,10.0,6.0,44,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+656,0,287,80,7.0,18.0,36,Control,ZDV+3TC,CD4<=50,F,Black Non-Hispanic,Never,N
+657,0,214,90,185.0,20.0,50,IDV,ZDV+3TC+IDV,CD4>50,F,White Non-Hispanic,Never,N
+658,0,322,90,187.5,7.0,39,Control,ZDV+3TC,CD4>50,M,Hispanic,Never,N
+659,0,293,90,117.5,59.0,48,IDV,ZDV+3TC+IDV,CD4>50,F,Black Non-Hispanic,Never,N
+660,0,118,90,139.0,47.0,42,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+661,0,349,90,68.0,96.0,44,IDV,ZDV+3TC+IDV,CD4>50,M,Black Non-Hispanic,Never,N
+662,1,233,80,100.0,14.0,49,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,Y
+663,0,285,90,1.0,24.0,42,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+664,0,272,90,48.5,52.0,32,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+665,0,300,70,3.0,26.0,36,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+666,0,258,100,132.0,9.0,29,IDV,ZDV+3TC+IDV,CD4>50,F,Black Non-Hispanic,Never,N
+667,0,202,90,62.0,9.5,49,Control,ZDV+3TC,CD4>50,M,Hispanic,Never,N
+668,0,132,90,95.0,80.0,39,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+669,0,132,90,161.0,75.0,59,IDV,ZDV+3TC+IDV,CD4>50,M,Hispanic,Never,N
+670,1,14,70,8.0,12.0,31,IDV,ZDV+3TC+IDV,CD4<=50,M,"Asian, Pacific Islander",Never,N
+671,0,307,90,150.0,53.0,39,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+672,0,125,80,209.0,58.0,28,IDV,ZDV+3TC+IDV,CD4>50,M,"American Indian, Alaskan Native",Never,N
+673,0,348,90,98.5,12.0,66,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Never,N
+674,0,120,80,5.0,156.0,20,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,Y
+675,0,244,100,54.0,12.0,29,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Never,N
+676,0,161,90,131.0,11.0,25,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Never,N
+677,0,321,100,241.5,8.0,51,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+678,0,347,90,143.5,28.0,43,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+679,1,9,70,23.0,85.0,36,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+680,0,313,90,51.5,11.0,34,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+681,0,230,90,13.5,31.0,30,IDV,ZDV+3TC+IDV,CD4<=50,F,Black Non-Hispanic,Never,N
+682,0,132,90,204.0,92.0,29,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Never,N
+683,0,354,80,51.5,14.0,42,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+684,0,293,90,82.5,17.0,34,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+685,1,84,80,115.0,9.0,28,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+686,0,326,80,10.0,28.0,46,Control,ZDV+3TC,CD4<=50,F,Black Non-Hispanic,Previously,N
+687,0,181,90,68.5,11.0,29,IDV,ZDV+3TC+IDV,CD4>50,F,Black Non-Hispanic,Never,N
+688,0,307,90,68.5,56.0,28,Control,ZDV+3TC,CD4>50,F,White Non-Hispanic,Never,N
+689,0,279,100,150.0,13.0,28,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+690,0,130,100,120.5,134.0,41,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Never,N
+691,0,271,100,283.0,6.0,19,Control,ZDV+3TC,CD4>50,M,Hispanic,Never,Y
+692,0,159,90,92.0,6.0,39,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+693,0,215,90,11.0,56.0,47,Control,ZDV+3TC,CD4<=50,M,Black Non-Hispanic,Never,N
+694,0,231,100,193.5,49.0,39,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+695,0,258,100,21.0,18.0,38,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+696,0,291,100,90.0,6.0,36,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+697,0,237,100,179.0,48.0,39,IDV,ZDV+3TC+IDV,CD4>50,F,Black Non-Hispanic,Previously,N
+698,0,136,90,107.0,8.0,37,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+699,0,312,90,24.5,8.0,40,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Previously,N
+700,0,294,100,112.0,6.0,42,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+701,0,167,100,161.5,7.0,30,IDV,ZDV+3TC+IDV,CD4>50,F,White Non-Hispanic,Never,N
+702,0,298,90,146.0,17.0,45,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Previously,N
+703,0,263,100,0.5,77.0,48,Control,ZDV+3TC,CD4<=50,F,Black Non-Hispanic,Previously,N
+704,0,319,80,12.0,9.0,32,IDV,ZDV+3TC+IDV,CD4<=50,M,Black Non-Hispanic,Never,N
+705,0,180,90,139.0,6.0,32,IDV,ZDV+3TC+IDV,CD4>50,F,Black Non-Hispanic,Previously,N
+706,0,153,80,54.0,32.0,35,Control,ZDV+3TC,CD4<=50,F,Black Non-Hispanic,Never,N
+707,0,41,100,135.5,6.0,36,IDV,ZDV+3TC+IDV,CD4>50,F,Hispanic,Never,N
+708,0,332,90,41.0,17.0,56,Control,ZDV+3TC,CD4<=50,M,Black Non-Hispanic,Previously,N
+709,0,298,70,22.5,36.0,37,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Previously,N
+710,0,105,100,115.5,18.0,33,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Never,N
+711,0,203,90,94.0,12.0,36,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+712,0,276,100,20.0,18.0,34,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+713,0,242,100,75.0,8.0,30,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+714,0,181,100,101.0,8.5,27,IDV,ZDV+3TC+IDV,CD4>50,M,Hispanic,Never,N
+715,0,327,90,61.5,52.0,38,Control,ZDV+3TC,CD4>50,M,Hispanic,Never,N
+716,0,273,90,43.5,24.0,31,Control,ZDV+3TC,CD4<=50,F,White Non-Hispanic,Never,N
+717,0,68,90,164.5,55.0,33,IDV,ZDV+3TC+IDV,CD4>50,M,Black Non-Hispanic,Never,N
+718,0,92,90,34.0,8.0,44,Control,ZDV+3TC,CD4<=50,F,Hispanic,Never,N
+719,0,269,80,31.5,36.0,43,IDV,ZDV+3TC+IDV,CD4<=50,F,White Non-Hispanic,Never,N
+720,0,266,100,39.0,48.0,32,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,Y
+721,0,88,100,63.0,6.5,39,IDV,ZDV+3TC+IDV,CD4>50,M,Black Non-Hispanic,Never,N
+722,0,276,90,26.33333,6.0,33,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+723,0,178,90,34.5,44.0,50,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+724,1,113,80,20.0,72.0,35,Control,ZDV+3TC,CD4<=50,M,Hispanic,Previously,N
+725,0,252,100,27.0,24.0,33,Control,ZDV+3TC,CD4<=50,F,White Non-Hispanic,Never,N
+726,0,56,90,18.0,58.0,38,IDV,ZDV+3TC+IDV,CD4<=50,F,Black Non-Hispanic,Never,N
+727,0,252,100,74.5,8.0,30,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+728,0,342,90,24.0,29.0,34,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+729,0,308,100,215.5,28.0,36,Control,ZDV+3TC,CD4>50,F,White Non-Hispanic,Never,N
+730,0,229,100,68.0,50.0,47,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+731,0,180,80,88.5,26.0,38,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Previously,N
+732,0,312,90,49.5,67.0,31,IDV,ZDV+3TC+IDV,CD4<=50,F,Black Non-Hispanic,Never,N
+733,0,38,100,225.5,31.0,32,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+734,0,273,90,52.0,7.0,40,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+735,0,173,90,124.0,9.0,32,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+736,0,301,90,23.5,11.0,48,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+737,1,68,80,3.0,28.0,52,Control,ZDV+3TC,CD4<=50,F,White Non-Hispanic,Never,N
+738,0,291,80,26.0,16.0,65,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+739,0,185,100,83.0,13.0,39,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+740,0,346,90,199.0,20.0,33,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+741,0,216,90,26.0,61.0,36,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+742,0,168,90,159.5,57.0,39,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+743,0,257,90,5.5,6.0,31,IDV,ZDV+3TC+IDV,CD4<=50,M,Black Non-Hispanic,Never,N
+744,0,299,100,237.5,7.0,37,IDV,ZDV+3TC+IDV,CD4>50,F,White Non-Hispanic,Never,N
+745,0,272,90,124.0,75.0,35,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Previously,N
+746,1,25,80,18.5,16.0,37,IDV,ZDV+3TC+IDV,CD4<=50,M,Hispanic,Never,N
+747,0,235,100,177.0,7.0,34,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+748,0,277,80,8.5,30.0,45,IDV,ZDV+3TC+IDV,CD4<=50,M,"American Indian, Alaskan Native",Previously,N
+749,0,25,100,76.5,6.0,42,Control,ZDV+3TC,CD4<=50,M,Black Non-Hispanic,Never,N
+750,0,53,80,392.0,42.0,40,Control,ZDV+3TC,CD4>50,M,"American Indian, Alaskan Native",Previously,N
+751,0,355,90,41.5,52.0,55,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+752,0,353,100,43.0,33.0,43,Control,ZDV+3TC,CD4<=50,M,Black Non-Hispanic,Previously,N
+753,0,59,100,49.5,11.0,46,Control,ZDV+3TC,CD4>50,F,Hispanic,Never,N
+754,0,187,100,208.5,48.0,34,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+755,0,300,80,71.0,12.0,40,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Previously,N
+756,0,117,100,188.5,55.0,35,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+757,0,251,90,26.0,22.0,59,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Never,N
+758,0,292,100,145.0,18.5,35,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+759,0,326,90,75.5,11.0,30,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+760,0,203,90,214.0,21.0,51,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+761,0,319,80,73.5,56.0,47,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+762,0,266,90,63.0,36.0,50,Control,ZDV+3TC,CD4>50,M,Hispanic,Never,N
+763,0,262,90,124.5,24.0,37,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+764,0,84,90,90.0,6.0,44,Control,ZDV+3TC,CD4>50,M,Hispanic,Previously,N
+765,0,287,100,88.5,6.0,27,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+766,0,144,100,148.0,90.0,32,IDV,ZDV+3TC+IDV,CD4>50,M,Black Non-Hispanic,Never,N
+767,0,315,100,5.5,20.0,45,Control,ZDV+3TC,CD4<=50,M,Black Non-Hispanic,Previously,N
+768,0,252,90,130.0,30.0,32,Control,ZDV+3TC,CD4>50,F,Black Non-Hispanic,Never,N
+769,0,47,80,114.0,10.0,33,Control,ZDV+3TC,CD4>50,M,Hispanic,Never,N
+770,0,311,100,200.5,21.0,39,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Previously,N
+771,0,336,80,33.0,34.0,41,Control,ZDV+3TC,CD4<=50,F,Hispanic,Never,N
+772,0,348,100,85.0,13.0,47,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Previously,N
+773,0,201,70,47.5,6.0,48,IDV,ZDV+3TC+IDV,CD4>50,M,Black Non-Hispanic,Never,N
+774,0,138,90,103.5,30.0,39,IDV,ZDV+3TC+IDV,CD4>50,M,Black Non-Hispanic,Never,N
+775,0,252,90,26.0,9.0,32,Control,ZDV+3TC,CD4>50,M,Hispanic,Never,N
+776,0,348,90,13.5,29.0,33,IDV,ZDV+3TC+IDV,CD4<=50,M,Hispanic,Never,N
+777,0,146,100,166.5,6.0,36,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Never,N
+778,0,256,100,234.0,14.0,30,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Never,N
+779,0,175,80,192.0,6.0,35,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Never,N
+780,0,308,100,92.5,84.0,45,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+781,1,68,80,11.5,9.0,37,Control,ZDV+3TC,CD4<=50,M,Hispanic,Never,N
+782,1,2,100,57.0,12.0,40,Control,ZDV+3TC,CD4>50,F,White Non-Hispanic,Never,N
+783,0,329,90,163.5,6.0,32,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+784,0,328,90,168.0,86.0,43,IDV,ZDV+3TC+IDV,CD4>50,F,Black Non-Hispanic,Previously,N
+785,0,256,80,65.5,10.0,40,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Previously,N
+786,0,252,90,47.0,13.0,39,Control,ZDV+3TC,CD4<=50,M,Hispanic,Previously,N
+787,0,333,90,10.0,12.0,37,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+788,0,314,100,205.5,36.0,35,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+789,0,304,90,33.5,9.0,37,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+790,0,259,90,12.0,18.0,29,Control,ZDV+3TC,CD4>50,M,Hispanic,Previously,N
+791,0,322,80,44.0,43.0,38,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+792,0,347,80,144.0,48.0,48,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+793,0,348,100,77.0,15.0,51,IDV,ZDV+3TC+IDV,CD4>50,M,Black Non-Hispanic,Currently,N
+794,1,226,80,41.0,16.0,51,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+795,0,140,100,127.0,7.0,32,Control,ZDV+3TC,CD4>50,M,Hispanic,Never,N
+796,0,90,100,232.0,37.0,33,Control,ZDV+3TC,CD4>50,F,Black Non-Hispanic,Previously,N
+797,0,278,90,153.5,8.0,42,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+798,0,189,100,21.0,31.0,35,IDV,ZDV+3TC+IDV,CD4<=50,M,Black Non-Hispanic,Never,N
+799,0,272,90,206.0,34.0,40,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+800,0,55,100,96.0,16.0,43,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Previously,N
+801,0,46,90,211.5,15.0,45,IDV,ZDV+3TC+IDV,CD4>50,M,Black Non-Hispanic,Previously,N
+802,0,252,80,1.0,7.0,38,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+803,0,291,90,136.5,69.0,35,Control,ZDV+3TC,CD4>50,M,Hispanic,Never,N
+804,0,265,100,22.5,9.5,33,Control,ZDV+3TC,CD4<=50,M,Hispanic,Previously,N
+805,0,294,90,12.0,7.0,36,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+806,0,343,90,140.0,34.0,59,IDV,ZDV+3TC+IDV,CD4>50,M,Hispanic,Never,N
+807,0,329,90,4.5,31.0,29,IDV,ZDV+3TC+IDV,CD4<=50,M,Hispanic,Never,N
+808,0,298,90,11.0,11.0,32,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+809,0,301,100,109.0,72.0,51,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+810,0,258,90,35.0,6.0,23,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,Y
+811,0,223,100,127.5,48.0,39,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+812,0,104,80,19.5,96.0,35,IDV,ZDV+3TC+IDV,CD4<=50,M,Black Non-Hispanic,Never,N
+813,0,214,100,42.5,12.0,39,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,Y
+814,0,301,80,17.0,34.0,32,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Previously,N
+815,0,166,100,4.0,6.0,29,Control,ZDV+3TC,CD4<=50,F,Black Non-Hispanic,Never,N
+816,0,272,90,25.0,6.5,28,Control,ZDV+3TC,CD4<=50,M,Hispanic,Never,N
+817,1,7,100,10.5,18.0,41,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+818,0,42,80,127.0,10.0,37,Control,ZDV+3TC,CD4>50,M,Hispanic,Never,N
+819,0,77,100,138.0,24.0,29,IDV,ZDV+3TC+IDV,CD4>50,M,Hispanic,Never,N
+820,0,283,80,149.0,9.0,32,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+821,0,110,80,209.5,35.0,43,IDV,ZDV+3TC+IDV,CD4>50,M,Black Non-Hispanic,Never,N
+822,0,228,70,15.0,48.0,37,IDV,ZDV+3TC+IDV,CD4<=50,M,Hispanic,Never,N
+823,1,151,90,9.0,23.0,36,Control,ZDV+3TC,CD4<=50,F,Black Non-Hispanic,Never,N
+824,0,306,90,159.5,312.0,32,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,Y
+825,0,342,90,82.0,7.0,33,IDV,ZDV+3TC+IDV,CD4<=50,M,Black Non-Hispanic,Never,N
+826,0,229,100,164.0,21.0,31,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+827,0,196,90,71.0,65.0,31,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+828,0,335,90,80.5,30.0,45,IDV,ZDV+3TC+IDV,CD4>50,M,Hispanic,Never,N
+829,0,217,90,115.0,20.0,35,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+830,0,271,100,1.0,12.0,39,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+831,0,202,80,158.5,7.0,71,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+832,0,143,90,140.0,61.5,29,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Previously,N
+833,0,312,100,196.0,51.0,39,IDV,ZDV+3TC+IDV,CD4>50,F,Black Non-Hispanic,Never,N
+834,0,315,100,49.0,19.0,36,IDV,ZDV+3TC+IDV,CD4<=50,M,Hispanic,Never,N
+835,0,290,100,125.0,8.0,49,IDV,ZDV+3TC+IDV,CD4>50,M,Hispanic,Never,N
+836,0,280,100,240.0,16.0,35,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+837,0,329,90,23.0,17.0,33,Control,ZDV+3TC,CD4>50,M,Hispanic,Never,N
+838,0,292,80,44.5,22.0,54,IDV,ZDV+3TC+IDV,CD4>50,F,Black Non-Hispanic,Never,N
+839,0,256,100,35.0,6.0,42,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+840,0,3,100,147.0,3.0,38,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Never,N
+841,0,280,100,37.5,24.0,51,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+842,1,44,90,78.0,12.0,47,IDV,ZDV+3TC+IDV,CD4>50,M,Hispanic,Previously,N
+843,0,250,80,15.0,71.0,40,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+844,0,139,90,74.0,51.0,45,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+845,1,24,70,40.0,6.0,53,Control,ZDV+3TC,CD4>50,M,Hispanic,Never,N
+846,0,266,90,142.0,9.0,40,Control,ZDV+3TC,CD4>50,M,Hispanic,Previously,N
+847,1,137,100,172.0,34.0,33,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Never,N
+848,0,265,90,139.5,18.0,52,IDV,ZDV+3TC+IDV,CD4>50,M,Black Non-Hispanic,Never,N
+849,0,326,100,35.0,7.0,32,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+850,0,306,90,0.0,90.0,39,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+851,0,327,100,8.0,25.0,45,Control,ZDV+3TC,CD4<=50,M,Hispanic,Previously,N
+852,0,341,90,22.0,32.0,30,Control,ZDV+3TC,CD4<=50,M,Hispanic,Never,N
+853,0,152,90,267.5,6.0,32,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+854,0,315,70,61.5,7.5,42,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+855,0,329,80,75.0,13.0,43,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+856,0,76,90,13.0,49.0,49,IDV,ZDV+3TC+IDV,CD4<=50,F,White Non-Hispanic,Never,N
+857,1,203,90,7.5,31.0,58,Control,ZDV+3TC,CD4<=50,M,Hispanic,Previously,N
+858,0,137,90,127.0,77.0,29,Control,ZDV+3TC,CD4>50,F,Black Non-Hispanic,Never,N
+859,0,201,90,99.0,12.0,40,IDV,ZDV+3TC+IDV,CD4>50,F,Black Non-Hispanic,Never,N
+860,0,292,90,118.5,11.0,44,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Never,N
+861,1,26,90,6.0,25.0,41,Control,ZDV+3TC,CD4<=50,M,Hispanic,Never,N
+862,0,336,90,150.0,21.0,28,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+863,1,7,100,2.0,48.0,16,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,Y
+864,0,105,100,114.0,19.0,42,IDV,ZDV+3TC+IDV,CD4>50,F,Black Non-Hispanic,Never,N
+865,0,264,100,115.5,12.0,32,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Previously,N
+866,0,284,90,117.5,31.0,57,IDV,ZDV+3TC+IDV,CD4>50,F,White Non-Hispanic,Never,N
+867,0,89,100,284.0,12.0,37,Control,ZDV+3TC,CD4>50,F,White Non-Hispanic,Never,N
+868,1,16,90,9.5,18.0,38,Control,ZDV+3TC,CD4<=50,M,Black Non-Hispanic,Never,N
+869,0,293,90,89.0,32.0,33,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+870,0,311,90,193.0,13.0,26,IDV,ZDV+3TC+IDV,CD4>50,F,Hispanic,Previously,N
+871,0,215,100,38.5,27.0,33,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+872,0,341,90,39.0,15.0,50,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+873,0,46,90,13.5,6.0,31,IDV,ZDV+3TC+IDV,CD4<=50,F,Black Non-Hispanic,Never,N
+874,0,340,90,121.5,28.0,30,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Previously,N
+875,0,256,90,12.0,11.0,31,Control,ZDV+3TC,CD4<=50,F,White Non-Hispanic,Never,N
+876,0,196,100,56.0,48.0,38,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+877,0,125,90,45.0,78.0,46,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+878,0,264,100,50.5,60.0,73,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+879,0,258,90,136.0,75.0,43,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+880,0,74,100,185.0,36.5,22,Control,ZDV+3TC,CD4>50,F,Black Non-Hispanic,Never,N
+881,0,17,100,119.0,3.0,41,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+882,0,231,90,62.0,12.0,47,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Previously,N
+883,0,243,90,156.5,46.0,34,IDV,ZDV+3TC+IDV,CD4>50,F,Hispanic,Never,N
+884,0,236,100,24.5,14.0,35,IDV,ZDV+3TC+IDV,CD4<=50,M,Black Non-Hispanic,Never,N
+885,0,293,100,64.5,6.0,37,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+886,0,313,100,94.5,24.0,47,Control,ZDV+3TC,CD4<=50,M,Black Non-Hispanic,Never,N
+887,0,215,80,31.5,101.0,41,IDV,ZDV+3TC+IDV,CD4<=50,F,Black Non-Hispanic,Previously,N
+888,0,347,90,232.0,52.0,60,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+889,0,173,80,7.0,6.0,40,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+890,0,235,90,19.5,28.0,29,Control,ZDV+3TC,CD4<=50,F,Black Non-Hispanic,Never,N
+891,0,231,100,3.5,18.0,48,Control,ZDV+3TC,CD4<=50,M,Black Non-Hispanic,Never,N
+892,0,257,100,171.0,6.0,37,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+893,1,113,100,52.0,43.0,30,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+894,0,187,90,196.0,63.0,61,Control,ZDV+3TC,CD4>50,M,Hispanic,Never,N
+895,0,335,90,77.0,7.0,37,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+896,0,308,100,24.5,12.0,35,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+897,1,87,80,8.0,24.0,35,Control,ZDV+3TC,CD4<=50,M,Black Non-Hispanic,Never,N
+898,0,348,90,20.0,39.0,41,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+899,0,182,100,125.0,8.0,44,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+900,0,340,90,140.0,12.0,26,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+901,0,319,100,78.0,10.0,28,IDV,ZDV+3TC+IDV,CD4>50,F,White Non-Hispanic,Never,N
+902,0,348,90,87.0,24.0,26,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+903,0,322,100,7.0,8.0,35,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+904,0,66,90,50.0,15.0,49,IDV,ZDV+3TC+IDV,CD4<=50,M,Black Non-Hispanic,Never,N
+905,0,266,90,124.5,7.0,27,Control,ZDV+3TC,CD4>50,M,Hispanic,Never,N
+906,0,82,90,51.0,19.0,36,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+907,1,17,80,8.0,27.0,30,IDV,ZDV+3TC+IDV,CD4<=50,M,"Asian, Pacific Islander",Never,N
+908,0,200,90,90.0,25.0,30,IDV,ZDV+3TC+IDV,CD4>50,F,Black Non-Hispanic,Never,N
+909,0,153,100,219.0,22.0,33,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+910,0,287,90,17.0,6.0,38,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Previously,N
+911,0,290,90,156.5,29.0,20,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,Y
+912,0,100,80,108.5,13.0,46,Control,ZDV+3TC,CD4>50,M,Hispanic,Never,N
+913,0,173,90,14.0,12.0,41,IDV,ZDV+3TC+IDV,CD4<=50,M,Hispanic,Previously,N
+914,0,259,100,112.5,36.0,32,Control,ZDV+3TC,CD4>50,M,Hispanic,Never,N
+915,1,14,80,5.0,60.0,42,IDV,ZDV+3TC+IDV,CD4<=50,F,Black Non-Hispanic,Previously,N
+916,0,326,100,100.5,41.0,30,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Never,N
+917,1,184,90,85.5,35.0,40,Control,ZDV+3TC,CD4<=50,M,Hispanic,Never,N
+918,1,245,70,17.5,32.0,37,Control,ZDV+3TC,CD4<=50,M,Black Non-Hispanic,Previously,N
+919,0,266,100,185.0,58.0,42,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+920,0,335,90,85.0,6.0,43,IDV,ZDV+3TC+IDV,CD4>50,M,Hispanic,Never,N
+921,0,314,100,78.0,13.0,48,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+922,0,154,80,76.5,7.0,50,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+923,1,58,70,9.5,31.0,51,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+924,0,257,90,61.0,6.0,38,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Never,N
+925,0,82,90,81.0,36.0,40,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Previously,N
+926,0,347,80,143.0,32.0,39,IDV,ZDV+3TC+IDV,CD4>50,M,Hispanic,Never,N
+927,0,269,100,9.0,30.0,35,IDV,ZDV+3TC+IDV,CD4<=50,F,Hispanic,Previously,N
+928,0,298,100,91.0,58.0,28,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+929,0,244,90,24.0,34.0,45,IDV,ZDV+3TC+IDV,CD4<=50,M,Black Non-Hispanic,Never,N
+930,0,47,90,39.0,72.0,16,IDV,ZDV+3TC+IDV,CD4<=50,M,Black Non-Hispanic,Never,N
+931,0,321,100,174.0,80.0,59,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Never,N
+932,1,85,100,55.0,15.0,29,IDV,ZDV+3TC+IDV,CD4<=50,F,Black Non-Hispanic,Never,N
+933,0,307,100,40.0,12.0,45,IDV,ZDV+3TC+IDV,CD4<=50,M,Hispanic,Previously,N
+934,0,313,90,101.5,32.0,39,IDV,ZDV+3TC+IDV,CD4>50,M,Black Non-Hispanic,Never,N
+935,1,169,80,2.5,17.0,50,Control,ZDV+3TC,CD4<=50,M,Black Non-Hispanic,Never,N
+936,0,265,100,6.5,37.0,46,IDV,ZDV+3TC+IDV,CD4<=50,M,Black Non-Hispanic,Never,N
+937,0,308,90,232.0,16.0,44,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+938,0,189,100,110.0,24.0,47,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Never,N
+939,0,165,90,53.5,14.0,24,Control,ZDV+3TC,CD4>50,F,Black Non-Hispanic,Never,N
+940,0,290,90,88.0,62.0,47,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+941,1,194,80,10.0,71.0,38,Control,ZDV+3TC,CD4<=50,M,"American Indian, Alaskan Native",Previously,Y
+942,0,335,90,15.0,12.0,38,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+943,0,272,80,177.5,42.0,50,IDV,ZDV+3TC+IDV,CD4>50,M,Hispanic,Previously,N
+944,0,259,90,26.0,9.0,40,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Previously,N
+945,0,264,80,22.0,6.0,60,Control,ZDV+3TC,CD4<=50,M,Hispanic,Never,N
+946,0,259,100,14.0,6.0,26,IDV,ZDV+3TC+IDV,CD4<=50,M,Black Non-Hispanic,Never,N
+947,0,228,100,67.5,20.0,36,IDV,ZDV+3TC+IDV,CD4>50,M,Hispanic,Previously,N
+948,1,266,90,48.0,66.0,39,IDV,ZDV+3TC+IDV,CD4>50,M,Hispanic,Never,N
+949,1,18,90,26.5,7.0,24,IDV,ZDV+3TC+IDV,CD4<=50,M,Hispanic,Never,N
+950,0,334,100,65.5,42.0,38,IDV,ZDV+3TC+IDV,CD4>50,M,Hispanic,Never,N
+951,0,54,80,67.5,14.0,33,Control,ZDV+3TC,CD4<=50,M,Hispanic,Never,N
+952,0,242,100,117.5,8.0,43,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+953,0,85,90,90.0,36.0,39,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+954,0,89,100,17.5,7.0,24,Control,ZDV+3TC,CD4<=50,M,Black Non-Hispanic,Never,N
+955,0,343,90,0.0,18.0,31,IDV,ZDV+3TC+IDV,CD4<=50,M,Black Non-Hispanic,Never,N
+956,0,87,90,139.5,100.0,36,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,Y
+957,0,257,100,128.5,11.0,33,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+958,0,257,100,27.0,112.0,42,IDV,ZDV+3TC+IDV,CD4<=50,F,White Non-Hispanic,Never,N
+959,0,280,100,111.0,10.0,58,IDV,ZDV+3TC+IDV,CD4>50,F,Hispanic,Never,N
+960,0,284,90,5.5,16.0,48,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+961,1,248,90,211.0,15.0,58,IDV,ZDV+3TC+IDV,CD4>50,M,Black Non-Hispanic,Never,N
+962,0,196,90,304.5,6.5,40,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Previously,N
+963,0,112,90,158.0,12.0,39,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Never,N
+964,0,291,100,30.0,6.0,28,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Previously,N
+965,0,280,90,115.0,15.0,44,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+966,0,196,90,287.5,18.0,38,IDV,ZDV+3TC+IDV,CD4>50,F,Black Non-Hispanic,Never,N
+967,0,66,100,119.5,42.0,28,IDV,ZDV+3TC+IDV,CD4>50,M,Black Non-Hispanic,Never,N
+968,0,328,100,63.5,84.0,56,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+969,0,273,100,70.0,72.0,56,IDV,ZDV+3TC+IDV,CD4>50,F,Black Non-Hispanic,Currently,N
+970,0,241,100,173.0,86.0,37,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Previously,N
+971,0,258,90,23.5,59.0,33,Control,ZDV+3TC,CD4<=50,F,Hispanic,Previously,N
+972,0,182,100,199.0,124.0,48,IDV,ZDV+3TC+IDV,CD4>50,M,Black Non-Hispanic,Previously,N
+973,0,272,100,26.0,20.0,34,IDV,ZDV+3TC+IDV,CD4<=50,M,Hispanic,Never,N
+974,0,335,70,115.0,15.0,47,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+975,0,291,100,79.5,39.0,29,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Previously,N
+976,0,311,90,195.0,47.0,40,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Previously,N
+977,0,259,90,3.0,18.0,38,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+978,0,334,90,101.0,36.0,39,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+979,0,313,90,196.0,150.0,44,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Never,N
+980,0,171,90,28.5,6.0,37,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Never,N
+981,0,271,90,188.5,47.0,38,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+982,0,322,100,27.0,56.0,42,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+983,0,328,90,109.5,9.0,34,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+984,1,114,90,24.5,20.0,40,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+985,0,271,100,15.0,65.0,32,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+986,0,39,90,11.0,51.0,34,IDV,ZDV+3TC+IDV,CD4<=50,M,Hispanic,Never,N
+987,0,131,80,52.0,6.0,33,IDV,ZDV+3TC+IDV,CD4<=50,M,Black Non-Hispanic,Never,N
+988,0,251,90,44.0,9.0,45,IDV,ZDV+3TC+IDV,CD4>50,M,Hispanic,Never,N
+989,0,308,100,42.0,37.0,54,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+990,0,172,90,119.0,73.0,34,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Previously,N
+991,0,167,100,39.0,26.5,34,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,Y
+992,0,155,100,62.0,6.0,27,IDV,ZDV+3TC+IDV,CD4>50,M,Hispanic,Never,Y
+993,0,130,90,101.5,28.0,40,Control,ZDV+3TC,CD4>50,M,Hispanic,Previously,N
+994,0,235,80,67.5,6.0,33,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+995,1,129,90,136.5,34.0,67,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+996,0,180,100,150.0,10.0,20,Control,ZDV+3TC,CD4>50,F,Hispanic,Never,N
+997,0,293,100,50.0,33.0,34,IDV,ZDV+3TC+IDV,CD4<=50,M,Black Non-Hispanic,Never,N
+998,0,258,100,130.0,16.0,40,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Never,N
+999,0,287,90,193.0,23.0,31,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+1000,0,293,90,141.5,87.0,49,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+1001,0,241,100,103.0,8.0,32,Control,ZDV+3TC,CD4>50,F,Black Non-Hispanic,Never,N
+1002,0,300,90,141.0,12.0,31,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+1003,0,313,70,47.0,41.0,38,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+1004,0,88,100,76.5,6.0,36,IDV,ZDV+3TC+IDV,CD4>50,M,Black Non-Hispanic,Previously,N
+1005,0,298,100,348.0,48.0,21,IDV,ZDV+3TC+IDV,CD4>50,M,Hispanic,Never,Y
+1006,0,322,90,0.0,14.0,36,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+1007,0,313,90,59.0,79.0,61,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+1008,0,87,90,61.5,48.0,38,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+1009,0,251,80,74.5,24.0,38,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Previously,N
+1010,0,280,100,115.0,51.0,38,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Never,N
+1011,0,216,80,2.0,36.0,31,IDV,ZDV+3TC+IDV,CD4<=50,M,Black Non-Hispanic,Never,N
+1012,0,290,100,144.5,27.0,43,Control,ZDV+3TC,CD4>50,M,Hispanic,Previously,N
+1013,0,263,90,145.0,48.0,52,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,Y
+1014,0,227,90,67.5,7.0,46,IDV,ZDV+3TC+IDV,CD4>50,M,Black Non-Hispanic,Never,N
+1015,0,301,80,32.0,24.0,27,IDV,ZDV+3TC+IDV,CD4>50,M,Hispanic,Never,N
+1016,0,294,100,168.0,7.0,50,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+1017,0,347,70,0.0,9.0,33,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+1018,0,263,100,78.5,12.0,37,IDV,ZDV+3TC+IDV,CD4>50,M,Black Non-Hispanic,Never,N
+1019,0,242,90,137.0,6.0,43,IDV,ZDV+3TC+IDV,CD4>50,F,Black Non-Hispanic,Previously,N
+1020,0,314,100,166.0,18.0,32,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+1021,0,298,90,8.0,48.0,15,IDV,ZDV+3TC+IDV,CD4<=50,M,Hispanic,Never,Y
+1022,0,280,80,38.5,18.0,39,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+1023,1,167,90,55.0,6.0,36,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Never,N
+1024,0,193,90,153.0,8.0,45,IDV,ZDV+3TC+IDV,CD4>50,M,Hispanic,Previously,N
+1025,0,175,90,53.0,6.0,42,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+1026,0,175,100,227.5,40.0,38,IDV,ZDV+3TC+IDV,CD4>50,F,White Non-Hispanic,Never,N
+1027,0,256,90,159.0,58.0,35,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+1028,0,346,100,80.0,8.0,38,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Never,N
+1029,0,291,90,68.0,17.0,27,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+1030,0,251,100,170.0,25.0,44,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+1031,0,285,90,108.0,38.0,41,IDV,ZDV+3TC+IDV,CD4>50,M,"Asian, Pacific Islander",Never,Y
+1032,0,214,80,157.0,75.0,38,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+1033,0,124,90,149.0,8.0,32,IDV,ZDV+3TC+IDV,CD4>50,F,Hispanic,Never,N
+1034,0,230,100,101.0,26.0,35,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+1035,0,328,90,207.0,39.0,37,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Previously,N
+1036,0,252,100,11.0,54.0,28,Control,ZDV+3TC,CD4<=50,F,White Non-Hispanic,Never,N
+1037,0,221,80,71.5,87.0,47,Control,ZDV+3TC,CD4>50,M,Hispanic,Currently,N
+1038,0,47,90,8.0,4.0,28,IDV,d4T+3TC+IDV,CD4<=50,F,Black Non-Hispanic,Never,N
+1039,1,151,70,38.0,45.0,47,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+1040,0,334,80,40.0,8.0,49,Control,ZDV+3TC,CD4>50,F,White Non-Hispanic,Never,N
+1041,0,299,90,117.5,78.0,43,IDV,ZDV+3TC+IDV,CD4>50,M,Hispanic,Never,N
+1042,0,299,90,63.0,43.0,40,IDV,ZDV+3TC+IDV,CD4<=50,M,Hispanic,Previously,N
+1043,0,11,80,15.5,59.0,38,Control,ZDV+3TC,CD4<=50,M,Hispanic,Never,N
+1044,0,321,100,161.0,36.0,36,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+1045,0,159,90,10.0,11.0,25,Control,ZDV+3TC,CD4<=50,M,Black Non-Hispanic,Never,N
+1046,0,321,90,18.0,65.0,41,Control,ZDV+3TC,CD4<=50,M,Black Non-Hispanic,Never,N
+1047,0,328,100,10.0,12.0,30,Control,ZDV+3TC,CD4<=50,F,Hispanic,Never,N
+1048,0,341,90,100.0,77.0,33,Control,ZDV+3TC,CD4>50,F,White Non-Hispanic,Never,N
+1049,0,341,90,195.0,27.0,50,IDV,ZDV+3TC+IDV,CD4>50,F,White Non-Hispanic,Never,N
+1050,1,13,90,56.0,57.0,33,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Previously,N
+1051,0,251,90,42.5,6.0,33,Control,ZDV+3TC,CD4<=50,M,Black Non-Hispanic,Never,N
+1052,0,278,80,10.0,20.0,42,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Previously,N
+1053,0,202,100,46.5,72.0,42,IDV,ZDV+3TC+IDV,CD4<=50,F,White Non-Hispanic,Never,N
+1054,0,318,100,247.0,62.0,57,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+1055,0,63,80,29.0,7.0,29,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+1056,0,259,100,9.0,15.0,40,Control,ZDV+3TC,CD4<=50,M,Black Non-Hispanic,Never,N
+1057,0,40,100,91.5,3.0,41,Control,ZDV+3TC,CD4>50,M,Hispanic,Previously,N
+1058,0,335,90,25.5,22.0,33,IDV,ZDV+3TC+IDV,CD4<=50,M,Hispanic,Never,N
+1059,1,197,90,75.0,72.0,45,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+1060,0,307,100,30.5,10.0,39,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Previously,N
+1061,0,306,90,108.5,79.0,48,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Previously,N
+1062,0,222,100,108.0,34.0,32,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+1063,0,241,80,20.0,60.0,36,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+1064,0,263,90,254.0,14.0,43,Control,ZDV+3TC,CD4>50,F,Black Non-Hispanic,Never,N
+1065,0,279,80,11.0,15.0,30,Control,ZDV+3TC,CD4<=50,M,Black Non-Hispanic,Never,N
+1066,0,215,100,113.5,14.0,44,Control,ZDV+3TC,CD4>50,F,White Non-Hispanic,Never,N
+1067,0,257,100,165.0,52.0,27,IDV,ZDV+3TC+IDV,CD4>50,F,Black Non-Hispanic,Never,N
+1068,1,130,80,56.5,6.0,33,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Never,N
+1069,0,98,90,126.5,56.0,41,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+1070,0,187,90,80.0,15.0,44,IDV,ZDV+3TC+IDV,CD4<=50,M,Black Non-Hispanic,Previously,N
+1071,0,333,90,4.5,10.0,30,Control,ZDV+3TC,CD4<=50,M,Black Non-Hispanic,Never,N
+1072,0,315,90,120.0,29.0,41,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+1073,0,228,80,110.5,36.0,39,Control,ZDV+3TC,CD4>50,M,Hispanic,Never,N
+1074,0,322,90,19.0,16.0,43,IDV,ZDV+3TC+IDV,CD4<=50,M,Black Non-Hispanic,Previously,N
+1075,1,186,90,35.5,32.0,42,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+1076,0,217,90,201.5,96.0,45,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+1077,0,286,90,95.0,72.0,43,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+1078,0,327,100,161.5,20.0,38,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+1079,0,273,90,15.0,30.0,40,IDV,ZDV+3TC+IDV,CD4<=50,M,Black Non-Hispanic,Previously,N
+1080,0,278,90,20.0,8.0,26,IDV,ZDV+3TC+IDV,CD4<=50,M,Black Non-Hispanic,Never,N
+1081,0,209,90,156.0,33.0,34,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Never,N
+1082,0,335,90,175.0,40.0,34,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Previously,N
+1083,0,308,100,7.5,7.0,30,IDV,ZDV+3TC+IDV,CD4<=50,M,Black Non-Hispanic,Never,N
+1084,0,279,80,12.0,14.0,35,IDV,ZDV+3TC+IDV,CD4<=50,M,Hispanic,Never,N
+1085,0,349,90,206.5,44.0,40,IDV,ZDV+3TC+IDV,CD4>50,M,Hispanic,Never,N
+1086,0,208,100,5.0,52.0,34,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+1087,0,231,100,157.0,38.0,42,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+1088,0,335,100,113.0,65.0,37,IDV,ZDV+3TC+IDV,CD4>50,F,Black Non-Hispanic,Previously,N
+1089,0,174,100,169.5,11.0,33,Control,ZDV+3TC,CD4>50,M,"American Indian, Alaskan Native",Previously,N
+1090,0,244,100,4.0,17.0,34,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+1091,0,47,90,28.5,9.5,37,Control,d4T+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+1092,0,250,80,250.5,12.0,59,IDV,ZDV+3TC+IDV,CD4>50,M,Black Non-Hispanic,Never,N
+1093,0,220,80,94.0,10.0,29,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+1094,0,266,70,1.0,44.0,35,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Previously,N
+1095,0,293,90,58.0,8.0,52,IDV,ZDV+3TC+IDV,CD4>50,M,"American Indian, Alaskan Native",Never,N
+1096,0,38,100,162.0,18.0,33,IDV,d4T+3TC+IDV,CD4>50,M,Hispanic,Previously,N
+1097,0,151,90,142.5,32.0,48,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+1098,0,278,80,43.5,19.0,29,Control,ZDV+3TC,CD4<=50,F,Hispanic,Never,N
+1099,0,271,90,123.5,68.0,45,Control,ZDV+3TC,CD4>50,F,White Non-Hispanic,Never,N
+1100,0,335,100,7.0,7.0,37,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+1101,0,334,90,17.0,31.0,45,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+1102,0,241,90,277.0,6.0,28,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Never,N
+1103,0,350,90,17.0,6.0,31,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+1104,0,308,80,10.0,11.0,28,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+1105,0,300,100,56.0,7.0,33,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+1106,1,114,80,63.0,48.0,56,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Never,N
+1107,0,243,100,82.0,12.0,37,IDV,ZDV+3TC+IDV,CD4>50,F,White Non-Hispanic,Never,N
+1108,0,202,90,253.0,90.0,42,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+1109,0,69,90,173.5,3.0,34,Control,ZDV+3TC,CD4>50,M,Hispanic,Never,N
+1110,0,194,90,32.0,20.0,38,IDV,ZDV+3TC+IDV,CD4<=50,M,White Non-Hispanic,Never,N
+1111,0,228,100,6.0,14.0,38,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,Y
+1112,0,186,90,172.5,32.0,30,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+1113,0,311,90,88.0,11.0,39,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Previously,N
+1114,0,306,100,154.5,43.0,37,IDV,ZDV+3TC+IDV,CD4>50,F,Hispanic,Never,N
+1115,0,319,90,147.0,72.0,32,Control,ZDV+3TC,CD4>50,F,Hispanic,Never,N
+1116,0,320,90,16.5,64.0,51,IDV,ZDV+3TC+IDV,CD4<=50,M,Hispanic,Never,N
+1117,0,103,90,181.0,13.0,41,IDV,ZDV+3TC+IDV,CD4>50,M,Black Non-Hispanic,Previously,N
+1118,0,311,100,75.0,7.0,25,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+1119,0,117,100,87.5,40.0,53,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Previously,N
+1120,1,20,80,64.0,30.0,45,Control,ZDV+3TC,CD4>50,F,White Non-Hispanic,Never,N
+1121,0,279,90,33.5,6.0,38,IDV,ZDV+3TC+IDV,CD4<=50,M,Hispanic,Never,N
+1122,0,329,80,8.0,22.0,46,IDV,ZDV+3TC+IDV,CD4<=50,M,Hispanic,Never,N
+1123,0,203,100,33.5,6.0,36,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+1124,0,336,90,75.5,67.0,49,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+1125,0,1,90,170.0,82.0,32,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+1126,1,174,80,18.0,22.0,39,IDV,ZDV+3TC+IDV,CD4<=50,M,Hispanic,Never,N
+1127,0,293,100,135.0,32.0,47,Control,ZDV+3TC,CD4>50,M,"Asian, Pacific Islander",Never,N
+1128,0,125,100,3.0,7.0,27,IDV,ZDV+3TC+IDV,CD4<=50,M,Black Non-Hispanic,Never,N
+1129,0,59,90,65.0,15.0,31,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+1130,0,102,100,96.0,39.0,47,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Never,N
+1131,0,328,100,96.0,18.0,39,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Never,N
+1132,0,158,90,219.5,16.0,38,Control,ZDV+3TC,CD4>50,F,White Non-Hispanic,Never,N
+1133,0,333,90,82.0,12.0,37,IDV,ZDV+3TC+IDV,CD4>50,M,Black Non-Hispanic,Previously,N
+1134,0,307,90,80.5,6.0,44,Control,ZDV+3TC,CD4>50,F,White Non-Hispanic,Never,N
+1135,0,342,90,145.0,40.0,48,Control,ZDV+3TC,CD4>50,F,Black Non-Hispanic,Never,N
+1136,0,321,90,21.0,26.0,33,IDV,ZDV+3TC+IDV,CD4<=50,M,Hispanic,Never,N
+1137,0,270,100,0.0,17.5,29,Control,ZDV+3TC,CD4<=50,M,Black Non-Hispanic,Never,N
+1138,0,238,90,99.5,18.0,25,IDV,ZDV+3TC+IDV,CD4>50,M,Black Non-Hispanic,Never,N
+1139,0,67,90,114.5,3.0,25,Control,ZDV+3TC,CD4>50,M,"Asian, Pacific Islander",Never,N
+1140,0,285,100,38.5,40.0,28,Control,ZDV+3TC,CD4<=50,F,White Non-Hispanic,Never,N
+1141,0,319,90,134.5,6.0,46,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+1142,0,217,100,47.5,288.0,40,IDV,ZDV+3TC+IDV,CD4<=50,M,Hispanic,Never,N
+1143,0,49,70,258.5,10.0,45,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+1144,0,341,90,18.5,8.0,52,IDV,ZDV+3TC+IDV,CD4<=50,M,Black Non-Hispanic,Never,N
+1145,0,294,100,16.5,7.0,25,Control,ZDV+3TC,CD4<=50,M,White Non-Hispanic,Never,N
+1146,0,273,100,65.5,103.0,44,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N
+1147,1,47,80,7.5,20.0,41,IDV,ZDV+3TC+IDV,CD4<=50,M,Black Non-Hispanic,Never,N
+1148,0,272,90,170.0,27.0,43,Control,ZDV+3TC,CD4>50,M,Black Non-Hispanic,Previously,N
+1149,0,192,80,282.5,12.0,44,Control,ZDV+3TC,CD4>50,M,White Non-Hispanic,Previously,N
+1150,0,132,90,120.0,26.0,44,IDV,ZDV+3TC+IDV,CD4>50,M,White Non-Hispanic,Never,N

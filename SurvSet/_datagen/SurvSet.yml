@@ -11,6 +11,7 @@ dependencies:
   - rdata=0.6
   - scikit-learn=1.0.2
   - scikit-survival=0.17.0
+  - sklearndf=2.0
   - xlrd=2.0.1
   - pip:
     - patchworklib==0.3.1
