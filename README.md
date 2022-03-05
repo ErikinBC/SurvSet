@@ -1,8 +1,8 @@
 # SurvSet: An open-source time-to-event dataset respository
 
-`SurvSet` is the first ever open-source time-to-event dataset repository. The goal of `SurvSet` is to allow researchers and practioneeres to benchmark machine learning models and assess statistical methods. All datasets in the repository are consisently formatted to enable rapid prototyping and inference. The origins of this dataset were for testing regularity conditions of the [False Positive Control Lasso](https://arxiv.org/abs/1903.12584).
+`SurvSet` is the first ever open-source time-to-event dataset repository. The goal of `SurvSet` is to allow researchers and practioneeres to benchmark machine learning models and assess statistical methods. All datasets in this repository are consisently formatted to enable rapid prototyping and inference. The origins of this dataset were for testing regularity conditions of the [False Positive Control Lasso](https://arxiv.org/abs/1903.12584).
 
-While `SurvSet` is designed for `python`, the formatted datasets can found in a comma-separated format within [this repo](https://github.com/ErikinBC/SurvSet/tree/main/SurvSet/_datagen/output). `SurvSet` currently has 76 datasets which vary in dimensionality (see figure below). This includes high-dimensional genomics datasets (p >> n) like `gse1992`, and long and skinny datasets like `hdfail`. 
+While `SurvSet` is designed for `python`, the formatted datasets can found in a comma-separated format within [this folder](https://github.com/ErikinBC/SurvSet/tree/main/SurvSet/_datagen/output). `SurvSet` currently has 76 datasets which vary in dimensionality (see figure below). This includes high-dimensional genomics datasets (p >> n) like `gse1992`, and long and skinny datasets like `hdfail` (n >> p). 
 
 ## Installation
 
@@ -15,7 +15,7 @@ Most of `SurvSet`'s datasets come from existing `R` packages. The accompanying [
 1. `pid`: the unique observation identier (especially relevant for time-varying datasets)
 2. `event`: a binary event indicator (1==event has happened) 
 3. `time`: time to event/censoring (or start time if `time2` exists)
-4. `time2`: end time ([`time`, `time2`)), if time-varying features
+4. `time2`: end time [`time`, `time2`) if there are time-varying features
 5. `num_{}`: prefix implies a continuous feature
 6. `fac_{}`: prefix implies a categorical feature
 
@@ -28,7 +28,7 @@ Currently 7 datasets have time-varying features. Some datasets will have the sam
 
 # Example usage
 
-The example below shows a simple machine learning model that fits a series of ElasticNet CoxPH models to each of the (non-time-varying) datasets. To make run the code, please install the appropriate packages: `conda install -c bcg_gamma -c conda-forge scikit-learn=1.0.2 sklearndf=2.0 scikit-survival=0.17.0 plotnine=0.8.0`.
+The example below shows a simple machine learning pipeline that fits a series of ElasticNet CoxPH models to each of the (non-time-varying) datasets. To make run the code, please install the appropriate packages: `conda install -c bcg_gamma -c conda-forge scikit-learn=1.0.2 sklearndf=2.0 scikit-survival=0.17.0 plotnine=0.8.0`.
 
 
 ```
@@ -36,7 +36,6 @@ import os
 import numpy as np
 import pandas as pd
 import plotnine as pn
-from pathlib import Path
 from SurvSet.data import SurvLoader
 from sksurv.util import Surv
 from sksurv.metrics import concordance_index_censored as concordance
@@ -45,9 +44,6 @@ from sklearn.model_selection import train_test_split
 from sklearn.compose import make_column_selector
 from sklearndf.pipeline import PipelineDF
 from sklearndf.transformation import OneHotEncoderDF, ColumnTransformerDF, SimpleImputerDF, StandardScalerDF
-
-dir_tests = Path(__file__).parent
-print('Figure will saved here: %s' % dir_tests)
 
 # (i) Set up feature transformer pipeline
 enc_fac = PipelineDF(steps=[('ohe', OneHotEncoderDF(sparse=False, drop=None, handle_unknown='ignore'))])
@@ -119,4 +115,4 @@ gg_cindex
 
 ## Adding new datasets
 
-If you are interested in contributed to `SurvSet` or know of other open-source time-to-event datasets you think would be useful additions, please contact me. If you would like to see these datasets adopted quickly, please directly modify the data generating process found in `SurvSet/_datagen/pipeline.sh` and create a pull request. 
+If you are interested in contributing to `SurvSet` or know of other open-source time-to-event datasets you think would be useful additions, please contact me. If you would like to see these datasets adopted quickly, please directly modify the data generating process found in `SurvSet/_datagen/pipeline.sh` and create a pull request. 
