@@ -6,7 +6,7 @@ README = (HERE / 'README.md').read_text()
 
 setup(
     name='SurvSet',
-    version='0.2.4',    
+    version='0.2.5',    
     description='SurvSet package',
     long_description=README,
     long_description_content_type="text/markdown",
