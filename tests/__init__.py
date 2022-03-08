@@ -3,9 +3,9 @@
 # # in main folder
 # rm dist/SurvSet* 
 # python setup.py bdist_wheel --universal
-# twine upload --repository-url https://test.pypi.org/legacy/ dist/SurvSet*
 
 # # on some test conda env
+# twine upload --repository-url https://test.pypi.org/legacy/ dist/SurvSet*
 # pip uninstall SurvSet
 # pip install --index-url https://test.pypi.org/simple/ pyexample --user
 

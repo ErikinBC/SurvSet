@@ -138,7 +138,7 @@ If you use `SurvSet` in your research or project please cite the following:
 @article{drysdale2022,
   title={{SurvSet}: An open-source time-to-event dataset repository},
   author={Drysdale, Erik},
-  journal={arXiv preprint arXiv: },
+  journal={arXiv preprint arXiv:2203.03094},
   year={2022}
 }
 ```
