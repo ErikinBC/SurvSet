@@ -9,7 +9,7 @@ n_char=$(echo $grep_env | wc -w)
 
 if [[ "$n_char" -eq 0 ]]; then
     echo "Installing environment"
-    conda env create -f SurvSet.yml
+    conda env create -f $env_name.yml
 else
     echo "Environment already exists"
 fi
