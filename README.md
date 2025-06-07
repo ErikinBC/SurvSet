@@ -2,7 +2,9 @@
 
 [`SurvSet`](https://arxiv.org/pdf/2203.03094.pdf) is the first ever open-source time-to-event dataset repository. The goal of `SurvSet` is to allow researchers and practioneeres to benchmark machine learning models and assess statistical methods. All datasets in this repository are consisently formatted to enable rapid prototyping and inference. The origins of this dataset were for testing regularity conditions of the [False Positive Control Lasso](https://arxiv.org/abs/1903.12584).
 
-While `SurvSet` is designed for `python`, the formatted datasets can found in a comma-separated format within [this folder](https://github.com/ErikinBC/SurvSet/tree/main/SurvSet/_datagen/output). `SurvSet` currently has 76 datasets which vary in dimensionality (see figure below). This includes high-dimensional genomics datasets (p >> n) like `gse1992`, and long and skinny datasets like `hdfail` (n >> p). 
+`SurvSet` currently has 77 datasets (8 of which are time-varying) which vary in dimensionality (see figure below). This includes high-dimensional genomics datasets (p >> n) like `gse1992`, and long and skinny datasets like `hdfail` (n >> p). 
+
+See the [Changelog](CHANGELOG.md)
 
 ## Installation
 
@@ -19,7 +21,7 @@ Most of `SurvSet`'s datasets come from existing `R` packages. The accompanying [
 5. `num_{}`: prefix implies a continuous feature
 6. `fac_{}`: prefix implies a categorical feature
 
-Currently 7 datasets have time-varying features. Some datasets will have the same feature a both a continuous and categorical feature. This was done for those features that are plausibly ordinal.
+Currently, 8 datasets have time-varying features. Some datasets will have the same feature a both a continuous and categorical feature. This was done for those features that are plausibly ordinal.
 
 ### Figure: Dataset dimensionality
 
@@ -41,94 +43,84 @@ print(df.head())
 
 # Usage (complex)
 
-The example below shows a simple machine learning pipeline that fits a series of ElasticNet CoxPH models to each of the (non-time-varying) datasets. To make run the code, please install the appropriate packages: `conda install -c bcg_gamma -c conda-forge scikit-learn=1.0.2 sklearndf=2.0 scikit-survival=0.17.0 plotnine=0.8.0`.
-
+The example below shows a sketch of what a machine learning might look like using an ElasticNet CoxPH model to a non-time-varying dataset, and a traditional CoxPH to a time-varying one. 
 
 ```python
-import os
-import numpy as np
+# Modules needed for fitting
 import pandas as pd
-import plotnine as pn
-from SurvSet.data import SurvLoader
 from sksurv.util import Surv
-from sksurv.metrics import concordance_index_censored as concordance
+from lifelines import CoxTimeVaryingFitter
 from sksurv.linear_model import CoxnetSurvivalAnalysis
-from sklearn.model_selection import train_test_split
-from sklearn.compose import make_column_selector
-from sklearndf.pipeline import PipelineDF
-from sklearndf.transformation import OneHotEncoderDF, ColumnTransformerDF, SimpleImputerDF, StandardScalerDF
-
-# (i) Set up feature transformer pipeline
-enc_fac = PipelineDF(steps=[('ohe', OneHotEncoderDF(sparse=False, drop=None, handle_unknown='ignore'))])
-sel_fac = make_column_selector(pattern='^fac\\_')
-enc_num = PipelineDF(steps=[('impute', SimpleImputerDF(strategy='median')), ('scale', StandardScalerDF())])
-sel_num = make_column_selector(pattern='^num\\_')
-# Combine both
-enc_df = ColumnTransformerDF(transformers=[('ohe', enc_fac, sel_fac),('s', enc_num, sel_num)])
-
-# (ii) Run on datasets
-alpha = 0.1
-senc = Surv()
+from sklearn.pipeline import Pipeline
+from sklearn.impute import SimpleImputer
+from sklearn.preprocessing import OneHotEncoder, StandardScaler
+from sklearn.compose import make_column_selector, ColumnTransformer
+# Set up the dataset loader
+from SurvSet.data import SurvLoader
 loader = SurvLoader()
-ds_lst = loader.df_ds[~loader.df_ds['is_td']]['ds'].to_list()  # Remove datasets with time-varying covariates
-n_ds = len(ds_lst)
-holder_cindex = np.zeros([n_ds, 3])
-for i, ds in enumerate(ds_lst):
-    print('Dataset %s (%i of %i)' % (ds, i+1, n_ds))
-    anno = loader.df_ds.query('ds == @ds').T.to_dict()
-    anno = anno[list(anno)[0]]
-    df, ref = loader.load_dataset(ds).values()
-    # Random stratified split
-    df_train, df_test = train_test_split(df, stratify=df['event'], random_state=1, test_size=0.3)
-    # Fit encoder
-    enc_df.fit(df_train)
-    # Sanity check
-    cn_prefix = enc_df.feature_names_original_.str.split('_',1,True)[0].unique()
-    assert all([cn in ['fac', 'num'] for cn in cn_prefix])
-    # Prepare numpy arrays
-    X_train = enc_df.transform(df_train)
-    So_train = senc.from_arrays(df_train['event'].astype(bool), df_train['time'])
-    X_test = enc_df.transform(df_test)
-    # Fit model
-    mdl = CoxnetSurvivalAnalysis(normalize=True)
-    mdl.fit(X=X_train, y=So_train)
-    scores_test = mdl.predict(X_test)
-    res_test = df_test[['event','time']].assign(scores=scores_test)
-    So_test = senc.from_arrays(res_test['event'].astype(bool), res_test['time'])
-    conc_test = concordance(So_test['event'], So_test['time'], res_test['scores'])[0]
-    # Get concordance and 90% CI
-    n_bs = 250
-    holder_bs = np.zeros(n_bs)
-    for j in range(n_bs):
-        res_bs = res_test.groupby(['event']).sample(frac=1,replace=True,random_state=j)
-        So_bs = senc.from_arrays(res_bs['event'].astype(bool), res_bs['time'])
-        conc_bs = concordance(So_bs['event'], So_bs['time'], res_bs['scores'])[0]
-        holder_bs[j] = conc_bs
-    lb, ub = np.quantile(holder_bs, [alpha,1-alpha])
-    holder_cindex[i] = [conc_test, lb, ub]
 
-# (iii) Merge results & plot
-df_cindex = pd.DataFrame(holder_cindex, columns=['cindex', 'lb', 'ub'])
-df_cindex.insert(0, 'ds', ds_lst)
-ds_ord = df_cindex.sort_values('cindex')['ds'].values
-df_cindex['ds'] = pd.Categorical(df_cindex['ds'], ds_ord)
+# (i) Set up a pipeline to handle numerical (possibly missing) and categorical features 
+enc_fac = Pipeline(steps=[('ohe', OneHotEncoder(drop=None,sparse_output=False, handle_unknown='ignore'))])
+sel_fac = make_column_selector(pattern='^fac\\_')
+enc_num = Pipeline(steps=[('impute', SimpleImputer(strategy='median')), 
+                        ('scale', StandardScaler())])
+sel_num = make_column_selector(pattern='^num\\_')
+enc_df = ColumnTransformer(transformers=[('ohe', enc_fac, sel_fac),('s', enc_num, sel_num)])
+enc_df.set_output(transform='pandas')
 
-gg_cindex = (pn.ggplot(df_cindex, pn.aes(y='cindex',x='ds')) + 
-    pn.theme_bw() + pn.coord_flip() + 
-    pn.geom_point(size=2) + 
-    pn.geom_linerange(pn.aes(ymin='lb', ymax='ub')) + 
-    pn.labs(y='Concordance') + 
-    pn.geom_hline(yintercept=0.5,linetype='--', color='red') + 
-    pn.theme(axis_title_y=pn.element_blank()))
-gg_cindex
+# (ii) Non-time-varying dataset (prostate)
+df_prostate = loader.load_dataset(ds_name='prostate')['df']
+# Set up data and model
+senc = Surv()
+So = senc.from_arrays(df_prostate['event'].astype(bool), df_prostate['time'])
+enc_df.fit(df_prostate)
+X_train = enc_df.transform(df_prostate)
+mdl = CoxnetSurvivalAnalysis(n_alphas=50, )
+# Fit and predict
+mdl.fit(X=X_train, y=So)
+mdl.predict(X_train)
+
+# (ii) Load a time-varying dataset (epileptic)
+df_epileptic = loader.load_dataset(ds_name='epileptic')['df']
+# Set up data and model
+mdl = CoxTimeVaryingFitter(penalizer=0.1)
+enc_df.fit(df_epileptic)
+X_train = enc_df.transform(df_epileptic)
+X_train = pd.concat(objs=[df_epileptic[['pid','event','time','time2']], X_train], axis=1)
+
+# Fit and predict
+mdl.fit(X_train, id_col="pid", event_col="event", start_col="time", stop_col="time2", show_progress=False)
+# Get test prediction
+mdl.predict_partial_hazard(X_train)
 ```
+
+See the [simulation](simulation/__main__.py) script for how to generate test-set concordance-index scores, which are highlighted below.
+
 
 ![gg_cindex](tests/gg_cindex.png)
 
 
-## Adding new datasets
+## Making changes to the package
 
-If you are interested in contributing to `SurvSet` or know of other open-source time-to-event datasets you think would be useful additions, please contact me. If you would like to see these datasets adopted quickly, please directly modify the data generating process found in `SurvSet/_datagen/pipeline.sh` and create a pull request. 
+If you are interested in contributing to `SurvSet` or know of other open-source time-to-event datasets you think would be useful additions, feel free to make a fork of the repo or a PR.
+
+### Environment set up
+
+You can start by creating a virtual environment to align with the development environment.
+
+1. `python -m venv surv`
+2. `pip install -r requirements.txt`
+3. `source surv/bin/activate`
+
+### How to add a new package/dataset
+
+The SurvSet._datagen module will generate the underlying raw data and process it. There are currently two ways to add a dataset:
+
+1. SurvSet/_datagen/download_pkgs.py: Will leverage existing R packages, which you can add to the `di_pkgs` dictionary in the SurvSet/_datagen/utils/funs_pkgs.py file (these will be stored locally in the ..utils/pkgs folder).
+2. For all others, they are manually describe in the SurvSet/_datagen/download_custom file.py and stored in the ..utils/custom folder.
+
+After the file download script is completed, a class will need to added to the datasets.py file in either the Rprocess or Cprocess folders. See the existing examples to align the required method/class structure (should be intuitive). Next, in the corresponding __init__.py file for R/CProcess, add your new class and corresponding methods/file-names. This will be called in by the process_datasets.py script to write a new pickle file. 
+
 
 ## How to cite
 

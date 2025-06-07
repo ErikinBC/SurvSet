@@ -1,14 +1,26 @@
+# Ignore secret codes
 .env
-.vscode
-SurvSet/resources/
-surv/
+
+# Ignore Python bytecode files
 .idea/
+.vscode/
+.DS_store
+*__pycache__*
+
+# Ignore the virtual environment directory
+surv/
 venv/
+
+# Ignore the datasets directories
 pkgs/
 custom/
-__pycache__/
 fold/
-.DS_store
+output/
+figures/
+resources/
+
+# Ignore the pip cache
+pip-wheel-metadata/
 *egg-info*
 build/
 dist/

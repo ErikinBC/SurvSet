@@ -1,0 +1,6 @@
+include README.md
+include LICENSE.txt
+
+# Only include .pickle files and the one table in the pickles folder
+recursive-include SurvSet/resources/pickles *.pickle
+include SurvSet/resources/pickles/df_ds.csv

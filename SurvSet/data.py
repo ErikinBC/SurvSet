@@ -1,8 +1,17 @@
-import os
-import numpy as np
+"""
+Main data loader for SurvSet datasets
+
+# Manual script test:
+>>> python3 -m SurvSet.data
+"""
+
+# External modules
+import pickle
 import pandas as pd
-from pathlib import Path
-from SurvSet._datagen.funs_ref import di_ref
+import importlib.resources as pkg_resources
+# Internal modules
+from .utils import di_ref, fn_df_ds
+
 
 class SurvLoader():
     """SurvLoader is the class used to call in SurvSet datasets
@@ -13,20 +22,29 @@ class SurvLoader():
         fold_ds:    Folder where csv files live
         df_ds:      pd.DataFrame with columns: ds (dataset alias), is_td (has time-varying features), n (sample size), n_fac (number of categorical columns), n_ohe (not of one-hot-encoded columns), and n_num (number of continuous columns) 
     """
+    path_to_resources = "SurvSet.resources"
+    path_to_data = f"{path_to_resources}.pickles"
     def __init__(self):
-        # Link to dataset source
-        dir_SurvSet = Path(__file__).parent
-        fold_datagen = os.path.join(dir_SurvSet, '_datagen')
-        self.fold_ds = os.path.join(fold_datagen, 'output')
-        lst_csv = pd.Series(os.listdir(self.fold_ds))
-        fn_csv = lst_csv.str.replace('\\.csv$','',regex=True)
         # Load pre-calculated dataset information
-        self.df_ds = pd.read_csv(os.path.join(fold_datagen, 'figures', 'df_ds.csv'))
-        d_csv = np.setdiff1d(fn_csv, self.df_ds['ds'])
-        assert len(d_csv) == 0, 'New dataset detected: %s' % list(d_csv)
+        self.df_ds = self.load_csv(fn_df_ds)
 
-    def load_dataset(self, ds_name):
-        """load_data calls in a dataset
+    def load_pickle(self, name: str) -> pd.DataFrame:
+        '''Method to load the pickle files'''
+        pickle_path = pkg_resources.files(self.path_to_data).joinpath(f"{name}.pickle")
+        with pickle_path.open("rb") as f:
+            return pickle.load(f)
+
+    def load_csv(self, name: str) -> pd.DataFrame:
+        '''Method to load the pickle files'''
+        fn_safe = name.split('.csv')[0] + '.csv'
+        csv_path = pkg_resources.files(self.path_to_data).joinpath(f"{fn_safe}")
+        with csv_path.open("rb") as f:
+            return pd.read_csv(f)
+
+
+    def load_dataset(self, ds_name) -> dict:
+        """
+        load_data calls in a dataset
 
         Parameters:
             ds_name (str): A Survset Dataset
@@ -38,14 +56,31 @@ class SurvLoader():
 
             ref is the url which contains the feature description found from the original source
         """
-        assert ds_name in self.df_ds['ds'].to_list(), '%s not found in dataset directory! See SurvLoader.df_ds["ds"] for a list of valid datasets' % ds_name
-        path_ds = os.path.join(self.fold_ds, ds_name+'.csv')
-        df = pd.read_csv(path_ds, low_memory=False, na_values='na')
+        assert ds_name in self.df_ds['ds'].to_list(), '%s not found in dataset directory! See SurvLoader().df_ds["ds"] for a list of valid datasets' % ds_name
+        # Load the dataset
+        df = self.load_pickle(ds_name)
         ref = di_ref[ds_name]
-        # Force categories to string
-        cn_df = df.columns
-        cn_fac = list(cn_df[cn_df.str.contains('^fac\\_',regex=True)])
-        if len(cn_fac) > 0:
-            df[cn_fac] = df[cn_fac].astype(str).values
+        # Combine dataframe and reference and return
         di = {'df':df, 'ref':ref}
         return di
+
+
+def _surv_test() -> None:
+    # Test the SurvLoader class
+    enc = SurvLoader()
+    n_ds = len(enc.df_ds)
+    df_names = enc.df_ds['ds'].to_list()
+    print(f"There are {n_ds:,} available datasets: {df_names}")
+    di = enc.load_dataset('ova')
+    print('Loaded dataset "ova":', di['df'].head())
+    print('Reference URL:', di['ref'])
+    # Check for a non-existent dataset
+    try:
+        di = enc.load_dataset('madeup')
+    except AssertionError as e:
+        print(e)
+
+
+if __name__ == '__main__':
+    # Call the surv test class
+    _surv_test()

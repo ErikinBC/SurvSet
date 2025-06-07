@@ -1,9 +1,15 @@
-# __main__
+"""
+Check to see if the SurvSet package can be compiled correctly.
 
-import pandas as pd
-from SurvSet.data import SurvLoader
+python3 -m SurvSet
+"""
 
 def main():
+    # External modules
+    import pandas as pd
+    # Internal modules
+    from .data import SurvLoader
+
     # (i) Check class
     enc = SurvLoader()
     assert hasattr(enc, 'df_ds'), 'SurvLoader() should has a "df_ds" attribute!'
@@ -27,6 +33,7 @@ def main():
         di = None
     assert di is None, '"madeup" should not have returned a result!'
     print('(iii) invalid dataset check complete')
+    
 
 if __name__ == '__main__':
     main()
