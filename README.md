@@ -97,7 +97,7 @@ mdl.predict_partial_hazard(X_train)
 See the [simulation](simulation/__main__.py) script for how to generate test-set concordance-index scores, which are highlighted below.
 
 
-![gg_cindex](tests/gg_cindex.png)
+![gg_cindex](simulation/gg_cindex.png)
 
 
 ## Making changes to the package
