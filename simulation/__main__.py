@@ -76,8 +76,6 @@ def main():
     n_ds = len(loader.df_ds)
     holder_cindex = []
     for i, r in loader.df_ds.iterrows():
-        if i > 15:
-            break
         is_td, ds = r['is_td'], r['ds']
         print('Dataset %s (%i of %i)' % (ds, i+1, n_ds))
         df = loader.load_dataset(ds)['df']
