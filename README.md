@@ -8,7 +8,9 @@ See the [Changelog](CHANGELOG.md)
 
 ## Installation
 
-`SurvSet` can be installed using `pip` for `python3`: `pip install SurvSet`. You can run `python3 -m SurvSet` to make sure the package has compiled without errors. Please note that `pandas` and `numpy` will be installed as dependencies (see [PyPI](https://pypi.org/project/SurvSet/) for more details).   
+`SurvSet` can be installed using `pip` for `python3`: `pip install SurvSet`. You can run `python3 -m SurvSet` to make sure the package has compiled without errors. Please note that `pandas` and `numpy` will be installed as dependencies (see [PyPI](https://pypi.org/project/SurvSet/) for more details).
+
+**Note:** Installing from Git refs (e.g., `git+https://github.com/ErikinBC/SurvSet.git@main`) does not include packaged dataset resources. For full functionality, install from [PyPI](https://pypi.org/project/SurvSet/) instead.   
 
 ## Dataset structure and origin
 

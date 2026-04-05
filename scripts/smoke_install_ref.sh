@@ -35,14 +35,18 @@ python3 -m venv "${TMP_DIR}/venv"
 echo "[2/4] Installing SurvSet from ref '${REF}'..."
 "${TMP_DIR}/venv/bin/pip" install --no-cache-dir "SurvSet @ git+${REPO_URL}@${REF}" >/tmp/survset_smoke_install.log
 
-echo "[3/4] Verifying installed loader fallback source..."
-"${TMP_DIR}/venv/bin/python" - <<'PY'
+echo "[3/4] Verifying installed package import path and fallback source..."
+cd "${TMP_DIR}"
+PYTHONPATH="" "${TMP_DIR}/venv/bin/python" - <<'PY'
 import inspect
+import SurvSet
 import SurvSet.data as data
+
+print("SurvSet imported from:", SurvSet.__file__)
 print(inspect.getsource(data.SurvLoader._resource_root))
 PY
 
 echo "[4/4] Running package entrypoint..."
-"${TMP_DIR}/venv/bin/python" -m SurvSet
+PYTHONPATH="" "${TMP_DIR}/venv/bin/python" -m SurvSet
 
 echo "PASS: Smoke install test succeeded for ref '${REF}'."
