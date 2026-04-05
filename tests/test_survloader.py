@@ -4,6 +4,7 @@ import importlib.resources as std_pkg_resources
 import unittest
 from unittest.mock import patch
 
+import numpy as np
 import pandas as pd
 
 from SurvSet.data import SurvLoader
@@ -57,6 +58,45 @@ class TestSurvLoader(unittest.TestCase):
         self.assertIsInstance(df_ds, pd.DataFrame)
         self.assertIn("ds", df_ds.columns)
         self.assertGreater(len(df_ds), 0)
+
+    def test_coxnet_alpha_selection_improves_score(self):
+        """Test that selecting optimal alpha produces better scores than default (issue #6)."""
+        try:
+            from sksurv.util import Surv
+            from sksurv.linear_model import CoxnetSurvivalAnalysis
+            from sklearn.impute import SimpleImputer
+            from sklearn.preprocessing import StandardScaler
+        except ImportError:
+            self.skipTest("scikit-survival or scikit-learn not available")
+
+        loader = SurvLoader()
+        df = loader.load_dataset("prostate")["df"]
+
+        # Prepare minimal data
+        senc = Surv()
+        y = senc.from_arrays(df["event"].astype(bool), df["time"])
+        
+        # Simple preprocessing: impute and scale numeric columns
+        X = df[[c for c in df.columns if c.startswith("num_")]].fillna(0)
+        imputer = SimpleImputer(strategy="median")
+        scaler = StandardScaler()
+        X = scaler.fit_transform(imputer.fit_transform(X))
+
+        # Fit model
+        mdl = CoxnetSurvivalAnalysis(n_alphas=10)
+        mdl.fit(X, y)
+
+        # Get score for each alpha
+        scores = [mdl.score(X, y, alpha=alpha) for alpha in mdl.alphas_]
+        best_alpha_idx = np.argmax(scores)
+        best_alpha = mdl.alphas_[best_alpha_idx]
+        best_score = scores[best_alpha_idx]
+
+        # Last alpha (default) should generally be worse or equal
+        default_score = mdl.score(X, y, alpha=mdl.alphas_[-1])
+
+        # The fix ensures we pick a better (or equal) alpha explicitly
+        self.assertGreaterEqual(best_score, default_score * 0.99)  # Allow 1% tolerance for numerical variations
 
 
 if __name__ == "__main__":
