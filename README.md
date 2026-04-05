@@ -112,6 +112,15 @@ You can start by creating a virtual environment to align with the development en
 2. `pip install -r requirements.txt`
 3. `source surv/bin/activate`
 
+### Pre-merge install smoke test
+
+Before merging a packaging-related fix, run a clean install smoke test from a Git ref:
+
+1. `scripts/smoke_install_ref.sh main`
+2. `scripts/smoke_install_ref.sh <branch-or-commit>`
+
+This creates a temporary virtual environment, installs `SurvSet` from the specified ref, and runs `python -m SurvSet`.
+
 ### How to add a new package/dataset
 
 The SurvSet._datagen module will generate the underlying raw data and process it. There are currently two ways to add a dataset:
