@@ -6,6 +6,7 @@
 .vscode/
 .DS_store
 *__pycache__*
+scratch/
 
 # Ignore the virtual environment directory
 surv/
