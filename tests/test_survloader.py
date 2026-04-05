@@ -42,6 +42,22 @@ class TestSurvLoader(unittest.TestCase):
         self.assertIn("ds", df_ds.columns)
         self.assertGreater(len(df_ds), 0)
 
+    def test_resource_root_fallback_when_namespace_package_missing(self):
+        real_files = std_pkg_resources.files
+
+        def files_with_missing_namespace(package):
+            if package == "SurvSet.resources.pickles":
+                raise ModuleNotFoundError("No module named 'SurvSet.resources'")
+            return real_files(package)
+
+        with patch("SurvSet.data.pkg_resources.files", side_effect=files_with_missing_namespace):
+            loader = SurvLoader()
+            df_ds = loader.load_csv("df_ds.csv")
+
+        self.assertIsInstance(df_ds, pd.DataFrame)
+        self.assertIn("ds", df_ds.columns)
+        self.assertGreater(len(df_ds), 0)
+
 
 if __name__ == "__main__":
     unittest.main()
