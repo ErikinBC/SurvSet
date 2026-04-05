@@ -32,8 +32,8 @@ class SurvLoader():
         """Return the pickles resource directory in a version-safe way."""
         try:
             return pkg_resources.files(self.path_to_data)
-        except (TypeError, AttributeError):
-            # Python 3.9 may fail for namespace packages with spec.origin=None.
+        except (TypeError, AttributeError, ModuleNotFoundError, ImportError):
+            # Some installed environments cannot import SurvSet.resources as a package.
             return pkg_resources.files("SurvSet").joinpath("resources", "pickles")
 
     def load_pickle(self, name: str) -> pd.DataFrame:
