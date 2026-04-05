@@ -37,7 +37,12 @@ if [[ "${1:-}" == "--commit" ]]; then
   echo "✓ Committed version bump"
 fi
 
-echo "Done! Remember to:"
+echo "Done! Testing version update:"
+echo "  Running: python3 -m SurvSet"
+./surv/bin/python -m SurvSet
+
+echo ""
+echo "Next steps:"
 echo "  1. rm -rf dist/ && ./surv/bin/python -m build"
 echo "  2. ./surv/bin/python -m twine upload dist/*"
 echo "  3. git push"

@@ -64,6 +64,7 @@ class TestSurvLoader(unittest.TestCase):
         try:
             from sksurv.util import Surv
             from sksurv.linear_model import CoxnetSurvivalAnalysis
+            from sksurv.metrics import concordance_index_censored
             from sklearn.impute import SimpleImputer
             from sklearn.preprocessing import StandardScaler
         except ImportError:
@@ -86,17 +87,22 @@ class TestSurvLoader(unittest.TestCase):
         mdl = CoxnetSurvivalAnalysis(n_alphas=10)
         mdl.fit(X, y)
 
-        # Get score for each alpha
-        scores = [mdl.score(X, y, alpha=alpha) for alpha in mdl.alphas_]
-        best_alpha_idx = np.argmax(scores)
-        best_alpha = mdl.alphas_[best_alpha_idx]
-        best_score = scores[best_alpha_idx]
+        # Get C-index for each alpha
+        best_c = -np.inf
+        best_alpha = mdl.alphas_[-1]
+        for alpha in mdl.alphas_:
+            pred = mdl.predict(X, alpha=alpha)
+            c = concordance_index_censored(y['event'], y['time'], pred)[0]
+            if c > best_c:
+                best_c = c
+                best_alpha = alpha
 
-        # Last alpha (default) should generally be worse or equal
-        default_score = mdl.score(X, y, alpha=mdl.alphas_[-1])
+        # Default alpha (last in path)
+        default_pred = mdl.predict(X, alpha=mdl.alphas_[-1])
+        default_c = concordance_index_censored(y['event'], y['time'], default_pred)[0]
 
         # The fix ensures we pick a better (or equal) alpha explicitly
-        self.assertGreaterEqual(best_score, default_score * 0.99)  # Allow 1% tolerance for numerical variations
+        self.assertGreaterEqual(best_c, default_c * 0.99)  # Allow 1% tolerance for numerical variations
 
 
 if __name__ == "__main__":

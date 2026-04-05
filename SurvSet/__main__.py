@@ -8,8 +8,10 @@ def main():
     # External modules
     import pandas as pd
     # Internal modules
+    from . import __version__
     from .data import SurvLoader
 
+    print(f'SurvSet version: {__version__}')
     # (i) Check class
     enc = SurvLoader()
     assert hasattr(enc, 'df_ds'), 'SurvLoader() should has a "df_ds" attribute!'
