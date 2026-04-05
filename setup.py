@@ -31,7 +31,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="SurvSet",
-    version="0.2.9",  # remember to change this in the __init_.py too!
+    version="0.2.10",  # remember to change this in the __init_.py too!
     description="SurvSet: A Python package for loading survival datasets",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
