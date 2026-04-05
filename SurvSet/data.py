@@ -28,16 +28,24 @@ class SurvLoader():
         # Load pre-calculated dataset information
         self.df_ds = self.load_csv(fn_df_ds)
 
+    def _resource_root(self):
+        """Return the pickles resource directory in a version-safe way."""
+        try:
+            return pkg_resources.files(self.path_to_data)
+        except (TypeError, AttributeError):
+            # Python 3.9 may fail for namespace packages with spec.origin=None.
+            return pkg_resources.files("SurvSet").joinpath("resources", "pickles")
+
     def load_pickle(self, name: str) -> pd.DataFrame:
         '''Method to load the pickle files'''
-        pickle_path = pkg_resources.files(self.path_to_data).joinpath(f"{name}.pickle")
+        pickle_path = self._resource_root().joinpath(f"{name}.pickle")
         with pickle_path.open("rb") as f:
             return pickle.load(f)
 
     def load_csv(self, name: str) -> pd.DataFrame:
         '''Method to load the pickle files'''
         fn_safe = name.split('.csv')[0] + '.csv'
-        csv_path = pkg_resources.files(self.path_to_data).joinpath(f"{fn_safe}")
+        csv_path = self._resource_root().joinpath(f"{fn_safe}")
         with csv_path.open("rb") as f:
             return pd.read_csv(f)
 
