@@ -77,10 +77,12 @@ senc = Surv()
 So = senc.from_arrays(df_prostate['event'].astype(bool), df_prostate['time'])
 enc_df.fit(df_prostate)
 X_train = enc_df.transform(df_prostate)
-mdl = CoxnetSurvivalAnalysis(n_alphas=50, )
+mdl = CoxnetSurvivalAnalysis(n_alphas=50)
 # Fit and predict
 mdl.fit(X=X_train, y=So)
-mdl.predict(X_train)
+# Select optimal alpha based on training score
+best_alpha = mdl.alphas_[np.argmax([mdl.score(X_train, So, alpha=alpha) for alpha in mdl.alphas_])]
+mdl.predict(X_train, alpha=best_alpha)
 
 # (ii) Load a time-varying dataset (epileptic)
 df_epileptic = loader.load_dataset(ds_name='epileptic')['df']
