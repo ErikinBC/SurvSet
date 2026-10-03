@@ -29,6 +29,112 @@ Currently, 8 datasets have time-varying features. Some datasets will have the sa
 
 ![gg_ds](SurvSet/_datagen/figures/gg_ds.png)
 
+### Table: Datasets by application field
+
+Survival analysis grew out of clinical research, and so did most of `SurvSet`: 69 of the 77 datasets are clinical/medical (37 of them oncology, including all the high-dimensional gene-expression datasets). The rest come from economics, social science or engineering, or have no documented provenance. Each dataset was classified from its source documentation (see the `ref` returned by `load_dataset`). A machine-readable version is in [`SurvSet/_datagen/figures/df_domain.csv`](SurvSet/_datagen/figures/df_domain.csv).
+
+| Application field | Group | # datasets |
+|---|---|---:|
+| Oncology | Clinical / medical | 37 |
+| Cardiology | Clinical / medical | 8 |
+| Transplant / Nephrology | Clinical / medical | 5 |
+| Infectious disease | Clinical / medical | 4 |
+| Hepatology | Clinical / medical | 3 |
+| Neurology | Clinical / medical | 2 |
+| Critical care | Clinical / medical | 3 |
+| Other clinical | Clinical / medical | 7 |
+| Economics | Non-medical | 2 |
+| Social science | Non-medical | 4 |
+| Engineering / reliability | Non-medical | 1 |
+| Other / unspecified | Unspecified | 1 |
+| **Total** | | **77** |
+
+<details>
+<summary>Full list of datasets by field (click to expand)</summary>
+
+| Field | Dataset | Sub-field / description |
+|---|---|---|
+| Oncology | `prostateSurvival` | Prostate cancer |
+| Oncology | `nwtco` | Wilms tumour (paediatric) |
+| Oncology | `rott2` | Breast cancer (Rotterdam) |
+| Oncology | `LeukSurv` | Acute myeloid leukaemia |
+| Oncology | `colon` | Colon cancer adjuvant trial |
+| Oncology | `dataOvarian1` | Ovarian cancer relapse (gene expression) |
+| Oncology | `GBSG2` | Breast cancer (German BCSG trial) |
+| Oncology | `follic` | Follicular lymphoma |
+| Oncology | `prostate` | Prostate cancer |
+| Oncology | `phpl04K8a` | Lung adenocarcinoma (Shedden et al., gene expression) |
+| Oncology | `zinc` | Esophageal cancer & tissue zinc (Linxian trial) |
+| Oncology | `chop` | DLBCL treated with CHOP (gene expression) |
+| Oncology | `ova` | Ovarian cancer |
+| Oncology | `DBCD` | Breast cancer (Dutch, gene expression) |
+| Oncology | `e1684` | Melanoma (ECOG 1684) |
+| Oncology | `mgus` | Monoclonal gammopathy (MGUS) |
+| Oncology | `DLBCL` | Diffuse large B-cell lymphoma (gene expression) |
+| Oncology | `cancer` | Lung cancer (NCCTG) |
+| Oncology | `hepatoCellular` | Hepatocellular carcinoma |
+| Oncology | `Melanoma` | Malignant melanoma |
+| Oncology | `wpbc` | Breast cancer (Wisconsin prognostic) |
+| Oncology | `d.oropha.rec` | Oropharyngeal carcinoma |
+| Oncology | `gse3143` | Breast cancer (GSE3143, gene expression) |
+| Oncology | `stagec` | Prostate cancer (stage C) |
+| Oncology | `nki70` | Breast cancer (NKI 70-gene) |
+| Oncology | `veteran` | Lung cancer (VA trial) |
+| Oncology | `gse1992` | Breast cancer (GSE1992, gene expression) |
+| Oncology | `micro.censure` | Rectal cancer (microsatellite allelotyping) |
+| Oncology | `AML_Bull` | Acute myeloid leukaemia (Bullinger, gene expression) |
+| Oncology | `NSBCD` | Breast cancer (Norway/Stanford, gene expression) |
+| Oncology | `gse4335` | Breast cancer (GSE4335, gene expression) |
+| Oncology | `breast` | Breast cancer |
+| Oncology | `MCLcleaned` | Mantle cell lymphoma (gene expression) |
+| Oncology | `Bergamaschi` | Breast cancer (gene expression) |
+| Oncology | `vdv` | Breast cancer (van 't Veer 70-gene, gene expression) |
+| Oncology | `glioma` | Glioma (brain tumour) |
+| Oncology | `ovarian` | Ovarian cancer trial |
+| Cardiology | `Framingham` | Framingham heart study |
+| Cardiology | `smarto` | Arterial disease (SMART) |
+| Cardiology | `acath` | Coronary catheterisation (Duke) |
+| Cardiology | `FRTCS` | Blood-pressure / hypertension |
+| Cardiology | `TRACE` | Post-MI (TRACE) |
+| Cardiology | `grace` | Acute coronary syndrome (GRACE) |
+| Cardiology | `heartvalve` | Heart-valve surgery |
+| Cardiology | `whas500` | Worcester heart-attack study |
+| Transplant / Nephrology | `Dialysis` | Dialysis patients |
+| Transplant / Nephrology | `dataDIVAT1` | Kidney transplant (DIVAT) |
+| Transplant / Nephrology | `dataDIVAT3` | Kidney transplant (DIVAT) |
+| Transplant / Nephrology | `dataDIVAT2` | Kidney transplant (DIVAT) |
+| Transplant / Nephrology | `heart` | Stanford heart transplant |
+| Infectious disease | `Aids2` | AIDS survival (Australia) |
+| Infectious disease | `aids` | AIDS cohort |
+| Infectious disease | `actg` | HIV trial (ACTG 320) |
+| Infectious disease | `cgd` | Chronic granulomatous disease |
+| Hepatology | `csl` | Liver cirrhosis (CSL) |
+| Hepatology | `Pbc3` | Primary biliary cirrhosis (PBC3) |
+| Hepatology | `pbc` | Primary biliary cirrhosis |
+| Neurology | `epileptic` | Epilepsy drug trial |
+| Neurology | `cost` | Stroke (Copenhagen) |
+| Critical care | `support2` | Seriously-ill hospitalised (SUPPORT) |
+| Critical care | `rhc` | Right-heart catheterisation |
+| Critical care | `burn` | Burn-unit patients |
+| Other clinical | `flchain` | Serum free light chain & mortality |
+| Other clinical | `uis` | Drug-relapse (UIS) |
+| Other clinical | `vlbw` | Very-low-birth-weight neonates |
+| Other clinical | `retinopathy` | Diabetic retinopathy (survival) |
+| Other clinical | `diabetes` | Diabetic retinopathy (timereg) |
+| Other clinical | `pharmacoSmoking` | Smoking-cessation trial |
+| Other clinical | `Z243` | Hospital length of stay, medical back problems (Swiss DRG 243) |
+| Economics | `UnempDur` | Unemployment duration (US) |
+| Economics | `Unemployment` | Unemployment spells |
+| Social science | `oldmort` | Old-age mortality (demography) |
+| Social science | `divorce` | Divorce / marriage duration |
+| Social science | `scania` | Historical mortality (Scania) |
+| Social science | `Rossi` | Criminal recidivism |
+| Engineering / reliability | `hdfail` | Hard-disk failure |
+| Other / unspecified | `rdata` | Relative-survival example data (relsurv); provenance not documented |
+
+</details>
+
+
 # Usage (simple)
 
 Print the list of datasets that can be loaded and load the `ova` dataset.

@@ -1,0 +1,78 @@
+ds,group,domain,subfield
+prostateSurvival,Clinical / medical,Oncology,Prostate cancer
+nwtco,Clinical / medical,Oncology,Wilms tumour (paediatric)
+rott2,Clinical / medical,Oncology,Breast cancer (Rotterdam)
+LeukSurv,Clinical / medical,Oncology,Acute myeloid leukaemia
+colon,Clinical / medical,Oncology,Colon cancer adjuvant trial
+dataOvarian1,Clinical / medical,Oncology,Ovarian cancer relapse (gene expression)
+GBSG2,Clinical / medical,Oncology,Breast cancer (German BCSG trial)
+follic,Clinical / medical,Oncology,Follicular lymphoma
+prostate,Clinical / medical,Oncology,Prostate cancer
+phpl04K8a,Clinical / medical,Oncology,"Lung adenocarcinoma (Shedden et al., gene expression)"
+zinc,Clinical / medical,Oncology,Esophageal cancer & tissue zinc (Linxian trial)
+chop,Clinical / medical,Oncology,DLBCL treated with CHOP (gene expression)
+ova,Clinical / medical,Oncology,Ovarian cancer
+DBCD,Clinical / medical,Oncology,"Breast cancer (Dutch, gene expression)"
+e1684,Clinical / medical,Oncology,Melanoma (ECOG 1684)
+mgus,Clinical / medical,Oncology,Monoclonal gammopathy (MGUS)
+DLBCL,Clinical / medical,Oncology,Diffuse large B-cell lymphoma (gene expression)
+cancer,Clinical / medical,Oncology,Lung cancer (NCCTG)
+hepatoCellular,Clinical / medical,Oncology,Hepatocellular carcinoma
+Melanoma,Clinical / medical,Oncology,Malignant melanoma
+wpbc,Clinical / medical,Oncology,Breast cancer (Wisconsin prognostic)
+d.oropha.rec,Clinical / medical,Oncology,Oropharyngeal carcinoma
+gse3143,Clinical / medical,Oncology,"Breast cancer (GSE3143, gene expression)"
+stagec,Clinical / medical,Oncology,Prostate cancer (stage C)
+nki70,Clinical / medical,Oncology,Breast cancer (NKI 70-gene)
+veteran,Clinical / medical,Oncology,Lung cancer (VA trial)
+gse1992,Clinical / medical,Oncology,"Breast cancer (GSE1992, gene expression)"
+micro.censure,Clinical / medical,Oncology,Rectal cancer (microsatellite allelotyping)
+AML_Bull,Clinical / medical,Oncology,"Acute myeloid leukaemia (Bullinger, gene expression)"
+NSBCD,Clinical / medical,Oncology,"Breast cancer (Norway/Stanford, gene expression)"
+gse4335,Clinical / medical,Oncology,"Breast cancer (GSE4335, gene expression)"
+breast,Clinical / medical,Oncology,Breast cancer
+MCLcleaned,Clinical / medical,Oncology,Mantle cell lymphoma (gene expression)
+Bergamaschi,Clinical / medical,Oncology,Breast cancer (gene expression)
+vdv,Clinical / medical,Oncology,"Breast cancer (van 't Veer 70-gene, gene expression)"
+glioma,Clinical / medical,Oncology,Glioma (brain tumour)
+ovarian,Clinical / medical,Oncology,Ovarian cancer trial
+Framingham,Clinical / medical,Cardiology,Framingham heart study
+smarto,Clinical / medical,Cardiology,Arterial disease (SMART)
+acath,Clinical / medical,Cardiology,Coronary catheterisation (Duke)
+FRTCS,Clinical / medical,Cardiology,Blood-pressure / hypertension
+TRACE,Clinical / medical,Cardiology,Post-MI (TRACE)
+grace,Clinical / medical,Cardiology,Acute coronary syndrome (GRACE)
+heartvalve,Clinical / medical,Cardiology,Heart-valve surgery
+whas500,Clinical / medical,Cardiology,Worcester heart-attack study
+Dialysis,Clinical / medical,Transplant / Nephrology,Dialysis patients
+dataDIVAT1,Clinical / medical,Transplant / Nephrology,Kidney transplant (DIVAT)
+dataDIVAT3,Clinical / medical,Transplant / Nephrology,Kidney transplant (DIVAT)
+dataDIVAT2,Clinical / medical,Transplant / Nephrology,Kidney transplant (DIVAT)
+heart,Clinical / medical,Transplant / Nephrology,Stanford heart transplant
+Aids2,Clinical / medical,Infectious disease,AIDS survival (Australia)
+aids,Clinical / medical,Infectious disease,AIDS cohort
+actg,Clinical / medical,Infectious disease,HIV trial (ACTG 320)
+cgd,Clinical / medical,Infectious disease,Chronic granulomatous disease
+csl,Clinical / medical,Hepatology,Liver cirrhosis (CSL)
+Pbc3,Clinical / medical,Hepatology,Primary biliary cirrhosis (PBC3)
+pbc,Clinical / medical,Hepatology,Primary biliary cirrhosis
+epileptic,Clinical / medical,Neurology,Epilepsy drug trial
+cost,Clinical / medical,Neurology,Stroke (Copenhagen)
+support2,Clinical / medical,Critical care,Seriously-ill hospitalised (SUPPORT)
+rhc,Clinical / medical,Critical care,Right-heart catheterisation
+burn,Clinical / medical,Critical care,Burn-unit patients
+flchain,Clinical / medical,Other clinical,Serum free light chain & mortality
+uis,Clinical / medical,Other clinical,Drug-relapse (UIS)
+vlbw,Clinical / medical,Other clinical,Very-low-birth-weight neonates
+retinopathy,Clinical / medical,Other clinical,Diabetic retinopathy (survival)
+diabetes,Clinical / medical,Other clinical,Diabetic retinopathy (timereg)
+pharmacoSmoking,Clinical / medical,Other clinical,Smoking-cessation trial
+Z243,Clinical / medical,Other clinical,"Hospital length of stay, medical back problems (Swiss DRG 243)"
+UnempDur,Non-medical,Economics,Unemployment duration (US)
+Unemployment,Non-medical,Economics,Unemployment spells
+oldmort,Non-medical,Social science,Old-age mortality (demography)
+divorce,Non-medical,Social science,Divorce / marriage duration
+scania,Non-medical,Social science,Historical mortality (Scania)
+Rossi,Non-medical,Social science,Criminal recidivism
+hdfail,Non-medical,Engineering / reliability,Hard-disk failure
+rdata,Unspecified,Other / unspecified,Relative-survival example data (relsurv); provenance not documented
