@@ -27,6 +27,13 @@ class TestSurvLoader(unittest.TestCase):
         with self.assertRaises(AssertionError):
             loader.load_dataset("madeup_dataset")
 
+    def test_df_ds_has_domain_columns(self):
+        loader = SurvLoader()
+        self.assertIn("domain", loader.df_ds.columns)
+        self.assertIn("subfield", loader.df_ds.columns)
+        self.assertFalse(loader.df_ds["domain"].isna().any())
+        self.assertEqual(loader.df_ds.set_index("ds").loc["ova", "domain"], "Oncology")
+
     def test_resource_root_fallback_when_namespace_lookup_fails(self):
         real_files = std_pkg_resources.files
 
