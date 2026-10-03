@@ -10,7 +10,7 @@ import pickle
 import pandas as pd
 import importlib.resources as pkg_resources
 # Internal modules
-from .utils import di_ref, fn_df_ds
+from .utils import di_ref, di_domain, fn_df_ds
 
 
 class SurvLoader():
@@ -20,13 +20,16 @@ class SurvLoader():
 
     Attributes:
         fold_ds:    Folder where csv files live
-        df_ds:      pd.DataFrame with columns: ds (dataset alias), is_td (has time-varying features), n (sample size), n_fac (number of categorical columns), n_ohe (not of one-hot-encoded columns), and n_num (number of continuous columns) 
+        df_ds:      pd.DataFrame with columns: ds (dataset alias), is_td (has time-varying features), n (sample size), n_fac (number of categorical columns), n_ohe (not of one-hot-encoded columns), n_num (number of continuous columns), domain (application field, e.g. Oncology), and subfield (sub-field / short description) 
     """
     path_to_resources = "SurvSet.resources"
     path_to_data = f"{path_to_resources}.pickles"
     def __init__(self):
         # Load pre-calculated dataset information
         self.df_ds = self.load_csv(fn_df_ds)
+        # Add the application field and sub-field of each dataset
+        self.df_ds['domain'] = self.df_ds['ds'].map(lambda x: di_domain.get(x, ('Other / unspecified', ''))[0])
+        self.df_ds['subfield'] = self.df_ds['ds'].map(lambda x: di_domain.get(x, ('', ''))[1])
 
     def _resource_root(self):
         """Return the pickles resource directory in a version-safe way."""

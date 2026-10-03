@@ -129,3 +129,97 @@ di_ref = {
     'vlbw':'https://hbiostat.org/data/repo/Cvlbw.html',
     }
 
+
+# Application field (domain) and sub-field of each dataset, see GitHub issue #12
+# Added to SurvLoader().df_ds so datasets can be filtered by field
+di_domain = {
+    # Oncology
+    'prostateSurvival': ('Oncology', 'Prostate cancer'),
+    'nwtco': ('Oncology', 'Wilms tumour (paediatric)'),
+    'rott2': ('Oncology', 'Breast cancer (Rotterdam)'),
+    'LeukSurv': ('Oncology', 'Acute myeloid leukaemia'),
+    'colon': ('Oncology', 'Colon cancer adjuvant trial'),
+    'dataOvarian1': ('Oncology', 'Ovarian cancer relapse (gene expression)'),
+    'GBSG2': ('Oncology', 'Breast cancer (German BCSG trial)'),
+    'follic': ('Oncology', 'Follicular lymphoma'),
+    'prostate': ('Oncology', 'Prostate cancer'),
+    'phpl04K8a': ('Oncology', 'Lung adenocarcinoma (Shedden et al., gene expression)'),
+    'zinc': ('Oncology', 'Esophageal cancer & tissue zinc (Linxian trial)'),
+    'chop': ('Oncology', 'DLBCL treated with CHOP (gene expression)'),
+    'ova': ('Oncology', 'Ovarian cancer'),
+    'DBCD': ('Oncology', 'Breast cancer (Dutch, gene expression)'),
+    'e1684': ('Oncology', 'Melanoma (ECOG 1684)'),
+    'mgus': ('Oncology', 'Monoclonal gammopathy (MGUS)'),
+    'DLBCL': ('Oncology', 'Diffuse large B-cell lymphoma (gene expression)'),
+    'cancer': ('Oncology', 'Lung cancer (NCCTG)'),
+    'hepatoCellular': ('Oncology', 'Hepatocellular carcinoma'),
+    'Melanoma': ('Oncology', 'Malignant melanoma'),
+    'wpbc': ('Oncology', 'Breast cancer (Wisconsin prognostic)'),
+    'd.oropha.rec': ('Oncology', 'Oropharyngeal carcinoma'),
+    'gse3143': ('Oncology', 'Breast cancer (GSE3143, gene expression)'),
+    'stagec': ('Oncology', 'Prostate cancer (stage C)'),
+    'nki70': ('Oncology', 'Breast cancer (NKI 70-gene)'),
+    'veteran': ('Oncology', 'Lung cancer (VA trial)'),
+    'gse1992': ('Oncology', 'Breast cancer (GSE1992, gene expression)'),
+    'micro.censure': ('Oncology', 'Rectal cancer (microsatellite allelotyping)'),
+    'AML_Bull': ('Oncology', 'Acute myeloid leukaemia (Bullinger, gene expression)'),
+    'NSBCD': ('Oncology', 'Breast cancer (Norway/Stanford, gene expression)'),
+    'gse4335': ('Oncology', 'Breast cancer (GSE4335, gene expression)'),
+    'breast': ('Oncology', 'Breast cancer'),
+    'MCLcleaned': ('Oncology', 'Mantle cell lymphoma (gene expression)'),
+    'Bergamaschi': ('Oncology', 'Breast cancer (gene expression)'),
+    'vdv': ('Oncology', "Breast cancer (van 't Veer 70-gene, gene expression)"),
+    'glioma': ('Oncology', 'Glioma (brain tumour)'),
+    'ovarian': ('Oncology', 'Ovarian cancer trial'),
+    # Cardiology
+    'Framingham': ('Cardiology', 'Framingham heart study'),
+    'smarto': ('Cardiology', 'Arterial disease (SMART)'),
+    'acath': ('Cardiology', 'Coronary catheterisation (Duke)'),
+    'FRTCS': ('Cardiology', 'Blood-pressure / hypertension'),
+    'TRACE': ('Cardiology', 'Post-MI (TRACE)'),
+    'grace': ('Cardiology', 'Acute coronary syndrome (GRACE)'),
+    'heartvalve': ('Cardiology', 'Heart-valve surgery'),
+    'whas500': ('Cardiology', 'Worcester heart-attack study'),
+    # Transplant / Nephrology
+    'Dialysis': ('Transplant / Nephrology', 'Dialysis patients'),
+    'dataDIVAT1': ('Transplant / Nephrology', 'Kidney transplant (DIVAT)'),
+    'dataDIVAT3': ('Transplant / Nephrology', 'Kidney transplant (DIVAT)'),
+    'dataDIVAT2': ('Transplant / Nephrology', 'Kidney transplant (DIVAT)'),
+    'heart': ('Transplant / Nephrology', 'Stanford heart transplant'),
+    # Infectious disease
+    'Aids2': ('Infectious disease', 'AIDS survival (Australia)'),
+    'aids': ('Infectious disease', 'AIDS cohort'),
+    'actg': ('Infectious disease', 'HIV trial (ACTG 320)'),
+    'cgd': ('Infectious disease', 'Chronic granulomatous disease'),
+    # Hepatology
+    'csl': ('Hepatology', 'Liver cirrhosis (CSL)'),
+    'Pbc3': ('Hepatology', 'Primary biliary cirrhosis (PBC3)'),
+    'pbc': ('Hepatology', 'Primary biliary cirrhosis'),
+    # Neurology
+    'epileptic': ('Neurology', 'Epilepsy drug trial'),
+    'cost': ('Neurology', 'Stroke (Copenhagen)'),
+    # Critical care
+    'support2': ('Critical care', 'Seriously-ill hospitalised (SUPPORT)'),
+    'rhc': ('Critical care', 'Right-heart catheterisation'),
+    'burn': ('Critical care', 'Burn-unit patients'),
+    # Other clinical
+    'flchain': ('Other clinical', 'Serum free light chain & mortality'),
+    'uis': ('Other clinical', 'Drug-relapse (UIS)'),
+    'vlbw': ('Other clinical', 'Very-low-birth-weight neonates'),
+    'retinopathy': ('Other clinical', 'Diabetic retinopathy (survival)'),
+    'diabetes': ('Other clinical', 'Diabetic retinopathy (timereg)'),
+    'pharmacoSmoking': ('Other clinical', 'Smoking-cessation trial'),
+    'Z243': ('Other clinical', 'Hospital length of stay, medical back problems (Swiss DRG 243)'),
+    # Economics
+    'UnempDur': ('Economics', 'Unemployment duration (US)'),
+    'Unemployment': ('Economics', 'Unemployment spells'),
+    # Social science
+    'oldmort': ('Social science', 'Old-age mortality (demography)'),
+    'divorce': ('Social science', 'Divorce / marriage duration'),
+    'scania': ('Social science', 'Historical mortality (Scania)'),
+    'Rossi': ('Social science', 'Criminal recidivism'),
+    # Engineering / reliability
+    'hdfail': ('Engineering / reliability', 'Hard-disk failure'),
+    # Other / unspecified
+    'rdata': ('Other / unspecified', 'Relative-survival example data (relsurv); provenance not documented'),
+    }

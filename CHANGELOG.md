@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [Unreleased]
+### Added
+- `SurvLoader().df_ds` now has `domain` (application field) and `subfield` columns so datasets can be filtered by field (see #12).
+
 ## [0.2.9] - 2025-06-07
 ### Added
 - Included only `.pickle` files in `SurvSet/resources/pickles` in the PyPI build (plus the one CSV table `resources/pickles/df_ds.csv`).
